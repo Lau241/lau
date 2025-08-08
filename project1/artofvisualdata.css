@@ -42,7 +42,7 @@ text-decoration: none;
 }
 
 /* Navigation Link AutoLayout */
-.nav-links {
+.nav-links ul {
     display: flex;
 align-items: center;
 justify-content: flex-end;
