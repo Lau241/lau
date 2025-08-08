@@ -1,0 +1,434 @@
+@font-face {
+    font-family: 'Halyard Micro';
+    src: url('fonts/halyard/HalyardMicroExtraLight.woff2') format('woff2'),
+        url('fonts/halyard/HalyardMicroExtraLight.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Micro dollar';
+    src: url('fonts/halyard/HalyardMicroExtraLight-Italic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardMicroExtraLight-Italic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Micro';
+    src: url('fonts/halyard/HalyardMicroLight.woff2') format('woff2'),
+        url('fonts/halyard/HalyardMicroLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Micro Book';
+    src: url('fonts/halyard/HalyardMicroBook-Regular.woff2') format('woff2'),
+        url('fonts/halyard/HalyardMicroBook-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Micro dollar Book';
+    src: url('fonts/halyard/HalyardMicroBook-Italic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardMicroBook-Italic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Micro dollar';
+    src: url('fonts/halyard/HalyardMicroLight-Italic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardMicroLight-Italic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Micro dollar';
+    src: url('fonts/halyard/HalyardMicroMedium-Italic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardMicroMedium-Italic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Micro';
+    src: url('fonts/halyard/HalyardMicroSemiBold.woff2') format('woff2'),
+        url('fonts/halyard/HalyardMicroSemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Micro';
+    src: url('fonts/halyard/HalyardMicro-Bold.woff2') format('woff2'),
+        url('fonts/halyard/HalyardMicro-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Micro';
+    src: url('fonts/halyard/HalyardMicroMedium.woff2') format('woff2'),
+        url('fonts/halyard/HalyardMicroMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Micro';
+    src: url('fonts/halyard/HalyardMicro-Regular.woff2') format('woff2'),
+        url('fonts/halyard/HalyardMicro-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Micro dollar';
+    src: url('fonts/halyard/HalyardMicroSemiBold-Italic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardMicroSemiBold-Italic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Micro dollar';
+    src: url('fonts/halyard/HalyardMicro-Italic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardMicro-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Micro dollar';
+    src: url('fonts/halyard/HalyardMicro-BoldItalic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardMicro-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('fonts/halyard/HalyardDisplayExtraLight-Italic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardDisplayExtraLight-Italic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('fonts/halyard/HalyardDisplayExtraLight.woff2') format('woff2'),
+        url('fonts/halyard/HalyardDisplayExtraLight.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Text Book';
+    src: url('fonts/halyard/HalyardTextBook-Regular.woff2') format('woff2'),
+        url('fonts/halyard/HalyardTextBook-Regular.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Text Dollar Book';
+    src: url('fonts/halyard/HalyardTextBook-Italic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardTextBook-Italic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Text Dollar';
+    src: url('fonts/halyard/HalyardTextLight-Italic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardTextLight-Italic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Text Dollar';
+    src: url('fonts/halyard/HalyardText-Italic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardText-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Text';
+    src: url('fonts/halyard/HalyardTextMedium.woff2') format('woff2'),
+        url('fonts/halyard/HalyardTextMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Text';
+    src: url('fonts/halyard/HalyardTextLight.woff2') format('woff2'),
+        url('fonts/halyard/HalyardTextLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Text Dollar';
+    src: url('fonts/halyard/HalyardTextMedium-Italic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardTextMedium-Italic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Text';
+    src: url('fonts/halyard/HalyardText-Regular.woff2') format('woff2'),
+        url('fonts/halyard/HalyardText-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Text';
+    src: url('fonts/halyard/HalyardTextBlack.woff2') format('woff2'),
+        url('fonts/halyard/HalyardTextBlack.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Text Dollar';
+    src: url('fonts/halyard/HalyardTextSemiBold-Italic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardTextSemiBold-Italic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Text Dollar';
+    src: url('fonts/halyard/HalyardTextBlack-Italic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardTextBlack-Italic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Micro dollar';
+    src: url('fonts/halyard/HalyardMicroBlack-Italic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardMicroBlack-Italic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Text';
+    src: url('fonts/halyard/HalyardText-Bold.woff2') format('woff2'),
+        url('fonts/halyard/HalyardText-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Text';
+    src: url('fonts/halyard/HalyardTextSemiBold.woff2') format('woff2'),
+        url('fonts/halyard/HalyardTextSemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Micro';
+    src: url('fonts/halyard/HalyardMicroBlack.woff2') format('woff2'),
+        url('fonts/halyard/HalyardMicroBlack.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Text Dollar';
+    src: url('fonts/halyard/HalyardText-BoldItalic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardText-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Text Dollar';
+    src: url('fonts/halyard/HalyardTextExtraLight-Italic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardTextExtraLight-Italic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Text';
+    src: url('fonts/halyard/HalyardTextExtraLight.woff2') format('woff2'),
+        url('fonts/halyard/HalyardTextExtraLight.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('fonts/halyard/HalyardDisplayLight-Italic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardDisplayLight-Italic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display Book';
+    src: url('fonts/halyard/HalyardDisplayBook.woff2') format('woff2'),
+        url('fonts/halyard/HalyardDisplayBook.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display Light';
+    src: url('fonts/halyard/HalyardDisplayLight.woff2') format('woff2'),
+        url('fonts/halyard/HalyardDisplayLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('fonts/halyard/HalyardDisplay-Regular.woff2') format('woff2'),
+        url('fonts/halyard/HalyardDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display Book';
+    src: url('fonts/halyard/HalyardDisplayBook-Italic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardDisplayBook-Italic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('fonts/halyard/HalyardDisplay-Bold.woff2') format('woff2'),
+        url('fonts/halyard/HalyardDisplay-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('fonts/halyard/HalyardDisplaySemiBold.woff2') format('woff2'),
+        url('fonts/halyard/HalyardDisplaySemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('fonts/halyard/HalyardDisplayMedium.woff2') format('woff2'),
+        url('fonts/halyard/HalyardDisplayMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('fonts/halyard/HalyardDisplay-BoldItalic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardDisplay-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('fonts/halyard/HalyardDisplayMedium-Italic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardDisplayMedium-Italic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('fonts/halyard/HalyardDisplaySemiBold-Italic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardDisplaySemiBold-Italic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('fonts/halyard/HalyardDisplay-Italic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardDisplay-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('fonts/halyard/HalyardDisplayBlack.woff2') format('woff2'),
+        url('fonts/halyard/HalyardDisplayBlack.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('fonts/halyard/HalyardDisplayBlack-Italic.woff2') format('woff2'),
+        url('fonts/halyard/HalyardDisplayBlack-Italic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* Repeat this pattern for all the remaining @font-face blocks... */
+

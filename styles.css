@@ -1,0 +1,697 @@
+/* This imports the unholy font file */
+@import url('portfolioStyles/fontcss.css');
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+}
+
+/* NavBar typographic settings */
+.logo {
+    font-family: 'Hydrophilia Iced', monospace;
+    font-size: 2.5rem;
+    color: var(--og-EFEAE4, #EFEAE4);
+    margin-right: auto;
+    text-decoration: none;
+}
+
+/* Navigation Bar Typographic Styles */
+header nav a {
+color: var(--og-EFEAE4, #EFEAE4);
+font-family: 'Halyard Display', sans-serif;
+font-size: 1.25rem;
+font-style: light;
+font-weight: 200;
+line-height: normal;
+text-decoration: none;
+}
+
+/* Navigation Link AutoLayout */
+.nav-links {
+    display: flex;
+align-items: center;
+justify-content: flex-end;
+gap: .5rem;
+list-style: none;
+}
+
+.nav-links a {
+    padding: .75rem 1.5rem;
+}
+
+.nav-links a:hover {
+    transition: background-color 0.3s ease-out;
+    background-color: #2e3035c9;
+    border-radius: 4px;
+    display: flex;
+}
+
+/* This alligns the nav bar with the logo */
+.fixedContainer header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15rem !important;
+    margin-right: 13rem !important;
+    margin-inline: auto;
+    padding-top: 1.75rem;
+    padding-bottom: .5rem;
+    max-width: none;
+}
+
+/* This seperates nav bar from page */
+.divider {
+  width: 100%;
+  height: .5px;
+  opacity: 50%;
+  background-color: #EFEAE4;
+}
+
+/* No fucking clue how I made this work, but it does;*/
+.navContainer {
+    padding: 0 0px;
+    width: 100%;
+}
+
+.fixedContainer {
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    height: var(--nav-height);
+    background-color: #131416;
+}
+
+/* Setting height for animation */
+body {
+    --nav-height: 100px;
+    padding-top : var(--nav-height);
+}
+
+/* Navigation Bar Scroll Animation */
+.nav--hidden {
+    transform: translateY(calc(-1 * var(--nav-height)));
+    transition: transform 0.5s ease-in-out;
+}
+
+.nav--revealed {
+    transform: translateY(calc(1 * var(0)));
+    transition: transform 0.3s ease-out;
+}
+
+/* Basically the border for the initial screen (Parent to homepage aside from navbar)*/
+.mainpage {
+    margin-inline: auto;
+    margin-left: 15rem;
+    margin-right: 13rem;
+    padding-top: 28rem;
+    padding-bottom: 1rem;
+  height: 100%;
+    background-color: #131416;
+}
+
+/* ENTER:RICHARD title style + spacing */
+h1 {
+    font-family: 'VCR OSD Mono', monospace;
+    font-size: 6rem;
+    font-weight: normal;
+    color: #EFEAE4;
+    margin-bottom: 1rem;
+    padding-top: 18.75rem;
+}
+
+/*gif settings*/
+.mainpage .dog{
+    width: 70px;
+    max-width: 100%;
+    height: auto;
+    padding-left: 20px;
+    padding-bottom: 40px;
+    opacity: 90%;
+}
+
+.mainTitle {
+   display: flex;
+   align-items: flex-end;
+   justify-content: flex-start;
+}
+
+.mainTitle h1 {
+   flex-shrink: 1;
+  min-width: 0;
+}
+
+.subTitle {
+   display: flex;
+   align-items: center;
+   gap: 6px;
+   margin-top: -14px;
+   padding-left: 4px;
+}
+
+/* paragraph settings */
+.subTitle p {
+    padding-bottom: 3.5px;
+    font-family: 'Halyard Display Book', sans-serif;
+font-size: 24px;
+font-style: light;
+font-weight: 300;
+}
+
+/* dropdown button */
+.dropbtn {
+  color: #131416;
+  background-color: #FFFFFF;
+  border: none;
+  font-size: 24px;
+  border-radius: 32px;
+  line-height: 28px;
+  cursor: pointer;
+font-family: 'Halyard Display Book', sans-serif;
+font-size: 24px;
+font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+
+    padding-left: 16px;
+    padding-right: 8px;
+    padding-top: 0px;
+    padding-bottom: 4px;
+
+    align-items: center;
+    display: flex;
+    height: 30px;
+}
+
+/* chevron icon */
+.dropbtn img {
+    width: 1rem;
+    height: auto;
+    position: relative;
+  top: 4px;   
+  vertical-align: middle;
+   margin-left: 2px;
+   transform: rotate();
+}
+
+.nowrap-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.typewriter {
+  /* example typewriter effect */
+  align-items: center;
+    display: flex;
+  font-family: 'Halyard Display', sans-serif;
+  font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+    color: #FC78CE;
+    font-size: 24px;
+
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 16px solid #FC78CE;
+  height: 100%;
+  line-height: 1; /* Adjust as needed */
+  animation: typing var(--timing) steps(30), blink 1s ease-in-out infinite;
+  animation-delay: 0s, var(--timing); 
+}
+
+@keyframes typing {
+    from { width: 0 }
+  to { width: var(--typing-width) }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+/* Dropdown content styles */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Show dropdown when .open class is added to .dropdown */
+.dropdown.open .dropdown-content {
+  display: block;
+}
+
+/* Rotate chevron when open */
+.dropbtn .chevron {
+  transition: transform 0.3s;
+}
+.dropdown.open .chevron {
+  transform: rotate(180deg);
+}
+
+/* dropdown box */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  z-index: 1;
+  top: 2.75rem;
+  border-radius: 8px;
+border: #c3beb9 1px solid;
+  text-align: left;
+max-height: 144px;
+overflow-y: auto;
+width: 176px;
+}
+
+/* custom scrollbar styles */
+.dropdown-content::-webkit-scrollbar {
+  background-color: #EFEAE4;
+  width: 10px;
+    border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.dropdown-content::-webkit-scrollbar-thumb {
+  background-color: #c3beb9;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: #131416;
+  padding-left: 8px;
+  padding-right: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  text-decoration: none;
+  display: block;
+  margin-inline: auto;
+border-bottom: 1px solid #EFEAE4;
+
+  font-family: 'Halyard Display Book', sans-serif;
+font-size: 20px;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+.dropdown-content a:hover {
+    background-color: #FC78CE;  
+    border-radius: 8px;
+    color: #EFEAE4; 
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #FC78CE; 
+    color: #EFEAE4; 
+}
+
+.dropdown.open .dropbtn {
+    background-color: #FC78CE; 
+    color: #EFEAE4; 
+}
+
+.dropdown.open .chevron {
+   filter: brightness(0) invert(1);
+}
+
+.dropdown:hover .chevron {
+    filter: brightness(0) invert(1);
+}
+
+/* scroll indicator */
+.scrollIndicator {
+  width: 2rem;
+  height: 3.5rem;
+  background-color: transparent;
+  border: #EFEAE4 1px solid;
+  border-radius: 2rem; /* optional: rounded corners */
+  margin-right: 1.5rem;
+  margin-left: auto; 
+   display: flex;
+  align-items: center;    /* vertical centering */
+  justify-content: center;/* horizontal centering */
+}
+
+.scrollIndicator-inner {
+  width: 0.3rem;
+  height: 0.4rem;
+  background: #EFEAE4;
+  animation: scroll-square-down 2s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes scroll-square-down {
+  0% {
+    transform: translateY(-.75rem);
+    opacity: 1;
+  }
+
+  10.7% { /* 150ms fade-in (150/1400 = ~10.7%) */
+    opacity: 1;
+  }
+
+  85.7% { /* 1200ms movement (1200/1400 = ~85.7%) */
+    transform: translateY(.75rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(-.75rem); /* moves square down slightly */
+    opacity: 0;
+  }
+}
+
+.callToAction {
+  width: 12.5rem;
+  height: auto;
+  position: relative;
+  top: -8rem; /* Adjust as needed */
+  vertical-align: middle;
+margin-left: 7rem;
+}
+
+.ornaments {
+  margin-inline: auto;
+    margin-left: 15rem;
+    margin-right: 13rem;
+    padding-top: 4rem;
+  height: 6rem;
+    background-color: #131416;
+}
+
+/* project defaults*/  
+.projects {
+    margin-inline: auto;
+    margin-left: 15rem;
+    margin-right: 14.5rem;
+    padding-top: 10.5rem;
+    position: sticky;
+    top: -250rem;
+}
+
+/* prefooter settings */
+
+.preFooter {
+  position: relative;
+    background: #131416;
+    color: #EFEAE4;
+    margin-inline: auto;
+    margin-left: 15rem;
+    margin-right: 14.5rem;
+    padding-top: 10.5rem;
+    z-index: 3;
+}
+
+.label {
+    font-family: 'VCR OSD Mono', monospace;
+    font-size: 2.25rem;
+    font-weight: normal;
+    color: #EFEAE4;
+    align-items: baseline;
+    padding-bottom: 2.5rem;
+}
+
+.arrowBottomLeft {
+  height: 1.5rem;
+  width: auto;
+  padding-bottom: .15rem;
+  padding-left: 0.875rem;
+}
+
+.connectBtn {
+  margin-inline: auto;
+  display: flex;
+  gap: 1rem;
+}
+
+.connectionLink {
+  padding: 1rem;
+  background-color: #FC78CE;
+  border-radius: .5rem;
+  text-decoration: none;
+
+    font-family: 'VCR OSD Mono', monospace;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #EFEAE4;
+    align-items: baseline;
+    font-style: normal;
+}
+
+.connectionLink:hover {
+  background-color: #EFEAE4;
+  color: #131416;
+  transition: background-color 0.3s ease-out;
+}
+
+/* Poro image settings */
+.poro {
+  width: 13rem;
+  height: auto;
+  margin-left: auto;
+  transform: translateY(-7rem);
+}
+
+.connectBtn {
+  display: flex-end;
+}
+
+.follow {
+  padding-bottom: 6rem;
+}
+
+.connections {
+  padding-bottom: 6rem;
+}
+
+/* footer */
+
+.siteInfo {
+  font-family: 'Halyard Display', sans-serif;
+    font-weight: 100;
+    font-style: lighter;
+    font-display: swap;
+
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+    margin-left: 15rem;
+    margin-right: 14.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+    font-size: 1.25rem;
+}
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, ol {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+    width: auto;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 1.25rem;
+    color: #EFEAE4;
+    background-color: #131416;
+
+    zoom: 80%;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+@media (max-width: 1000px) {
+.fixedContainer header {
+        margin-left: 8rem !important;
+        margin-right: 8rem !important;
+    }
+
+    .projects {
+    margin-inline: auto;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    padding-top: 5rem;
+  }
+
+  .mainpage {
+        margin-left: 8rem;
+        margin-right: 8rem;
+        padding-top: 10rem;
+    }
+
+    .ornaments {
+      display: none;
+    }
+    
+.preFooter {
+    margin-left: 8rem;
+    margin-right: 8rem;
+    padding-top: 5rem;
+}
+
+.siteInfo {
+    margin-left: 8rem;
+    margin-right: 8rem;
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+    font-size: 1rem;
+}
+
+  }
+
+@media (max-width: 780px) {
+    .fixedContainer header {
+        margin-left: 1rem !important;
+        margin-right: 1rem !important;
+    }
+
+    .nav-links {
+      display: flex;
+  align-items: center;
+  flex: 1; /* Fill available space */
+  justify-content: space-between; /* Spread links evenly */
+  gap: .5rem;
+  padding-bottom: .25rem;
+  list-style: none;
+    }
+
+    .logo {
+    display: none;
+}
+}
+
+/* Mobile Device Adaptation for Hero Section */
+@media (max-width: 780px) {
+    .mainpage {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        padding-top: 10rem;
+    }
+
+.mainpage .dog {
+        width: 4rem;
+        padding-left: 10px;
+        padding-bottom: 1rem;
+    }
+
+    h1 {
+        font-family: 'VCR OSD Mono', monospace;
+    font-size: 4rem !important;
+    font-weight: normal;
+    color: #EFEAE4;
+    line-height: 130%;
+    }
+
+    .subTitle {
+   display: flex;
+   align-items: baseline;
+   gap: 6px;
+   margin-top: 0px;
+   padding-left: 4px;
+}
+
+.nowrap-container {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 130%;
+}
+
+.typewriter {
+    float: left;
+}
+
+.preFooter {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-top: 5rem;
+}
+
+.poro{
+  display: none;
+}
+
+.siteInfo {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+    font-size: 1rem;
+    flex-direction: column;
+}
+
+/* edit animation speeds for this screen*/
+@media (max-width: 540px) {
+    .subTitle p {
+        font-size: 2.5rem;
+    }
+
+@keyframes typing {
+    from { width: 0 }
+  to { width: var(--typing-double) }
+}    
+
+.dropbtn {
+  font-size: 2.5rem;
+  height: 3rem;
+}
+
+.dropdown-content {
+  top: 4rem;
+}
+
+.subTitle {
+   display: inline;
+   align-items: baseline;
+   gap: 6px;
+   margin-top: 0px;
+   padding-left: 4px;
+}
+
+.connectionLink {
+font-size: 1.5rem;
+}
+
+.description {
+  font-size: 1rem !important;
+}
+
+}
+
+/* Hide ornaments on mobile */
+@media (max-width: 780px) {
+  .ornaments {
+    display: none;
+}
+}
+
+/* Project Adjustment on mobile */
+@media (max-width: 780px) {
+  .projects {
+    margin-inline: auto;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-top: 7.5rem;
+  }
+
+  .aovdWeb {
+    width: 100%;
+    text-align: center;
+  }
+
+  .aovdWebThumbnail {
+    max-width: 100%;
+    border-radius: 1rem;
+    object-fit: cover;
+  }
+
+}
+
+}

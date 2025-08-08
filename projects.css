@@ -1,0 +1,124 @@
+/* css for project thumbnails and titles */
+
+
+/* project 1 */
+.thumbnailParent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: left;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Big thumbnail */
+.Thumbnail2 {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  max-height: 800px;
+   transition: transform 0.5s ease-out;
+}
+
+.thumbnailParent:hover .Thumbnail2,
+.Thumbnail:hover {
+  transform: scale(1.06); /* Slightly expand on hover */
+  z-index: 2;
+}
+
+/* Smaller thumbnail */
+.Thumbnail {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  max-height: 840px;
+   transition: transform 0.5s ease-out;
+}
+
+.thumbnailParent:hover .Thumbnail,
+.Thumbnail:hover {
+  transform: scale(1.06); /* Slightly expand on hover */
+  z-index: 2;
+}
+
+
+.projectList a {
+  margin-top: 1rem;
+  text-decoration: none;
+
+font-family: 'VCR OSD Mono', monospace;
+    font-size: 3rem;
+    font-weight: normal;
+    line-height: 130%;
+  color: #EFEAE4;
+
+}
+
+.projectList p {
+font-family: 'Halyard Display Book', sans-serif;
+font-size: 20px;
+font-style: light;
+font-weight: 300;
+color: #A3A19E;
+}
+
+.projectList .more {
+   text-decoration: underline;
+  font-family: 'VCR OSD Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: normal;
+    line-height: 130%;
+  color: #EFEAE4;
+}
+
+.projectHeaders {
+        display: flex;
+  align-items: top;
+  flex: 1; /* Fill available space */
+  justify-content: space-between; /* Spread links evenly */
+  padding-bottom: .25rem;
+}
+
+.more:hover {
+    text-decoration: none;
+}
+
+.space {
+  margin-bottom: 10rem;
+}
+
+.seeAll {
+  transform: translateY(-5rem);
+}
+
+/* adaptation for project 1 */
+@media (max-width: 1000px) {
+.projectList .more {
+    display: none;;
+}
+
+.thumbnailParent {
+  padding-bottom: 0rem;
+}
+
+.projectList a {
+  font-size: 2.25rem;
+  letter-spacing: -0.05rem;
+}
+
+.projectList p {
+  font-size: 1.25rem;
+  padding-right: 3rem;
+}
+
+.space {
+  margin-bottom: 5rem;
+}
+
+.seeAll {
+  top: -5rem;
+}
+
+}
