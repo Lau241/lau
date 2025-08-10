@@ -451,6 +451,9 @@ margin-left: 7rem;
 .poro {
   width: 13rem;
   height: auto;
+}
+
+.poroContainer {
   margin-left: auto;
   transform: translateY(-7rem);
 }
@@ -483,6 +486,18 @@ margin-left: 7rem;
     padding-top: 3rem;
     padding-bottom: 3.5rem;
     font-size: 1.25rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Reset some default styles */
