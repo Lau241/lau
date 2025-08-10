@@ -269,7 +269,7 @@ body {
     font-family: 'VCR OSD Mono', monospace;
     font-size: 1.5rem;
     font-weight: normal;
-    color: #6E6868;
+    color: #837C7C;
 }
 
 .gatheringDataHeaders h2 {
@@ -548,7 +548,7 @@ margin: 0 auto;
   flex: 1;
 }
 
-.personaDetails h4 {
+.personaDetails h3 {
   font-size: 1.5rem;
   font-family: 'Halyard Display Book', sans-serif;
     font-weight: 300;
