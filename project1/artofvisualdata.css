@@ -269,7 +269,7 @@ body {
     font-family: 'VCR OSD Mono', monospace;
     font-size: 1.5rem;
     font-weight: normal;
-    color: #5A5A5A;
+    color: #6E6868;
 }
 
 .gatheringDataHeaders h2 {
@@ -729,7 +729,7 @@ align-self: center;
   gap: .75rem;
 }
 
-.point h4 {
+.point h3 {
   font-size: 2.5rem;
   font-family: 'Halyard Display', sans-serif;
     font-weight: normal;
@@ -1145,6 +1145,13 @@ font-family: 'VCR OSD Mono', monospace;
     font-display: swap;
     font-size: 1.5rem;
     color: #A3A19E;
+}
+
+.listSpacing {
+  content: "";
+  margin-bottom: 1.25rem;
+  padding: 0 !important;
+  opacity: 0;  
 }
 
 
