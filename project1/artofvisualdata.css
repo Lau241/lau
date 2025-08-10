@@ -695,7 +695,7 @@ align-self: center;
     font-family: 'VCR OSD Mono', monospace;
     font-size: 1.5rem;
     font-weight: normal;
-    color: #5A5A5A;
+    color: #837C7C;
 }
 
 .headerContent h2 {
@@ -866,7 +866,7 @@ align-self: center;
   gap: 1rem;
 }
 
-.sideBox h4 {
+.sideBox h3 {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
   color: #EFEAE4;
@@ -982,7 +982,7 @@ align-self: center;
   flex: 38; /* ratio'd */
 }
 
-.sideBoxFinal h4 {
+.sideBoxFinal h3 {
   font-size: 3rem;
   margin-bottom: 1.5rem;
   color: #EFEAE4;
