@@ -1274,6 +1274,9 @@ font-family: 'VCR OSD Mono', monospace;
 .poro {
   width: 13rem;
   height: auto;
+}
+
+.poroContainer {
   margin-left: auto;
   transform: translateY(-7rem);
 }
