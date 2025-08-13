@@ -2235,6 +2235,7 @@ font-size: 1rem;
 .quoteText blockquote {
   font-size: 3.5rem;
   width: 100%;
+  height: fit-content;
 }
 
 .introSummary {
