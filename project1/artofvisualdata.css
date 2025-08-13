@@ -2168,7 +2168,7 @@ font-size: 1rem;
 }
 
 .prSubtitle, .prSubtitle3 {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
 }
 
 .prSubHeading {
@@ -2437,10 +2437,15 @@ flex: 35;
 }
 
 .userQuote {
+  flex-direction: column;
 margin-top: 8rem;
 margin-bottom: 8rem;
 margin-left: .5rem;
 margin-right: .5rem;
+}
+
+.userQuote video {
+  width: 100%;
 }
 
 .learnings h2 {
@@ -2460,6 +2465,10 @@ font-size: 1rem;
   flex-direction: column;
 }
 
+.tags {
+  display: none;
+}
+
 .tags li {
   font-size: .9rem;
 }
@@ -2469,7 +2478,12 @@ font-size: 1rem;
     margin-right: .5rem;
 }
 
+.connectionLink {
+  font-size: 1.75rem;
+}
+
 .siteInfo {
+  flex-direction: column;
     margin-left: .5rem;
     margin-right: .5rem;
     padding-top: 3rem;
