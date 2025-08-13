@@ -344,6 +344,7 @@ body {
   padding-top: 15.75rem;
   padding-bottom: 1rem;
   background-color: #131416;
+  height: fit-content;
 }
 
 .quoteBox {
