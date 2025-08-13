@@ -326,7 +326,7 @@ body {
 .datasetContainer {
     /* Sticky positioning for datasets */
   position: sticky; 
-  top: -25rem;      /* adjust to match your header height */
+  top: -15rem;      /* adjust to match your header height */
   z-index: 1;     /* lower than .quote */
   margin-top: 5rem;
 }
@@ -337,10 +337,12 @@ body {
 }
 
 .quote {
-  position: relative;
-  z-index: 10;
+  position: sticky;
+  top: -10rem;
+  z-index: 2;
   font-family: 'VCR OSD Mono', monospace;
   padding-top: 15.75rem;
+  padding-bottom: 1rem;
   background-color: #131416;
 }
 
@@ -361,7 +363,6 @@ body {
   padding-top: 2.25%;
   padding-bottom: 2.25%;
   justify-content: space-between;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .quoteText {
@@ -386,13 +387,19 @@ body {
   font-size: 2.25rem;
 }
 
+.pointContainer {
+  position: relative;
+  z-index: 3;
+  background-color: #131416;  
+}
+
 .introSummary {
 margin: 0 auto;  
   padding-top: 12rem;
   gap: 6rem;
   display: flex;
   flex-direction: column;
-  max-width: 58%;
+  max-width: 68%;
   justify-content: center;   /* vertical centering */
   align-items: center;       /* horizontal centering */
 }
@@ -409,6 +416,7 @@ margin: 0 auto;
   padding-left: 6.25%;
   padding-right: 14.5%;
   justify-content: space-between;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
 .keyTitle {
@@ -538,7 +546,7 @@ margin: 0 auto;
 .personaBio {
     font-family: 'Halyard Display Book', sans-serif;
     font-weight: 300;
-    font-style: italic;
+    font-style: normal;
     font-display: swap;
     font-size: 1.25rem;
     color: #131416;
@@ -549,7 +557,7 @@ margin: 0 auto;
   color: #131416;
     font-family: 'Halyard Display', sans-serif;
     font-weight: normal;
-    font-style: italic;
+    font-style: normal;
     font-display: swap;
 }
 
@@ -1192,7 +1200,7 @@ font-family: 'VCR OSD Mono', monospace;
 
   font-family: 'Halyard Display', sans-serif;
     font-weight: 200;
-    font-style: italic;
+    font-style: light;
     font-display: swap;
     font-size: 1.5rem;
     color: #A3A19E;
@@ -1221,7 +1229,6 @@ font-family: 'VCR OSD Mono', monospace;
   width: 100%;
   object-fit: cover;
   border-radius: 1rem;
-  max-height: 25rem;
    transition: transform 0.5s ease-out;
 }
 
@@ -1485,6 +1492,10 @@ body, h1, h2, h3, h4, h5, p, ul, ol {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+em {
+  font-style: normal;
 }
 
 figure {
@@ -2100,4 +2111,376 @@ font-size: 1rem;
     padding-bottom: 3.5rem;
     font-size: 1rem;
 }
+
+
+
+/*mobile screens*/
+
+@media (max-width: 540px) {
+
+.nav-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spread links evenly */
+  padding-bottom: .25rem;
+  list-style: none;
+}
+
+.prHeader {
+    margin-left: .5rem;
+    margin-right: .5rem;  
+}
+
+.imageContainer {
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.prInfo {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 4rem;
+  flex-direction: column;
+}
+
+.categories {
+  margin-top: 2rem;
+}
+
+.scrollIndicator {
+  margin-right: 0;
+  width: 1.5rem;
+  height: 3rem;
+}
+
+.introHeading {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.projectThumbnail2 {
+  margin-top: 2rem;
+}
+
+.prSubtitle, .prSubtitle3 {
+  font-size: 2.5rem;
+}
+
+.prSubHeading {
+  font-size: 1.25rem;
+}
+
+.prText, .introHeading .paragraphStyle1 {
+  font-size: 1.25rem;
+}
+
+.projectThumbnail2 {
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.gatheringData {
+  margin-top: 4rem;
+  margin-right: .5rem;
+  margin-left: .5rem;
+}
+
+.gatheringDataHeaders h2 {
+  font-size: 2rem;
+  margin-top: .5rem;
+}
+
+.gatheringDataHeaders h3, .paragraphStyle2 {
+  font-size: 1.25rem;
+}
+
+.gatheringData .sectionDivider {
+  margin-top: 1rem;
+}
+
+.line-break {
+  display: block;
+  margin-top: 2rem;
+}
+
+.affinityMap {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.datasetContainer {
+  top: 5rem;
+  margin-top: 2rem;
+}
+
+.paragraphStyle1 {
+  font-size: .9rem;
+}
+
+.quoteBox {
+  gap: 2rem;
+}
+
+.quote {
+  padding-top: 10rem;
+  top: -2rem;
+}
+
+.quoteText blockquote {
+  font-size: 3.5rem;
+  width: 100%;
+}
+
+.introSummary {
+  max-width: 97%;
+  gap: 4rem;
+}
+
+.challengeSummary {
+  max-width: 85%;
+}
+
+.keyPoint {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.process1 h2 {
+  margin-bottom: 1rem;
+}
+
+.process1 {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 4rem;
+}
+
+.personaProfile {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 2rem;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.personaCard {
+  gap: 2rem;
+}
+
+.personaGreeting {
+  font-size: 1.25rem;
+}
+
+.personaName {
+  font-size: 2.25rem;
+}
+
+.personaBio {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.sectionDivider {
+  margin-bottom: 1rem;
+}
+
+.personaDetails h3 {
+  font-size: 1.25rem;
+}
+
+.personaDetails ul {
+  font-size: 1rem;
+}
+
+.process2 {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 4rem;
+}
+
+.process2 h2 {
+  margin-bottom: 1rem;
+}
+
+.personaJourney img {
+  width: 8rem;
+  height: 8rem;
+}
+
+.personaJourneyContainer {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.personaJourney h2 {
+  font-size: 2rem;
+}
+
+.paragraphStyle3 {
+  font-size: 1.2rem;
+}
+
+.personaInsights {
+  padding-top: 1rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+.researchSummary {
+  margin-top: 4rem;
+}
+
+.headerContent {
+  gap: .5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-bottom: 3%;
+}
+
+.researchPoints {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  align-items: top;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  padding-top: 3rem;
+}
+
+.point p {
+  font-size: 1.25rem;
+}
+
+.headerContent h3 {
+    font-size: 1.25rem;
+}
+
+.headerContent h2 {
+    font-size: 2rem;
+}
+
+.point h3 {
+  font-size: 1.75rem;
+}
+
+.informationArchitecture {
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.articleIdeation {
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.ideationText h3 {
+  font-size: 2rem;
+}
+
+.ideationText p {
+  font-size: 1.25rem;
+}
+
+.designChallenge {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 8rem;
+}
+
+
+.sideBoxList {
+  font-size: .9rem;
+}
+
+.sideBox {
+padding: .75rem;
+flex: 35;
+}
+
+.sideBox h3 {
+  font-size: 1rem;
+}
+
+.finalDesigns {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 8rem;
+}
+
+.sideBoxParagraph {
+  font-size: .9rem;
+}
+
+.sideBoxFinal h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  flex: 48;
+}
+
+.dataSense {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 9rem;
+}
+
+.reflection {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 15rem;
+}
+
+.userQuote {
+margin-top: 8rem;
+margin-bottom: 8rem;
+margin-left: .5rem;
+margin-right: .5rem;
+}
+
+.learnings h2 {
+font-size: 2rem;
+}
+
+.learnings li {
+font-size: 1rem;
+}
+
+.relatedProjects {
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.project02 {
+  flex-direction: column;
+}
+
+.tags li {
+  font-size: .9rem;
+}
+
+.preFooter {
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.siteInfo {
+    margin-left: .5rem;
+    margin-right: .5rem;
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+    font-size: 1rem;
+}
+
+.poro {
+  display: none;
+}
+
+}
+
 }
