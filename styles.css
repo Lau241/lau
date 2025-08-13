@@ -364,7 +364,7 @@ font-size: 20px;
 }
 
 .callToAction {
-  width: 12.5rem;
+  width: 14rem;
   height: auto;
   position: relative;
   top: -8rem; /* Adjust as needed */
@@ -523,7 +523,7 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
 .fixedContainer header {
         margin-left: 8rem !important;
         margin-right: 8rem !important;
@@ -563,24 +563,27 @@ body {
   }
 
 @media (max-width: 780px) {
-    .fixedContainer header {
-        margin-left: .5rem !important;
-        margin-right: .5rem !important;
-    }
+  .fixedContainer header {
+    margin-left: .5rem !important;
+    margin-right: .5rem !important;
+  }
 
-    .nav-links {
-      display: flex;
-  align-items: center;
-  flex: 1; /* Fill available space */
-  justify-content: space-between; /* Spread links evenly */
-  gap: .5rem;
-  padding-bottom: .25rem;
-  list-style: none;
-    }
+  .nav-links {
+    flex: 1; /* Fill available space */
+  }
 
-    .logo {
+  .nav-links ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Spread links evenly */
+    gap: .5rem;
+    padding-bottom: .25rem;
+    list-style: none;
+  }
+
+  .logo {
     display: none;
-}
+  }
 }
 
 /* Mobile Device Adaptation for Hero Section */
