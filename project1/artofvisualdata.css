@@ -348,14 +348,13 @@ body {
 }
 
 .quoteBox {
-  aspect-ratio: 72/23;
   background-image: url('caseStudy1/quote_img_cropped.png');
   background-size: cover;
   width: 100%;
   max-width: 100%;
-  min-height: 38rem;
   border-radius: 1rem;
   box-sizing: border-box;
+  gap: 4rem;
 
   display: flex;
   align-items: flex-end;
