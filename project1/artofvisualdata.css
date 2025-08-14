@@ -812,6 +812,10 @@ align-self: center;
   padding: 1rem;
 }
 
+#mobileIdea {
+  display: none;
+}
+
 .processHeading {
   display: flex;
   border: #FFFFFF 1px solid;
@@ -2308,7 +2312,7 @@ font-size: 1rem;
 }
 
 .process2 h2 {
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 
 .personaJourney img {
@@ -2319,6 +2323,7 @@ font-size: 1rem;
 .personaJourneyContainer {
   flex-direction: column;
   gap: 1rem;
+  margin-top: 1rem;
 }
 
 .personaJourney h2 {
@@ -2331,8 +2336,8 @@ font-size: 1rem;
 
 .personaInsights {
   padding-top: 1rem;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   padding-bottom: 1rem;
 }
 
@@ -2355,7 +2360,7 @@ font-size: 1rem;
   align-items: top;
   margin-left: .5rem;
   margin-right: .5rem;
-  padding-top: 3rem;
+  padding-top: 1rem;
 }
 
 .point p {
@@ -2377,11 +2382,35 @@ font-size: 1rem;
 .informationArchitecture {
   margin-left: .5rem;
   margin-right: .5rem;
+  margin-top: 6rem;
+}
+
+.informationArchitecture .gatheringDataHeaders {
+  margin-bottom: 1rem;
+}
+
+.informationArchitecture .paragraphStyle2 {
+  margin-bottom: 1rem;
 }
 
 .articleIdeation {
   margin-left: .5rem;
   margin-right: .5rem;
+  margin-top: 4rem;
+}
+
+.articleIdeation h2 {
+  font-size: 1.5rem;
+  line-height: 200%;
+}
+
+.articleIdeation header {
+  margin-bottom: 1rem;
+}
+
+#space2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .ideationText h3 {
@@ -2390,6 +2419,18 @@ font-size: 1rem;
 
 .ideationText p {
   font-size: 1.25rem;
+}
+
+.ideation {
+  flex-direction: column;
+}
+
+#desktopIdea {
+  display: none;
+}
+
+#mobileIdea {
+  display: flex;
 }
 
 .designChallenge {
