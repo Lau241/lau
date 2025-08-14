@@ -360,7 +360,7 @@
     
 <div id="space2"></div>
 
-    <article class="ideation" id="desktopIdea">
+    <article class="ideation desktopIdea">
       <figure class="ideationFigure">
         <video aria-label="Desktop Mockup of Art of Visual Data's homepage." class="mockupImage" autoplay muted loop playsinline>
            <source src="https://dl.dropboxusercontent.com/scl/fi/rhpu7s4j8l12pb2iids26/graphideationInteractionC.mp4?rlkey=rrvxdp8kanndz35u8ugqw0wb8" type="video/mp4">
@@ -374,7 +374,7 @@
     
 <!-- This is the mobile version -->
 
-    <article class="ideation" id="mobileIdea">      
+    <article class="ideation mobileIdea">      
       <div class="ideationText">
         <h3>Pairing interaction with data</h3>
         <p>The types of graphs I decided to use were simple, common, and easy-to-read graphs such as bar graphs, pictograms, pie graphs, etc...<br><br>For our detailed datasets, I utilized only the line graph/bubble chart to create a consistent base to pair with interactions such as hover effects. This creates a straightforward and consistent interaction system.</p>
@@ -447,7 +447,8 @@
     <div class="sectionDivider"></div>  
     <p class="paragraphStyle2" id="finalIntroduction">Art of Visual Data (AoVD) is a platform and brand that translates complex global datasets into visual stories, improving data literacy for all through accessible design, storytelling, and gamification. The ultimate goal of AoVD is to advocate awareness of global issues through the power of design.</p>
     
-    <section class="finalDesignImages">
+    <!-- desktop version -->
+    <section class="finalDesignImages desktopFinals">
       <video aria-label="Desktop Mockup of Art of Visual Data's homepage." class="mockupImage" autoplay muted loop playsinline>
         <source src="https://dl.dropboxusercontent.com/scl/fi/y1w3c3i9j4l52jrnzc6mh/homePageMockup.mp4?rlkey=gybzsfu61upzaqydcbquip8b6&st=ho6cv7bz" type="video/mp4">
       </video>
@@ -480,6 +481,44 @@
         </div>
       </article>        
     </section>
+
+    <!-- mobile version -->
+
+    <section class="finalDesignImages mobileFinals">
+      <video aria-label="Desktop Mockup of Art of Visual Data's homepage." class="mockupImage" autoplay muted loop playsinline>
+        <source src="https://dl.dropboxusercontent.com/scl/fi/y1w3c3i9j4l52jrnzc6mh/homePageMockup.mp4?rlkey=gybzsfu61upzaqydcbquip8b6&st=ho6cv7bz" type="video/mp4">
+      </video>
+      
+      <article class="videoCaptionCombination1">
+        <aside class="sideBoxFinal" role="complementary" aria-labelledby="articleLandingPageHeading">
+          <h3 id="articleLandingPageHeading">Article Landing Page</h3>
+          <p class="sideBoxParagraph">
+            The story 'You Can’t See Me' is a featured article on the website’s homepage. This initial article page provides a journalistic summary of the data observed, summarizing data trends and key issues, catering to those who struggle with reading data or want the general idea.
+          </p>        
+        </aside>
+        <div class="imageVer1">
+          <video aria-label="The landing page of the article. Summary of key points, highlighting Sub-Saharan Africa's lag behind the world average." autoplay muted loop playsinline>
+            <source src="https://dl.dropboxusercontent.com/scl/fi/dw57ko91xz0a219t1vwpn/compressed_animation.mp4?rlkey=nyils2suijqrpxvba83fn1bya&st=w3o0x8qg" type="video/mp4">
+          </video>
+        </div>
+      </article>
+      
+      <article class="videoCaptionCombination1">
+        <aside class="sideBoxFinal" role="complementary" aria-labelledby="articleDatasetsHeading">
+          <h3 id="articleDatasetsHeading">Article Detailed Datasets</h3>
+          <p class="sideBoxParagraph">
+            With five different SDGs, 11 data points, and multiple timelines, the most effective storytelling approach was to compare regional trends with world averages and explore how they relate to other SDG metrics.<br><br>Additionally, the use of interactive graphs conveys all the data while maintaining comprehensibility.
+          </p>        
+        </aside>
+        <div class="imageVer1">
+          <video aria-label="Detailed datasets comparing multiple SDGs. Text of key points in the top right, chatbot implementation in the bottom right, metric comparison on the right, interactive graph in the center-left." autoplay muted loop playsinline>
+            <source src="https://dl.dropboxusercontent.com/scl/fi/qke6qhej6rqfl4ifs7xtt/detailedGraph.mp4?rlkey=p2sg16qpybxby0po9a2m8hmjy&st=wlsd7fzq" type="video/mp4">
+          </video>
+        </div>                
+      </article>        
+    </section>
+
+    <!--continue desktop version-->
 
     <figure class="customGrid">
         <video class="gridItem" aria-label="Navigation bar opening and closing, transforming 3-line hamburger icon into 4-line bar graph when hovered. When clicked lines transform into an X." autoplay muted loop playsinline>
@@ -703,6 +742,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
   videos.forEach(video => observer.observe(video));
 });
+</script>
+
+<!-- Desktop Video Removal (to save the poor user's ram) -->
+ <script>
+if (window.matchMedia("(max-width: 540px)").matches) {
+  document.querySelectorAll('.desktopFinals, .desktopIdea').forEach(el => el.remove());
+}
+</script>
+
+<!-- Mobile Video Removal (to save the poor user's ram) -->
+ <script>
+if (window.matchMedia("(min-width: 540px)").matches) {
+  document.querySelectorAll('.mobileFinals, .mobileIdea').forEach(el => el.remove());
+}
 </script>
 
 </body>

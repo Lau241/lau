@@ -812,9 +812,7 @@ align-self: center;
   padding: 1rem;
 }
 
-#mobileIdea {
-  display: none;
-}
+
 
 .processHeading {
   display: flex;
@@ -1002,6 +1000,7 @@ align-self: center;
   justify-content: center;   /* vertical centering */
   align-items: center;       /* horizontal centering */
 }
+
 
 .finalDesigns {
   margin-left: 15rem;
@@ -2250,7 +2249,8 @@ font-size: 1rem;
 }
 
 .challengeSummary {
-  max-width: 85%;
+  max-width: 96%;
+  padding-top: 6rem;
 }
 
 .keyPoint {
@@ -2400,12 +2400,20 @@ font-size: 1rem;
 }
 
 .articleIdeation h2 {
-  font-size: 1.7rem;
+  font-size: 1.65rem;
   line-height: 200%;
+}
+
+.articleIdeation h2::after {
+  transform: translateY(20%);
 }
 
 .articleIdeation header {
   margin-bottom: 1rem;
+}
+
+.challengeRevision {
+  margin-top: 2rem;
 }
 
 #space2 {
@@ -2424,14 +2432,6 @@ font-size: 1rem;
 .ideation {
   flex-direction: column;
   gap: 2rem;
-}
-
-#desktopIdea {
-  display: none;
-}
-
-#mobileIdea {
-  display: flex;
 }
 
 .designChallenge {
@@ -2466,6 +2466,7 @@ top: 0;
 
 .revisions {
   flex-direction: column;
+  gap: 2rem;
 }
 
 .sideBox h3 {
@@ -2475,17 +2476,47 @@ top: 0;
 .finalDesigns {
   margin-left: .5rem;
   margin-right: .5rem;
-  margin-top: 8rem;
+  margin-top: 6rem;
+}
+
+.mobileFinals {
+display: flex;
+gap: 8rem;
+}
+
+.mobileFinals .videoCaptionCombination1 {
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sideBoxFinal {
+  position: relative;
+  top: 0;
+  border: none;
+  padding: 0;
+}
+
+.finalDesigns .gatheringDataHeaders {
+  margin-bottom: 1rem;
+}
+
+.finalDesigns .paragraphStyle2 {
+  margin-bottom: 2rem !important;
 }
 
 .sideBoxParagraph {
-  font-size: .9rem;
+  font-size: 1.25rem;
 }
 
 .sideBoxFinal h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
   flex: 48;
+  font-family: 'Halyard Display';
+}
+
+.customGrid {
+  flex-direction: column;
 }
 
 .dataSense {
