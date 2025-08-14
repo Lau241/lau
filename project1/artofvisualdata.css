@@ -353,7 +353,7 @@ body {
   background-size: cover;
   width: 100%;
   max-width: 100%;
-  height: fit-content;
+  min-height: 38rem;
   border-radius: 1rem;
   box-sizing: border-box;
 
