@@ -2400,7 +2400,7 @@ font-size: 1rem;
 }
 
 .articleIdeation h2 {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   line-height: 200%;
 }
 
@@ -2423,6 +2423,7 @@ font-size: 1rem;
 
 .ideation {
   flex-direction: column;
+  gap: 2rem;
 }
 
 #desktopIdea {
@@ -2436,21 +2437,39 @@ font-size: 1rem;
 .designChallenge {
   margin-left: .5rem;
   margin-right: .5rem;
-  margin-top: 8rem;
+  margin-top: 4rem;
 }
 
+.designChallenge .gatheringDataHeaders {
+  margin-bottom: 1rem;
+}
+
+.designChallenge .paragraphStyle2 {
+  margin-bottom: 2rem;
+}
+
+.challengeVersion1 {
+  flex-direction: column;
+}
 
 .sideBoxList {
-  font-size: .9rem;
+  font-size: 1.25rem;
 }
 
 .sideBox {
 padding: .75rem;
 flex: 35;
+margin-bottom: 2rem;
+position: relative;
+top: 0;
+}
+
+.revisions {
+  flex-direction: column;
 }
 
 .sideBox h3 {
-  font-size: 1rem;
+  font-size: 1.25rem;
 }
 
 .finalDesigns {
