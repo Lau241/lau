@@ -353,6 +353,7 @@ body {
   background-size: cover;
   width: 100%;
   max-width: 100%;
+  height: fit-content;
   border-radius: 1rem;
   box-sizing: border-box;
 
@@ -364,7 +365,6 @@ body {
   padding-top: 2.25%;
   padding-bottom: 2.25%;
   justify-content: space-between;
-  background-color: #FC78CE;
 }
 
 .quoteText {
