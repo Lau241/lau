@@ -769,7 +769,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function checkFade() {
     const viewportWidth = window.innerWidth;
     const isMobile = viewportWidth < 768;
-    const triggerPoint = isMobile ? 0.25 : 0.65; // 25% on mobile, 65% on desktop
+    const triggerPoint = isMobile ? 0.95 : 0.65; // 95% on mobile, 65% on desktop
 
     sections.forEach(section => {
       if (section.classList.contains('animateUp')) return;
