@@ -765,14 +765,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function checkFade() {
     const viewportHeight = window.innerHeight;
+    const viewportWidth = window.innerWidth;
+
+    // Define breakpoints
+    const isMobile = viewportWidth < 768; // adjust if needed
+    const triggerPoint = isMobile ? 0.35 : 0.65; // 35% for mobile, 65% for desktop
 
     sections.forEach(section => {
       if (section.classList.contains('animateUp')) return; // skip already animated
 
       const rect = section.getBoundingClientRect();
 
-      // Trigger when top of section reaches 65% of viewport
-      if (rect.top <= viewportHeight * 0.65 && rect.bottom >= 0) {
+      // Trigger when top of section reaches the trigger point
+      if (rect.top <= viewportHeight * triggerPoint && rect.bottom >= 0) {
         section.classList.add('animateUp');
       }
     });
