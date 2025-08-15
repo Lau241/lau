@@ -448,6 +448,10 @@ margin: 0 auto;
   margin-bottom: 2.5rem;
 }
 
+.keyPoint .gatheringDataHeaders h3 {
+  color: #8A8585;
+}
+
 .personaProfile {
   display: flex;
   align-items: flex-start;
@@ -658,6 +662,10 @@ margin: 0 auto;
 
 #space {
   flex: 1.5;
+}
+
+.personaInsights .gatheringDataHeaders h3 {
+  color: #8A8585;
 }
 
 .personaInsights {
