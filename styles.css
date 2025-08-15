@@ -547,7 +547,7 @@ body {
   animation-name: fadeInUpCustom;
   animation-duration: 1s;
   animation-fill-mode: forwards; /* keeps final state after animation */
-}}
+}
 
 @media (max-width: 1024px) {
 .fixedContainer header {
