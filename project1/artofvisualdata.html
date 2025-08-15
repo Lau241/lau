@@ -763,21 +763,21 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('.fadeinup');
 
-  // Stable viewport height for mobile/desktop
-  const viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-
   function checkFade() {
     const viewportWidth = window.innerWidth;
     const isMobile = viewportWidth < 768;
-    const triggerPoint = isMobile ? 0.95 : 0.65; // 95% on mobile, 65% on desktop
+    const triggerPoint = isMobile ? 0.65 : 0.65; // 35% mobile, 65% desktop
+
+    // Calculate viewport height dynamically each scroll
+    const viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
     sections.forEach(section => {
       if (section.classList.contains('animateUp')) return;
 
       const rect = section.getBoundingClientRect();
 
-      // Trigger when top of section reaches trigger point
-      if (rect.top <= viewportHeight * triggerPoint && rect.bottom >= 0) {
+      // Trigger with small offset to ensure early animation on mobile
+      if (rect.top <= viewportHeight * triggerPoint + (isMobile ? 50 : 0) && rect.bottom >= 0) {
         section.classList.add('animateUp');
       }
     });
