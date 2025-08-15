@@ -301,7 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Define breakpoints
     const isMobile = viewportWidth < 768; // adjust if needed
-    const triggerPoint = isMobile ? 0.35 : 0.65; // 35% for mobile, 65% for desktop
+    const triggerPoint = isMobile ? 0.85 : 0.65; // 85% for mobile, 65% for desktop
 
     sections.forEach(section => {
       if (section.classList.contains('animateUp')) return; // skip already animated
