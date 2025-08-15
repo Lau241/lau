@@ -92,7 +92,7 @@ list-style: none;
     z-index: 1000;
     position: fixed;
     width: 100%;
-    height: var(--nav-height);
+
     background-color: #131416;
 }
 
@@ -121,8 +121,8 @@ body {
     margin-left: 15rem;
     margin-right: 13rem;
     display: flex;
-    justify-content: space-between;
-    align-items: top;    
+    align-items: flex-end;
+    justify-content: space-between;    
 } 
 
 .prTitle {
@@ -130,7 +130,6 @@ body {
     font-size: 3rem;
     font-weight: normal;
     color: #EFEAE4;
-    line-height: 150%;
 }
 
 
@@ -1094,7 +1093,7 @@ font-family: 'VCR OSD Mono', monospace;
 
 .figmaEmbed {
   aspect-ratio: 16/9;
-  width: 95%;
+  width: 100%;
   margin-top: 9rem;
   border-radius: 1rem;
   justify-self: center;
@@ -1456,10 +1455,12 @@ font-family: 'VCR OSD Mono', monospace;
   border: #EFEAE4 1px solid;
   border-radius: 2rem; /* optional: rounded corners */
   margin-right: 1.5rem;
-  margin-left: auto; 
+  margin-left: auto;
+  margin-bottom: .25rem; 
    display: flex;
   align-items: center;    /* vertical centering */
   justify-content: center;/* horizontal centering */
+  flex-shrink: 0;
 }
 
 .scrollIndicator-inner {
@@ -2390,7 +2391,7 @@ font-size: 1rem;
 }
 
 .informationArchitecture .paragraphStyle2 {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .articleIdeation {
@@ -2400,7 +2401,7 @@ font-size: 1rem;
 }
 
 .articleIdeation h2 {
-  font-size: 1.65rem;
+  font-size: 1.55rem;
   line-height: 200%;
 }
 
@@ -2481,7 +2482,7 @@ top: 0;
 
 .mobileFinals {
 display: flex;
-gap: 8rem;
+gap: 4rem;
 }
 
 .mobileFinals .videoCaptionCombination1 {
@@ -2515,26 +2516,48 @@ gap: 8rem;
   font-family: 'Halyard Display';
 }
 
-.customGrid {
+.customGridMobile {
+  margin-top: 4rem;
   flex-direction: column;
+  gap: 1rem;
+}
+
+.customGridMobile .sectionDivider {
+  margin-bottom: 4rem;
+}
+
+#motionGraphic {
+  margin-top: 8rem;
 }
 
 .dataSense {
   margin-left: .5rem;
   margin-right: .5rem;
-  margin-top: 9rem;
+  margin-top: 8rem;
+}
+
+.dataSense .gatheringDataHeaders {
+  margin-bottom: 1rem;
+}
+
+#finalIntroduction {
+  margin-bottom: 2rem;
 }
 
 .reflection {
   margin-left: .5rem;
   margin-right: .5rem;
-  margin-top: 15rem;
+  margin-top: 6rem;
+}
+
+.reflection .gatheringDataHeaders {
+  margin-bottom: 1rem;
 }
 
 .userQuote {
   flex-direction: column;
-margin-top: 8rem;
-margin-bottom: 8rem;
+margin-top: 4rem;
+margin-bottom: 4rem;
 margin-left: .5rem;
 margin-right: .5rem;
 }
@@ -2543,17 +2566,27 @@ margin-right: .5rem;
   width: 100%;
 }
 
-.learnings h2 {
-font-size: 2rem;
+.learnings {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.learnHead {
+  font-size: 2rem;
+  top: 0;
+  position: relative;
+  margin-bottom: 0rem !important;
 }
 
 .learnings li {
-font-size: 1rem;
+font-size: 1.25rem;
 }
 
 .relatedProjects {
   margin-left: .5rem;
   margin-right: .5rem;
+  margin-top: 4rem;
+  margin-bottom: 8rem;
 }
 
 .project02 {
