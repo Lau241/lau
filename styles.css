@@ -522,6 +522,33 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+/* Base class — always on the element */
+.fadeinup {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0); /* start slightly below */
+}
+
+/* Keyframes for the animation */
+@keyframes fadeInUpCustom {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 2rem, 0);
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transform: scale(1);
+  }
+}
+
+/* Animation trigger class — added by JS */
+.animateUp {
+  animation-name: fadeInUpCustom;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; /* keeps final state after animation */
+}}
+
 @media (max-width: 1024px) {
 .fixedContainer header {
         margin-left: 8rem !important;
