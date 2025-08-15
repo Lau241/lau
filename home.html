@@ -294,29 +294,20 @@ lastScrollY = window.scrollY;
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('.fadeinup');
-
-  // Stable viewport height for mobile/desktop
-  const viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  const viewportHeight = document.documentElement.clientHeight;
+  const triggerPoint = 0.65; // desktop trigger
 
   function checkFade() {
-    const viewportWidth = window.innerWidth;
-    const isMobile = viewportWidth < 768;
-    const triggerPoint = isMobile ? 0.95 : 0.65; // 95% on mobile, 65% on desktop
+    if (window.innerWidth < 768) return; // skip mobile
 
     sections.forEach(section => {
-      if (section.classList.contains('animateUp')) return;
-
-      const rect = section.getBoundingClientRect();
-
-      // Trigger when top of section reaches trigger point
-      if (rect.top <= viewportHeight * triggerPoint && rect.bottom >= 0) {
+      if (!section.classList.contains('animateUp') && section.getBoundingClientRect().top <= viewportHeight * triggerPoint) {
         section.classList.add('animateUp');
       }
     });
   }
 
   window.addEventListener('scroll', checkFade);
-  window.addEventListener('resize', checkFade);
   checkFade(); // initial check
 });
 </script>
