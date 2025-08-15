@@ -2128,6 +2128,11 @@ font-size: 1rem;
 
 @media (max-width: 540px) {
 
+  .fadeinup {
+    opacity: 1 !important;
+    transform: none !important;
+  }  
+
 .nav-links ul {
   display: flex;
   align-items: center;
