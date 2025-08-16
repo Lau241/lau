@@ -702,6 +702,10 @@ body {
 /* edit animation speeds for this screen*/
 @media (max-width: 540px) {
 
+  .loadingVideo {
+  width: 50%;
+  }  
+
   .fadeinup {
     opacity: 1 !important;
     transform: none !important;
