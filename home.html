@@ -322,18 +322,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <!-- Loading Screen -->
 <script>
-  window.addEventListener("load", function() {
+window.addEventListener("load", function() {
+  // Wait 2 seconds before running your existing code
   setTimeout(() => {
-  console.log("This runs after 2 seconds");
-}, 2000);    
     const loader = document.querySelector(".loadingContainer"); // select by class
-    if(loader) {
-      loader.style.opacity = 0; // optional fade
-      setTimeout(() => loader.style.display = "none", 500);
-    }
     const page = document.getElementById("pageContent");
-    if(page) page.style.display = "block";
-  },);
+
+    if(loader) {
+      loader.classList.add('playAnimation')
+    }
+
+  }, 2000); // 2000ms = 2 seconds
+});
 </script>
 </body>
 </html>
