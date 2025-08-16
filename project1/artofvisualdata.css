@@ -24,7 +24,7 @@
 }
 
 .playAnimation {
-  animation: loadingContainer .5s ease-out forwards; /* 2 seconds, keep final state */
+  animation: loadingContainer .3s ease-out forwards;
 }
 
 /* NavBar typographic settings */
@@ -2152,6 +2152,10 @@ font-size: 1rem;
 /*mobile screens*/
 
 @media (max-width: 540px) {
+
+  .loadingVideo {
+  width: 50%;
+  }
 
   .fadeinup {
     opacity: 1 !important;
