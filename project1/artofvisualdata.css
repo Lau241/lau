@@ -11,14 +11,20 @@
   background-color: #131416;
 }
 
+@keyframes loadingContainer {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 .loadingVideo {
   width: 12.5%;
   height: auto;
-  transition: transform 0.3s ease-out;
+  opacity: 1;
+  transition: opacity 0.5s ease-out; /* smooth fade */
 }
 
-.loadingVideo:hover {
-  transform: scale(1.05);
+.playAnimation {
+  animation: loadingContainer .5s ease-out forwards; /* 2 seconds, keep final state */
 }
 
 /* NavBar typographic settings */
@@ -112,7 +118,6 @@ list-style: none;
     z-index: 15;
     position: fixed;
     width: 100%;
-
     background-color: #131416;
 }
 
