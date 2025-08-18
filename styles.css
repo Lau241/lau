@@ -280,7 +280,7 @@ font-weight: 300;
   display: none;
   position: absolute;
   background-color: #ffffff;
-  z-index: 1;
+  z-index: 15;
   top: 2.75rem;
   border-radius: 8px;
 border: #c3beb9 1px solid;
@@ -400,34 +400,36 @@ margin-left: 7rem;
 
 .ornaments {
   margin-inline: auto;
-    margin-left: 15rem;
-    margin-right: 13rem;
-    padding-top: 4rem;
+  margin-left: 15rem;
+  margin-right: 13rem;
+  padding-top: 4rem;
   height: 6rem;
-    background-color: #131416;
+  background-color: #131416;
+  z-index: -1;
+  position: relative;
 }
 
 /* project defaults*/  
 .projects {
-    margin-inline: auto;
-    margin-left: 15rem;
-    margin-right: 14.5rem;
-    padding-top: 10.5rem;
-    position: sticky;
-    top: -250rem;
+  margin-inline: auto;
+  margin-left: 15rem;
+  margin-right: 14.5rem;
+  padding-top: 10.5rem;
+  position: sticky;
+  top: -250rem;
 }
 
 /* prefooter settings */
 
 .preFooter {
   position: relative;
-    background: #131416;
-    color: #EFEAE4;
-    margin-inline: auto;
-    margin-left: 15rem;
-    margin-right: 14.5rem;
-    padding-top: 10.5rem;
-    z-index: 3;
+  background: #131416;
+  color: #EFEAE4;
+  margin-inline: auto;
+  margin-left: 15rem;
+  margin-right: 14.5rem;
+  padding-top: 10.5rem;
+  z-index: 3;
 }
 
 .label {
@@ -727,7 +729,8 @@ body {
 }
 
 .dropdown-content {
-  top: 4rem;
+  margin-top: 4rem;
+  z-index: 1;
 }
 
 .subTitle {
