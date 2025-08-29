@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Designed and coded by Richard Lau -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art of Visual Data</title>
+    <link rel="icon" href="../media/RL.png" type="image/png">
+    <link rel="stylesheet" href="../portfolioStyles/siteToolkit.css">
+    <link rel="stylesheet" href="../projects.css">
+    <link rel="stylesheet" href="thequeensgambit.css">
+</head>
+
+<body>
+    <div class="loadingContainer">
+    <video autoplay muted loop playsinline class="loadingVideo">
+        <source src="../media/loadingvid.webm" type="video/webm">
+        Your browser does not support the video tag.
+    </video>
+    </div>
+
+    <!-- This is our navigation bar. -->  
+    <section class="fixedContainer">
+    <div class="navContainer">
+        <header class="navbar" role="banner">
+        <a href="https://richardlau.ca" class="logo" role="link" aria-label="Button to Homepage">richard</a>
+        <nav class="nav-links">
+            <ul>
+            <li><a href="https://richardlau.ca/home">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">tidbits</a></li>
+            <li><a href="#">resume</a></li>
+            </ul>
+        </nav>
+        </header>
+        <div class="divider"></div>
+    </div>
+    </section>
+
+    <main>
+
+        <div class="tempNotice">
+            <h1>under construction</h1>
+            <p>great things are coming...</p>
+        </div>
+    </main>
+
+
+<!-- Footer/Scripts -->
+ <footer class="footerContent">
+  <div class="divider"></div>
+  <div class="siteInfo">
+    <p>© 2025 Richard Lau. All rights reserved.</p>
+    <p>imagined and crafted by richard | ft. healthy sleep schedule</p>
+  </div>
+</footer>
+ 
+<!-- This is the navigation bar scroll effect -->
+<script>  
+  const fixedContainer = document.querySelector('.fixedContainer');
+   let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+    if (lastScrollY < window.scrollY) {
+      fixedContainer.classList.remove("nav--revealed");
+   fixedContainer.classList.add("nav--hidden");
+    } else {
+    fixedContainer.classList.remove("nav--hidden");
+    fixedContainer.classList.add("nav--revealed");
+    }
+lastScrollY = window.scrollY;
+  });
+</script>
+
+<!-- Fade In Animation -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const sections = document.querySelectorAll('.fadeinup');
+  const viewportHeight = document.documentElement.clientHeight;
+  const triggerPoint = 0.65; // desktop trigger
+
+  function checkFade() {
+    if (window.innerWidth < 540) return; // skip mobile
+
+    sections.forEach(section => {
+      if (!section.classList.contains('animateUp') && section.getBoundingClientRect().top <= viewportHeight * triggerPoint) {
+        section.classList.add('animateUp');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkFade);
+  checkFade(); // initial check
+});
+</script>
+
+<!-- Refresh page when breakpoint changes -->
+<script>
+let currentBreakpoint = window.innerWidth > 540 ? "desktop" : "mobile";
+
+window.addEventListener("resize", function() {
+  let newBreakpoint = window.innerWidth > 540 ? "desktop" : "mobile";
+  if (newBreakpoint !== currentBreakpoint) {
+    location.reload();
+  }
+});
+</script>
+
+
+<!-- Loading Screen -->
+<script>
+window.addEventListener("load", function() {
+  setTimeout(() => {
+    const loader = document.querySelector(".loadingContainer"); // select by class
+    const page = document.getElementById("pageContent");
+
+    if(loader) {
+      loader.classList.add('playAnimation')
+    }
+
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 500);
+
+  }, 1000);
+});
+</script>    
+</body>
