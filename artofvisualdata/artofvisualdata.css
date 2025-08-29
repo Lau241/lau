@@ -1,0 +1,2692 @@
+@import url('../portfolioStyles/fontcss.css');
+
+.loadingContainer {
+  position: fixed;
+  z-index: 25;
+  display: flex;            /* enables flexbox */
+  justify-content: center;  /* horizontal centering */
+  align-items: center;      /* vertical centering */
+  width: 100%;
+  height: 100%;
+  background-color: #131416;
+}
+
+@keyframes loadingContainer {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.loadingVideo {
+  width: 12.5%;
+  height: auto;
+  opacity: 1;
+  transition: opacity 0.5s ease-out; /* smooth fade */
+}
+
+.playAnimation {
+  animation: loadingContainer .3s ease-out forwards;
+}
+
+/* NavBar typographic settings */
+.logo {
+    font-family: 'Hydrophilia Iced', monospace;
+    font-size: 2.5rem;
+    color: var(--og-EFEAE4, #EFEAE4);
+    margin-right: auto;
+    text-decoration: none;
+}
+
+/* Navigation Bar Typographic Styles */
+header nav a {
+color: var(--og-EFEAE4, #EFEAE4);
+font-family: 'Halyard Display', sans-serif;
+font-size: 1.25rem;
+font-style: light;
+font-weight: 200;
+line-height: normal;
+text-decoration: none;
+}
+
+/* NavBar typographic settings */
+.logo {
+    font-family: 'Hydrophilia Iced', monospace;
+    font-size: 2.5rem;
+    color: var(--og-EFEAE4, #EFEAE4);
+    margin-right: auto;
+    text-decoration: none;
+}
+
+/* Navigation Bar Typographic Styles */
+header nav a {
+color: var(--og-EFEAE4, #EFEAE4);
+font-family: 'Halyard Display', sans-serif;
+font-size: 1.25rem;
+font-style: light;
+font-weight: 200;
+line-height: normal;
+text-decoration: none;
+}
+
+/* Navigation Link AutoLayout */
+.nav-links ul {
+    display: flex;
+align-items: center;
+justify-content: flex-end;
+gap: .5rem;
+list-style: none;
+}
+
+.nav-links a {
+    padding: .75rem 1.5rem;
+}
+
+.nav-links a:hover {
+    transition: background-color 0.3s ease-out;
+    background-color: #2e3035c9;
+    border-radius: 4px;
+    display: flex;
+}
+
+/* This alligns the nav bar with the logo */
+.fixedContainer header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15rem !important;
+    margin-right: 13rem !important;
+    margin-inline: auto;
+    padding-top: 1.75rem;
+    padding-bottom: 1rem;
+    max-width: none;
+}
+
+/* This seperates nav bar from page */
+.divider {
+  width: 100%;
+  height: .5px;
+  opacity: 50%;
+  background-color: #EFEAE4;
+}
+
+/* No fucking clue how I made this work, but it does;*/
+.navContainer {
+    padding: 0 0px;
+    width: 100%;
+}
+
+.fixedContainer {
+    z-index: 15;
+    position: fixed;
+    width: 100%;
+    background-color: #131416;
+}
+
+/* Setting height for animation */
+body {
+    --nav-height: 100px;
+    padding-top : var(--nav-height);
+}
+
+/* Navigation Bar Scroll Animation */
+.nav--hidden {
+    transform: translateY(calc(-1 * var(--nav-height)));
+    transition: transform 0.5s ease-in-out;
+}
+
+.nav--revealed {
+    transform: translateY(calc(1 * var(0)));
+    transition: transform 0.3s ease-out;
+}
+
+/* Start styling here */
+
+.prHeader {
+    padding-top: 12rem;
+    padding-bottom: 1.5rem;
+    margin-left: 15rem;
+    margin-right: 13rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;    
+} 
+
+.prTitle {
+    font-family: 'VCR OSD Mono', monospace;
+    font-size: 3rem;
+    font-weight: normal;
+    color: #EFEAE4;
+}
+
+
+.imageContainer {
+  margin-left: 15rem;
+  margin-right: 13rem;
+}
+
+.mockupImage {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-sizing: border-box;
+}
+
+.prSubtitle {
+    font-family: 'VCR OSD Mono', monospace;
+    font-size: 3.5rem;
+    font-weight: normal;
+    color: #EFEAE4;
+    line-height: 150%;
+}
+
+.sectionDivider {
+    background-color: #737170;
+    height: 0.5px;
+    opacity: 100%;
+    width: auto;
+    margin-bottom: 1.5rem;
+}
+
+.prInfo {
+  margin-left: 15rem;
+  margin-right: 13rem;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: space-between;    
+}
+
+.prSubHeading {
+    color: #EFEAE4;
+    font-family: 'Halyard Display', sans-serif;
+    font-weight: 200;
+}
+
+.prText h3 {
+  flex: 10;
+}
+.blockB2 {
+  flex: 3.25;
+}
+
+.prText p {
+  flex: 35;
+}
+
+
+.prText {
+  display: flex;
+    margin-bottom: 4rem;
+  font-family: 'Halyard Display', sans-serif;
+    font-weight: 200;
+    font-style: light;
+    font-display: swap;
+    color: #A3A19E;
+    font-size: 1.25rem;
+}
+
+.date {
+    line-height: 200%;
+}
+
+.reference1 {
+    color: #FC78CE;
+}
+
+.reference2 {
+    color: #EFEAE4;
+}
+
+.introHeading {
+  margin-left: 15rem;
+  margin-right: 13rem;
+  margin-top: 11rem;
+
+    align-items: flex-end;
+    text-align: baseline;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blockA {
+  flex: 1;
+}
+.blockB {
+  flex: .45;
+}
+
+.blockC {
+  flex: 1;
+}
+
+
+.paragraphStyle1 {
+    font-family: 'Halyard Display', sans-serif;
+    font-weight: 200;
+    font-style: light;
+    font-display: swap;
+    color: #A3A19E;
+    font-size: 1.25rem;
+}
+
+.prSubtitle3 {
+    font-family: 'VCR OSD Mono', monospace;
+    font-size: 3.5rem;
+    font-weight: normal;
+    color: #EFEAE4;
+}
+
+.projectThumbnail2 {
+  margin-top: 5rem;
+  margin-left: 15rem;
+  margin-right: 13rem;
+}
+
+.projectThumbnail2 .sectionDivider {
+    margin-top: 7.5rem;
+}
+
+
+.gatheringData {
+    margin-left: 15rem;
+    margin-right: 13rem;
+    margin-top: 12.5rem;
+}
+
+.gatheringDataHeaders {
+    margin-left: 0rem !important;
+    gap: .5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: transparent !important;
+}
+
+.gatheringDataHeaders h3 {
+    font-family: 'VCR OSD Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #837C7C;
+}
+
+.gatheringDataHeaders h2 {
+    font-family: 'VCR OSD Mono', monospace;
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+.gatheringData .sectionDivider {
+    margin-top: 2.5rem;
+}
+
+.gatheringData .paragraphStyle2 {
+  color: #A3A19E;
+}
+
+.paragraphStyle2 {
+    font-family: 'Halyard Display', sans-serif;
+    font-weight: 200;
+    font-style: light;
+    font-display: swap;
+    font-size: 1.5rem;
+}
+
+.affinityMap {
+  margin-top: 2.5rem;
+  margin-bottom: 5rem;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.affinityMap .mockupImage {
+  margin-bottom: 1.5rem;
+}
+
+.datasets .mockupImage {
+  margin-bottom: 1.5rem;
+}
+
+.datasetContainer {
+    /* Sticky positioning for datasets */
+  position: sticky; 
+  top: -15rem;      /* adjust to match your header height */
+  z-index: 1;     /* lower than .quote */
+  margin-top: 5rem;
+}
+
+.gatheringData figcaption {
+  display: flex;
+  justify-content: center;
+}
+
+.quote {
+  position: sticky;
+  top: -10rem;
+  z-index: 2;
+  font-family: 'VCR OSD Mono', monospace;
+  padding-top: 15.75rem;
+  padding-bottom: 1rem;
+  background-color: #131416;
+  height: fit-content;
+}
+
+.quoteBox {
+  background-image: url('caseStudy1/quote_img_cropped.png');
+  background-size: cover;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  gap: 6rem;
+
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 2.25%;
+  padding-bottom: 2.25%;
+  justify-content: space-between;
+}
+
+.quoteText {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.quoteText blockquote {
+  font-size: 4rem;
+  width: 70%;
+  line-height: 130%;
+}
+
+.quoteText img {
+  width: 5%;
+  height: auto;
+  object-fit: contain; /* preserve aspect ratio */
+}
+
+#author {
+  font-size: 2.25rem;
+}
+
+.pointContainer {
+  position: relative;
+  z-index: 3;
+  background-color: #131416;  
+}
+
+.introSummary {
+margin: 0 auto;  
+  padding-top: 12rem;
+  gap: 6rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 68%;
+  justify-content: center;   /* vertical centering */
+  align-items: center;       /* horizontal centering */
+}
+
+.keyPoint {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+  gap: 1.5rem;
+
+  background-color: #1E1F22;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding-left: 6.25%;
+  padding-right: 14.5%;
+  justify-content: space-between;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.keyTitle {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.paragraphStyle3 {
+  font-family: 'Halyard Display Book', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  font-size: 1.5rem;
+}
+
+.keyPoint .paragraphStyle3 {
+  color: #EFEAE4;
+  padding-left: 3px;
+}
+
+.process1 {
+  margin-left: 15rem;
+  margin-right: 13rem;
+  margin-top: 12.5rem;
+}
+
+.process1 h2 {
+  margin-bottom: 2.5rem;
+}
+
+.keyPoint .gatheringDataHeaders h3 {
+  color: #8A8585;
+}
+
+.personaProfile {
+  display: flex;
+  align-items: flex-start;
+  margin-left: 8rem;
+  margin-right: 8rem;
+  margin-top: 6.5rem;
+}
+
+.personaCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  flex: 1;
+}
+
+.arrowLeft, .arrowRight {
+  filter: invert(1);
+}
+
+.arrowLeft {
+  transform: rotate(90deg);
+  cursor: pointer;
+  width: 1rem;
+}
+
+.arrowRight {
+  transform: rotate(-90deg);
+  cursor: pointer;
+  width: 1rem;
+}
+
+.eris {
+  width: .625rem;
+  height: .625rem;
+  background-color: #EFEAE4;
+}
+
+.lewis {
+  width: .625rem;
+  height: .625rem;
+  background-color: #A3A19E;
+}
+
+.sliderIndicator {
+  display: flex;
+  align-items: center;
+  gap: .25rem
+}
+
+.personaContainer {
+  box-shadow: 0 0 16px 0px #EFEAE4;
+  background-color: #EFEAE4;
+  border-radius: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 3rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.personaIdentifier {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.personaImage {
+  border-radius: .5rem;
+  width: 20%;
+  max-width: 6rem;
+  height: auto;
+  object-fit: contain;
+}
+
+.personaGreeting {
+  font-family: 'Halyard Display Book', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+    font-size: 1.5rem;
+    color: #131416;
+}
+
+.personaName {
+  font-family: 'Halyard Display', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    font-size: 4rem;
+    color: #131416;
+}
+
+.personaBio {
+    font-family: 'Halyard Display Book', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    font-size: 1.25rem;
+    color: #131416;
+}
+
+.underline {
+  text-decoration: underline;
+  color: #131416;
+    font-family: 'Halyard Display', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.personaDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1;
+}
+
+.personaBlock {
+  flex: .12;
+}
+
+.personaDetails h3 {
+  font-size: 1.5rem;
+  font-family: 'Halyard Display Book', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  color: #EFEAE4;
+  margin-bottom: 1.5rem;
+}
+
+.personaDetails ul {
+  font-size: 1.25rem;
+  font-family: 'Halyard Display Book', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  color: #A3A19E;
+
+  padding-left: 2rem;
+}
+
+.painPoints, .goals {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+
+  border: #EFEAE4 1px solid;
+  border-radius: .5rem;
+  padding: 1rem;
+}
+
+.personaDetails ul li {
+  list-style-type: square;
+  margin-bottom: 1.5rem;
+}
+
+.personaDetails ul li::marker {
+  font-size: 0.7em; /* make the bullet smaller */
+}
+
+.process2 {
+  margin-left: 15rem;
+  margin-right: 13rem;
+  margin-top: 8rem;
+}
+
+.process2 h2 {
+  margin-bottom: 2.5rem;
+}
+
+.process2 .paragraphStyle2 {
+  margin-bottom: 2.5rem;
+  color: #A3A19E;
+}
+
+.personaJourney .paragraphStyle3 {
+  color: #A3A19E;
+}
+
+.personaJourney img {
+  border-radius: 0.5rem;
+  width: 13rem;
+  height: 13rem;
+  object-fit: cover;
+}
+
+.personaJourney h2 {
+  margin-bottom: 0rem;
+  font-size: 4rem;
+  font-family: 'Halyard Display', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.personaJourney figcaption {
+  padding-left: 1.5rem;
+}
+
+.personaJourney {
+  display: flex;
+  flex: 6.2;
+}
+
+#space {
+  flex: 1.5;
+}
+
+.personaInsights .gatheringDataHeaders h3 {
+  color: #8A8585;
+}
+
+.personaInsights {
+  flex: 3.8;
+  padding-top: 2rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  padding-bottom: 2rem;
+  border-radius: 1rem;
+  background-color: #1E1F22;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.personaJourneyContainer {
+  display: flex;
+  align-items: top;
+  margin-top: 3rem;
+}
+
+.personaInsights .paragraphStyle3 {
+  margin-top: .5rem;
+  color: #EFEAE4;
+}
+
+.userJourney {
+  margin-top: 3rem;
+}
+
+.researchSummary {
+align-self: center;
+  margin-top: 16.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevents overflow */
+}
+
+.vines {
+  max-width: 100%; /* or whatever fits your design */
+  height: auto;
+  margin: 0; /* Remove any default margin */
+}
+
+#flipped {
+  transform: scaleX(-1);
+}
+
+.headerContent {
+  gap: .5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+  padding-bottom: 3%;
+}
+
+.headerContent h3 {
+    font-family: 'VCR OSD Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #837C7C;
+}
+
+.headerContent h2 {
+    font-family: 'VCR OSD Mono', monospace;
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+.researchTitle {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}     
+
+.researchPoints {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  align-items: top;
+  margin-left: 20.5rem;
+  margin-right: 20.5rem;
+  padding-top: 6rem;
+}
+
+.point {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  flex: 1;
+  gap: .75rem;
+}
+
+.point h3 {
+  font-size: 2.5rem;
+  font-family: 'Halyard Display', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.point p {
+  color: #A3A19E;
+}
+
+.point header {
+  display: flex;
+  flex-direction: row;
+  gap: .625rem;
+}
+
+.informationArchitecture {
+  margin-left: 15rem;
+  margin-right: 13rem;
+  margin-top: 12.5rem;
+}
+
+.informationArchitecture header {
+  margin-bottom: 2.5rem;
+}
+
+.informationArchitecture p {
+  color: #A3A19E;
+  margin-bottom: 2.5rem;
+}
+
+.informationArchitectureImage img {
+  border-radius: 1rem;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+}
+
+.informationArchitectureImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.articleIdeation {
+  margin-left: 15rem;
+  margin-right: 13rem;
+  margin-top: 12.5rem;
+}
+
+.articleIdeation header {
+  margin-bottom: 5rem;
+  padding: 1rem;
+}
+
+
+
+.processHeading {
+  display: flex;
+  border: #FFFFFF 1px solid;
+  border-radius: 1rem;
+  flex: 1;
+  height: 100%;
+  padding-left: 1rem;
+  align-items: center;
+}
+
+.processHeading img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.processHeading h2 {
+  margin-left: 1rem;
+    font-family: 'Halyard Display Book', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  font-size: 2.25rem;
+}
+
+.ideation {
+  padding-top: 1rem;
+  display: flex;
+  align-items: top;
+  gap: 3rem;
+}
+
+.ideation img {
+  border-radius: 1rem;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.ideationFigure {
+  flex: 1;
+}
+
+.ideationText {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;  
+}
+
+.ideationText p {
+  font-size: 1.5rem;
+    font-family: 'Halyard Display', sans-serif;
+    font-weight: 200;
+    font-style: light;
+    font-display: swap;
+    color: #A3A19E;  
+}
+
+.ideationText h3 {
+  font-size: 2.5rem;
+  font-family: 'Halyard Display', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;  
+}
+
+#space2 {
+  width: 100%;
+  height: .5px;
+  background-color: #EFEAE4;
+  opacity: 50%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.designChallenge {
+  margin-left: 15rem;
+  margin-right: 13rem;
+  margin-top: 12.5rem;
+}
+
+.designChallenge header {
+  margin-bottom: 2.5rem;
+}
+
+.imageVer1 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.designChallenge .paragraphStyle2 {
+  color: #A3A19E;
+  margin-bottom: 2.5rem;
+}
+
+.challengeVersion1 ul li {
+  list-style-type: square;
+  margin-bottom: 1.5rem;
+  padding-left: .25rem;
+}
+
+.challengeVersion1 ul li::marker {
+  font-size: 0.7em; /* make the bullet smaller */
+}
+
+.challengeVersion1 {
+  display: flex;
+  gap: 1rem;
+}
+
+.sideBox h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #EFEAE4;
+    font-family: 'Halyard Display Book', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+.sideBoxList {
+  font-size: 1.25rem;
+  color: #A3A19E;
+  padding-left: 1.75rem;
+    font-family: 'Halyard Display Book', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+.sideBox {
+  position: sticky;
+  top: 8rem;
+
+  padding: 1rem;
+  border: #EFEAE4 1px solid;
+  border-radius: 0.5rem;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  flex: 28; /* ratio'd */
+}
+
+.imageVer1 {
+  flex: 145;
+}
+
+.challengeRevision {
+  margin-top: 7.5rem;
+}
+
+.revisions {
+  display: flex;
+  gap: 1rem;
+}
+
+.revisions figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.revisions figcaption img, video {
+  border-radius: 1rem;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.challengeSummary {
+  margin: 0 auto;  
+  padding-top: 10rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 63%;
+  justify-content: center;   /* vertical centering */
+  align-items: center;       /* horizontal centering */
+}
+
+
+.finalDesigns {
+  margin-left: 15rem;
+  margin-right: 13rem;
+  margin-top: 12.5rem;
+}
+
+.finalDesigns header {
+  margin-bottom: 2.5rem;
+}
+
+#finalIntroduction {
+  color: #A3A19E;
+  margin-bottom: 3rem;
+}
+
+.finalDesignImages {
+  gap: 9rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sideBoxParagraph {
+  font-size: 1.25rem;
+  color: #A3A19E;
+    font-family: 'Halyard Display Book', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+.sideBoxFinal {
+  position: sticky;
+  top: 8rem;
+
+  padding: 1rem;
+  border: #EFEAE4 1px solid;
+  border-radius: 0.5rem;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  flex: 38; /* ratio'd */
+}
+
+.sideBoxFinal h3 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  color: #EFEAE4;
+font-family: 'VCR OSD Mono', monospace;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.videoCaptionCombination1 {
+  display: flex;
+  gap: 1rem;
+}
+
+.customGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 1rem;
+  align-items: stretch;
+  margin-top: 9rem;
+}
+
+.customGrid .gridItem:nth-child(1) {
+  grid-row: 1 / span 2; /* tall left image */
+  grid-column: 1 / 2;
+}
+
+.customGrid .gridItem:nth-child(2) {
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+}
+
+.customGrid .gridItem:nth-child(3) {
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+}
+
+.customGrid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  display: block;
+}
+
+.figmaEmbed {
+  aspect-ratio: 16/9;
+  width: 100%;
+  margin-top: 9rem;
+  border-radius: 1rem;
+  justify-self: center;
+  object-fit: cover;
+  display: block;
+}
+
+.figma {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.dataSense {
+  margin-left: 15rem;
+  margin-right: 13rem;
+  margin-top: 9rem;
+}
+
+.dataSense header {
+  margin-bottom: 2.5rem;
+}
+
+#motionGraphic {
+  margin-top: 9rem;
+}
+
+.reflection {
+  margin-left: 15rem;
+  margin-right: 13rem;
+  margin-top: 15rem;
+}
+
+.reflection header {
+  margin-bottom: 2.5rem;
+}
+
+.reflection .paragraphStyle2 {
+  color: #A3A19E;
+}
+
+.userQuote {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 2rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+}
+
+.userQuote h2 {
+  line-height: 130%;
+}
+
+.userQuote video {
+  width: 56%;
+  flex: 1;
+}
+
+.learnings {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.learnings h2 {
+  padding: 1rem;
+    font-family: 'Halyard Display Book', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  font-size: 2.25rem;
+}
+
+.learnHead {
+  position: sticky;
+  top: 20rem;
+  display: flex;
+  border: #FFFFFF 1px solid;
+  border-radius: 1rem;
+  flex: 1;
+  height: 100%;
+  padding-left: 1rem;
+  align-items: center;
+}
+
+.learnHead img {
+  width: 2rem;
+  height: 2rem;
+}
+
+.learnings ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 1rem;
+  flex: 1;
+}
+
+.learnings li {
+  padding: 1rem;
+  border: #FFFFFF 1px solid;
+  border-radius: .5rem;
+
+  font-family: 'Halyard Display', sans-serif;
+    font-weight: 200;
+    font-style: light;
+    font-display: swap;
+    font-size: 1.5rem;
+    color: #A3A19E;
+}
+
+.listSpacing {
+  content: "";
+  margin-bottom: 1.25rem;
+  padding: 0 !important;
+  opacity: 0;  
+}
+
+
+.relatedProjects {
+  margin-left: 15rem;
+  margin-right: 13rem;
+  margin-top: 8rem;
+  margin-bottom: 20rem;
+}
+
+.relatedProjects header {
+  margin-bottom: 1rem;
+}
+
+.relatedProjects img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+   transition: transform 0.5s ease-out;
+}
+
+.relatedProjectContainer {
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.relatedProjects img:hover {
+  transform: scale(1.06); /* Slightly expand on hover */
+  z-index: 2;
+}
+
+.tags {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.tags li {
+  padding: .5rem 1.5rem;
+  border-radius: 2rem;
+  background-color: #212326;
+
+  font-family: 'Halyard Display Book', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    font-size: 1.5rem;
+    color: #EFEAE4;
+}
+
+.project02 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.project02 h3, .seeProject {
+  text-decoration: underline;
+  font-family: 'VCR OSD Mono', monospace;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    font-size: 1.5rem;
+    color: #EFEAE4;
+}
+
+.project02 h3:hover, .seeProject:hover {
+  text-decoration: none;
+}
+
+/* Prefooter Styles */
+.preFooter {
+  position: relative;
+    background: #131416;
+    color: #EFEAE4;
+    margin-inline: auto;
+    margin-left: 15rem;
+    margin-right: 14.5rem;
+    z-index: 3;
+}
+
+.label {
+    font-family: 'VCR OSD Mono', monospace;
+    font-size: 2.25rem;
+    font-weight: normal;
+    color: #EFEAE4;
+    align-items: baseline;
+    margin-bottom: 4rem;
+}
+
+.arrowBottomLeft {
+  height: 1.5rem;
+  width: auto;
+  padding-bottom: .15rem;
+  padding-left: 0.875rem;
+}
+
+.connectBtn {
+  margin-inline: auto;
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.connectionLink {
+  padding: 1rem;
+  background-color: #212326;
+  border-radius: .5rem;
+  text-decoration: none;
+
+    font-family: 'VCR OSD Mono', monospace;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #EFEAE4;
+    align-items: baseline;
+    font-style: normal;
+}
+
+.connectionLink:hover {
+  background-color: #EFEAE4;
+  color: #131416;
+  transition: background-color 0.3s ease-out;
+}
+
+/* Poro image settings */
+.poro {
+  width: 13rem;
+  height: auto;
+}
+
+.poroContainer {
+  margin-left: auto;
+  transform: translateY(-7rem);
+}
+
+.connectBtn {
+  display: flex-end;
+}
+
+.follow {
+  padding-bottom: 7.5rem;
+}
+
+.connections {
+  padding-bottom: 6rem;
+}
+
+/* Footer */
+
+.siteInfo {
+  font-family: 'Halyard Display', sans-serif;
+    font-weight: 100;
+    font-style: lighter;
+    font-display: swap;
+
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+    margin-left: 15rem;
+    margin-right: 14.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+    font-size: 1.25rem;
+}
+
+
+
+
+
+
+
+
+
+/* typewriter effect */
+.learnHead h2::after {
+  content: "";
+  margin-left: .5rem;
+  transform: translateY(0.25rem);
+  width: .25rem;
+  height: 2rem;
+  background: #EFEAE4;
+  display: inline-block;
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.learnHead h2::after {
+    animation: cursor-blink 1.5s ease-in-out infinite;
+}
+
+/* typewriter effect */
+.processHeading h2::after {
+  content: "";
+  margin-left: .5rem;
+  transform: translateY(0.25rem);
+  width: .25rem;
+  height: 2rem;
+  background: #EFEAE4;
+  display: inline-block;
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.processHeading h2::after {
+    animation: cursor-blink 1.5s ease-in-out infinite;
+}
+
+/* Persona Profile Slider */
+
+#lewis {
+  display: none;
+}
+
+/* scroll indicator */
+.scrollIndicator {
+  width: 2rem;
+  height: 3.5rem;
+  background-color: transparent;
+  border: #EFEAE4 1px solid;
+  border-radius: 2rem; /* optional: rounded corners */
+  margin-right: 1.5rem;
+  margin-left: auto;
+  margin-bottom: .25rem; 
+   display: flex;
+  align-items: center;    /* vertical centering */
+  justify-content: center;/* horizontal centering */
+  flex-shrink: 0;
+}
+
+.scrollIndicator-inner {
+  width: 0.3rem;
+  height: 0.4rem;
+  background: #EFEAE4;
+  animation: scroll-square-down 2s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes scroll-square-down {
+  0% {
+    transform: translateY(-.75rem);
+    opacity: 1;
+  }
+
+  10.7% { /* 150ms fade-in (150/1400 = ~10.7%) */
+    opacity: 1;
+  }
+
+  85.7% { /* 1200ms movement (1200/1400 = ~85.7%) */
+    transform: translateY(.75rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(-.75rem); /* moves square down slightly */
+    opacity: 0;
+  }
+}
+
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, p, ul, ol {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+em {
+  font-style: normal;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+  font-style: normal; /* removes italic */
+  border: none;       /* removes any default border */
+  background: none;   /* removes any default background */
+}
+
+
+
+/* Base styles */
+body {
+    width: auto;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    color: #EFEAE4;
+    background-color: #131416;
+    zoom: 80%;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+
+
+/* Small laptop screen */
+
+@media (max-width: 1024px) {
+.fixedContainer header {
+        margin-left: 8rem !important;
+        margin-right: 8rem !important;
+    }
+
+.prHeader {
+    margin-left: 8rem;
+    margin-right: 8rem;  
+}
+
+.imageContainer {
+    margin-left: 8rem;
+    margin-right: 8rem;
+}
+
+.prInfo {
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+.introHeading {
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+.prSubtitle, .prSubtitle3 {
+  font-size: 2.5rem;
+}
+
+.prSubHeading {
+  font-size: 1.15rem;
+}
+
+.prText, .introHeading .paragraphStyle1 {
+  font-size: .9rem;
+}
+
+.projectThumbnail2 {
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+.gatheringData {
+  margin-top: 8rem;
+  margin-right: 8rem;
+  margin-left: 8rem;
+}
+
+.gatheringDataHeaders h2 {
+  font-size: 2rem;
+  margin-top: .5rem;
+}
+
+.gatheringDataHeaders h3, .paragraphStyle2 {
+  font-size: 1.25rem;
+}
+
+.paragraphStyle1 {
+  font-size: .9rem;
+}
+
+.quoteText blockquote {
+  font-size: 2.75rem;
+}
+
+.introSummary {
+  max-width: 70%;
+  gap: 4rem;
+}
+
+.challengeSummary {
+  max-width: 70%;
+}
+
+.process1 {
+  margin-left: 8rem;
+  margin-right: 8rem;
+  margin-top: 8rem;
+}
+
+.personaProfile {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 3rem;
+}
+
+.personaGreeting {
+  font-size: 1.25rem;
+}
+
+.personaName {
+  font-size: 2.25rem;
+}
+
+.personaBio {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.sectionDivider {
+  margin-bottom: 2rem;
+}
+
+.personaDetails h3 {
+  font-size: 1.25rem;
+}
+
+.personaDetails ul {
+  font-size: 1rem;
+}
+
+.process2 {
+  margin-left: 8rem;
+  margin-right: 8rem;
+  margin-top: 4rem;
+}
+
+.personaJourney img {
+  width: 10rem;
+  height: 10rem;
+}
+
+.personaJourney h2 {
+  font-size: 2rem;
+}
+
+.paragraphStyle3 {
+  font-size: 1.2rem;
+}
+
+.personaInsights {
+  padding-top: 1rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+.researchSummary {
+  margin-top: 10rem;
+}
+
+.headerContent {
+  gap: .5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  padding-bottom: 3%;
+}
+
+.researchPoints {
+  display: flex;
+  gap: 3.5rem;
+  justify-content: center;
+  align-items: top;
+  margin-left: 8rem;
+  margin-right: 8rem;
+  padding-top: 3rem;
+}
+
+.point p {
+  font-size: 1.25rem;
+}
+
+.headerContent h3 {
+    font-size: 1.25rem;
+}
+
+.headerContent h2 {
+    font-size: 2rem;
+}
+
+.point h3 {
+  font-size: 1.75rem;
+}
+
+.informationArchitecture {
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+.articleIdeation {
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+.ideationText h3 {
+  font-size: 2rem;
+}
+
+.ideationText p {
+  font-size: 1.25rem;
+}
+
+.designChallenge {
+  margin-left: 8rem;
+  margin-right: 8rem;
+  margin-top: 8rem;
+}
+
+
+.sideBoxList {
+  font-size: .9rem;
+}
+
+.sideBox {
+padding: .75rem;
+flex: 35;
+}
+
+.sideBox h3 {
+  font-size: 1rem;
+}
+
+.finalDesigns {
+  margin-left: 8rem;
+  margin-right: 8rem;
+  margin-top: 8rem;
+}
+
+.sideBoxParagraph {
+  font-size: .9rem;
+}
+
+.sideBoxFinal h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  flex: 48;
+}
+
+.dataSense {
+  margin-left: 8rem;
+  margin-right: 8rem;
+  margin-top: 9rem;
+}
+
+.reflection {
+  margin-left: 8rem;
+  margin-right: 8rem;
+  margin-top: 15rem;
+}
+
+.userQuote {
+margin-top: 8rem;
+margin-bottom: 8rem;
+margin-left: 3rem;
+margin-right: 3rem;
+}
+
+.learnings h2 {
+font-size: 2rem;
+}
+
+.learnings li {
+font-size: 1rem;
+}
+
+.relatedProjects {
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+.tags li {
+  font-size: 1.25rem;
+}
+
+.preFooter {
+    margin-left: 8rem;
+    margin-right: 8rem;
+}
+
+.siteInfo {
+    margin-left: 8rem;
+    margin-right: 8rem;
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+    font-size: 1rem;
+}
+
+}
+
+/* Tablet styles */
+
+@media (max-width: 780px) {
+
+.fixedContainer header {
+  margin-left: .5rem !important;
+  margin-right: .5rem !important;
+}
+
+.nav-links {
+  flex: 1; /* Fill available space */
+}
+
+.nav-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spread links evenly */
+  gap: .5rem;
+  padding-bottom: .25rem;
+  list-style: none;
+}
+
+.logo {
+  display: none;
+}
+
+.prHeader {
+    margin-left: .5rem;
+    margin-right: .5rem;  
+}
+
+.imageContainer {
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.prInfo {
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.introHeading {
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.prSubtitle, .prSubtitle3 {
+  font-size: 2.5rem;
+}
+
+.prSubHeading {
+  font-size: 1.15rem;
+}
+
+.prText, .introHeading .paragraphStyle1 {
+  font-size: .9rem;
+}
+
+.projectThumbnail2 {
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.gatheringData {
+  margin-top: 4rem;
+  margin-right: .5rem;
+  margin-left: .5rem;
+}
+
+.gatheringDataHeaders h2 {
+  font-size: 2rem;
+  margin-top: .5rem;
+}
+
+.gatheringDataHeaders h3, .paragraphStyle2 {
+  font-size: 1.25rem;
+}
+
+.paragraphStyle1 {
+  font-size: .9rem;
+}
+
+.quoteText blockquote {
+  font-size: 2.75rem;
+}
+
+.introSummary {
+  max-width: 85%;
+  gap: 4rem;
+}
+
+.challengeSummary {
+  max-width: 85%;
+}
+
+.process1 {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 8rem;
+}
+
+.personaProfile {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 3rem;
+}
+
+.personaGreeting {
+  font-size: 1.25rem;
+}
+
+.personaName {
+  font-size: 2.25rem;
+}
+
+.personaBio {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.sectionDivider {
+  margin-bottom: 2rem;
+}
+
+.personaDetails h3 {
+  font-size: 1.25rem;
+}
+
+.personaDetails ul {
+  font-size: 1rem;
+}
+
+.process2 {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 4rem;
+}
+
+.personaJourney img {
+  width: 8rem;
+  height: 8rem;
+}
+
+.personaJourney h2 {
+  font-size: 2rem;
+}
+
+.paragraphStyle3 {
+  font-size: 1.2rem;
+}
+
+.personaInsights {
+  padding-top: 1rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-bottom: 1rem;
+}
+
+.researchSummary {
+  margin-top: 10rem;
+}
+
+.headerContent {
+  gap: .5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  padding-bottom: 3%;
+}
+
+.researchPoints {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: top;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  padding-top: 3rem;
+}
+
+.point p {
+  font-size: 1.25rem;
+}
+
+.headerContent h3 {
+    font-size: 1.25rem;
+}
+
+.headerContent h2 {
+    font-size: 2rem;
+}
+
+.point h3 {
+  font-size: 1.75rem;
+}
+
+.informationArchitecture {
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.articleIdeation {
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.ideationText h3 {
+  font-size: 2rem;
+}
+
+.ideationText p {
+  font-size: 1.25rem;
+}
+
+.designChallenge {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 8rem;
+}
+
+
+.sideBoxList {
+  font-size: .9rem;
+}
+
+.sideBox {
+padding: .75rem;
+flex: 35;
+}
+
+.sideBox h3 {
+  font-size: 1rem;
+}
+
+.finalDesigns {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 8rem;
+}
+
+.sideBoxParagraph {
+  font-size: .9rem;
+}
+
+.sideBoxFinal h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  flex: 48;
+}
+
+.dataSense {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 9rem;
+}
+
+.reflection {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 15rem;
+}
+
+.userQuote {
+margin-top: 8rem;
+margin-bottom: 8rem;
+margin-left: .5rem;
+margin-right: .5rem;
+}
+
+.learnings h2 {
+font-size: 2rem;
+}
+
+.learnings li {
+font-size: 1rem;
+}
+
+.relatedProjects {
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.tags li {
+  font-size: 1.25rem;
+}
+
+.preFooter {
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.siteInfo {
+    margin-left: .5rem;
+    margin-right: .5rem;
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+    font-size: 1rem;
+}
+
+}
+
+/*mobile screens*/
+
+@media (max-width: 540px) {
+
+  .loadingVideo {
+  width: 50%;
+  }
+
+  .fadeinup {
+    opacity: 1 !important;
+    transform: none !important;
+  }  
+
+.nav-links ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Spread links evenly */
+  padding-bottom: .25rem;
+  list-style: none;
+}
+
+.prHeader {
+    margin-left: .5rem;
+    margin-right: .5rem;  
+}
+
+.imageContainer {
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.prInfo {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 4rem;
+  flex-direction: column;
+}
+
+.categories {
+  margin-top: 2rem;
+}
+
+.scrollIndicator {
+  margin-right: 0;
+  width: 1.5rem;
+  height: 3rem;
+}
+
+.introHeading {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.projectThumbnail2 {
+  margin-top: 2rem;
+}
+
+.prSubtitle, .prSubtitle3 {
+  font-size: 2.25rem;
+}
+
+.prSubHeading {
+  font-size: 1.25rem;
+}
+
+.prText, .introHeading .paragraphStyle1 {
+  font-size: 1.25rem;
+}
+
+.projectThumbnail2 {
+  margin-left: .5rem;
+  margin-right: .5rem;
+}
+
+.gatheringData {
+  margin-top: 4rem;
+  margin-right: .5rem;
+  margin-left: .5rem;
+}
+
+.gatheringDataHeaders h2 {
+  font-size: 2.5rem;
+  line-height: 130%;
+  margin-top: .5rem;
+}
+
+.gatheringDataHeaders {
+  gap: 0;
+}
+
+.gatheringDataHeaders h3, .paragraphStyle2 {
+  font-size: 1.25rem;
+}
+
+.gatheringData .sectionDivider {
+  margin-top: 1rem;
+}
+
+.line-break {
+  display: block;
+}
+
+.affinityMap {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.datasetContainer {
+  top: 5rem;
+  margin-top: 2rem;
+}
+
+.paragraphStyle1 {
+  font-size: .9rem;
+}
+
+.quoteBox {
+  gap: 2rem;
+}
+
+.quote {
+  padding-top: 10rem;
+  top: -2rem;
+}
+
+.quoteText blockquote {
+  font-size: 3.5rem;
+}
+
+.introSummary {
+  max-width: 97%;
+  gap: 4rem;
+}
+
+.challengeSummary {
+  max-width: 96%;
+  padding-top: 6rem;
+}
+
+.keyPoint {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+.process1 h2 {
+  margin-bottom: 1rem;
+}
+
+.process1 {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 4rem;
+}
+
+.personaProfile {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 2rem;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.personaCard {
+  gap: 2rem;
+}
+
+.personaGreeting {
+  font-size: 1.25rem;
+}
+
+.personaName {
+  font-size: 2.25rem;
+}
+
+.personaBio {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.sectionDivider {
+  margin-bottom: 1rem;
+}
+
+.personaDetails h3 {
+  font-size: 1.25rem;
+}
+
+.personaDetails ul {
+  font-size: 1rem;
+}
+
+.process2 {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 4rem;
+}
+
+.process2 h2 {
+  margin-bottom: 0rem;
+}
+
+.personaJourney img {
+  width: 8rem;
+  height: 8rem;
+}
+
+.personaJourneyContainer {
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.personaJourney h2 {
+  font-size: 2rem;
+}
+
+.paragraphStyle3 {
+  font-size: 1.2rem;
+}
+
+.personaInsights {
+  padding-top: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.researchSummary {
+  margin-top: 4rem;
+}
+
+.headerContent {
+  gap: .5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-bottom: 3%;
+}
+
+.researchPoints {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  align-items: top;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  padding-top: 1rem;
+}
+
+.point p {
+  font-size: 1.25rem;
+}
+
+.headerContent h3 {
+    font-size: 1.25rem;
+}
+
+.headerContent h2 {
+    font-size: 2rem;
+}
+
+.point h3 {
+  font-size: 1.75rem;
+}
+
+.informationArchitecture {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 6rem;
+}
+
+.informationArchitecture .gatheringDataHeaders {
+  margin-bottom: 1rem;
+}
+
+.informationArchitecture .paragraphStyle2 {
+  margin-bottom: 2rem;
+}
+
+.articleIdeation {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 4rem;
+}
+
+.articleIdeation h2 {
+  font-size: 1.55rem;
+  line-height: 200%;
+}
+
+.articleIdeation h2::after {
+  transform: translateY(20%);
+}
+
+.articleIdeation header {
+  margin-bottom: 1rem;
+}
+
+.challengeRevision {
+  margin-top: 2rem;
+}
+
+#space2 {
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ideationText h3 {
+  font-size: 2rem;
+}
+
+.ideationText p {
+  font-size: 1.25rem;
+}
+
+.ideation {
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.designChallenge {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 4rem;
+}
+
+.designChallenge .gatheringDataHeaders {
+  margin-bottom: 1rem;
+}
+
+.designChallenge .paragraphStyle2 {
+  margin-bottom: 2rem;
+}
+
+.challengeVersion1 {
+  flex-direction: column;
+}
+
+.sideBoxList {
+  font-size: 1.25rem;
+}
+
+.sideBox {
+padding: .75rem;
+flex: 35;
+margin-bottom: 2rem;
+position: relative;
+top: 0;
+}
+
+.revisions {
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sideBox h3 {
+  font-size: 1.25rem;
+}
+
+.finalDesigns {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 6rem;
+}
+
+.mobileFinals {
+display: flex;
+gap: 4rem;
+}
+
+.mobileFinals .videoCaptionCombination1 {
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sideBoxFinal {
+  position: relative;
+  top: 0;
+  border: none;
+  padding: 0;
+}
+
+.finalDesigns .gatheringDataHeaders {
+  margin-bottom: 1rem;
+}
+
+.finalDesigns .paragraphStyle2 {
+  margin-bottom: 2rem !important;
+}
+
+.sideBoxParagraph {
+  font-size: 1.25rem;
+}
+
+.sideBoxFinal h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  flex: 48;
+  font-family: 'Halyard Display';
+}
+
+.customGridMobile {
+  margin-top: 4rem;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.customGridMobile .sectionDivider {
+  margin-bottom: 4rem;
+}
+
+#motionGraphic {
+  margin-top: 8rem;
+}
+
+.dataSense {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 8rem;
+}
+
+.dataSense .gatheringDataHeaders {
+  margin-bottom: 1rem;
+}
+
+#finalIntroduction {
+  margin-bottom: 2rem;
+}
+
+.reflection {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 6rem;
+}
+
+.reflection .gatheringDataHeaders {
+  margin-bottom: 1rem;
+}
+
+.userQuote {
+  flex-direction: column;
+margin-top: 4rem;
+margin-bottom: 4rem;
+margin-left: .5rem;
+margin-right: .5rem;
+}
+
+.userQuote video {
+  width: 100%;
+}
+
+.learnings {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.learnHead {
+  font-size: 2rem;
+  top: 0;
+  position: relative;
+  margin-bottom: 0rem !important;
+}
+
+.learnings li {
+font-size: 1.25rem;
+}
+
+.relatedProjects {
+  margin-left: .5rem;
+  margin-right: .5rem;
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+}
+
+.project02 {
+  flex-direction: column;
+}
+
+.tags {
+  display: none;
+}
+
+.tags li {
+  font-size: .9rem;
+}
+
+.preFooter {
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.connectionLink {
+  font-size: 1.75rem;
+}
+
+.siteInfo {
+  flex-direction: column;
+    margin-left: .5rem;
+    margin-right: .5rem;
+    padding-top: 3rem;
+    padding-bottom: 3.5rem;
+    font-size: 1rem;
+}
+
+.poro {
+  display: none;
+}
+
+}
+
+/* Base class — always on the element */
+.fadeinup {
+  opacity: 0;
+  transform: translate3d(0, 20px, 0); /* start slightly below */
+}
+
+/* Keyframes for the animation */
+@keyframes fadeInUpCustom {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 2rem, 0);
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transform: scale(1);
+  }
+}
+
+/* Animation trigger class — added by JS */
+.animateUp {
+  animation-name: fadeInUpCustom;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; /* keeps final state after animation */
+}
