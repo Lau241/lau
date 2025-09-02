@@ -37,7 +37,7 @@
         <ul>
           <li><a href="https://richardlau.ca/home">home</a></li>
           <li><a href="#">about</a></li>
-          <li><a href="#">tidbits</a></li>
+          <li><a href="#">scraps</a></li>
           <li><a href="#">resume</a></li>
         </ul>
       </nav>
@@ -64,11 +64,11 @@
           <div class="dropdown-content">
             <a href="#">designer</a>
             <a href="#">print designer</a>
-            <a href="#">storyteller</a>
             <a href="#">system builder</a>
-            <a href="#">typographer</a>
             <a href="#">product designer</a>
-            <a href="#">motion menace</a>
+            <a href="#">ui/ux designer</a>
+            <a href="#">data specialist</a>
+            <a href="#">storyteller</a>
           </div>
         </div>
       </div>
@@ -121,18 +121,18 @@
       </article>
 
       <article class="project3 fadeinup">
-        <a href="#"><span class="visually-hidden">View project: The Spiralist</span>  
+        <a href="#"><span class="visually-hidden">View project: THIS PAGE IS A COVER</span>  
           <div class="thumbnailParent">
-            <img src="media/spiralist_cropped_mockup.gif" alt="Magazine spreads for 'The Spiralist,' featuring spirals created by a contrast of blue and gold blocks of text, connected across the spread." class="Thumbnail2"></img>
-          </div>
+            <img src="media/thispageisacover.png" alt="Two of the three book covers of the series 'THIS PAGE IS A COVER,' featuring bold typography alongside floral patterns on a textured background on one cover and bold typography and a black background for the other cover." class="Thumbnail2"></img>
+          </div> 
         </a>
         <header class="projectHeaders">
-          <a href="#" tabindex="-1">The Spiralist</a>
-          <a href="#" class="more" tabindex="-1">see project<span class="visually-hidden">details for The Spiralist</span></a>
+          <a href="https://richardlau.ca/queensgambit" tabindex="-1">THIS PAGE IS A COVER</a>
+          <a href="https://richardlau.ca/queensgambit" class="more">see project<span class="visually-hidden">details for the project 'THIS PAGE IS A COVER'</span></a>
         </header>
-        <p class="description">Typographical magazine feature about the existence of spirals within everything in the world</p>
+        <p class="description">Breaking the bounderies of conventional book design by unlocking the visual soul of print.</p>
         <div class="space"></div>
-      </article>
+      </article>         
 
       <article class="project4 fadeinup">
         <a href="https://richardlau.ca/queensgambit"><span class="visually-hidden">View project: The Queen's Gambit</span>  
@@ -149,6 +149,20 @@
         <p class="description">Reliving 'The Queen's Gambit' through a gamified and graphical experience</p>
         <div class="space"></div>
       </article>
+
+      <article class="project5 fadeinup">
+        <a href="#"><span class="visually-hidden">View project: The Spiralist</span>  
+          <div class="thumbnailParent">
+            <img src="media/spiralist_cropped_mockup.gif" alt="Magazine spreads for 'The Spiralist,' featuring spirals created by a contrast of blue and gold blocks of text, connected across the spread." class="Thumbnail2"></img>
+          </div>
+        </a>
+        <header class="projectHeaders">
+          <a href="#" tabindex="-1">The Spiralist</a>
+          <a href="#" class="more" tabindex="-1">see project<span class="visually-hidden">details for The Spiralist</span></a>
+        </header>
+        <p class="description">Typographical magazine feature about the existence of spirals within everything in the world</p>
+        <div class="space"></div>
+      </article>      
       
       <div class="seeAll">
         <a href="#" class="more">See All Works</a>
@@ -200,26 +214,44 @@
 
   // Dropdown Selection
   document.querySelectorAll('.dropdown').forEach(dropdown => {
-  const button = dropdown.querySelector('.dropbtn');
-  const options = dropdown.querySelectorAll('.dropdown-content a');
+    const button = dropdown.querySelector('.dropbtn');
+    const options = dropdown.querySelectorAll('.dropdown-content a');
 
-  options.forEach(option => {
-    option.addEventListener('click', function(e) {
-      e.preventDefault(); // Prevent link navigation
-      button.childNodes[0].nodeValue = this.textContent + ' '; // Update button text, keep chevron
-      dropdown.classList.remove('open'); // Optionally close dropdown
-
-            // Hide/show projects based on selection
+    function applySelection(value) {
+      // Hide/show projects based on selection
       const project1 = document.querySelector('.project1');
-      if (this.textContent.trim() === "print designer") {
+      const project2 = document.querySelector('.project2');  
+      const project3 = document.querySelector('.project3');  
+      const project4 = document.querySelector('.project4');                    
+      const project5 = document.querySelector('.project5');        
+      if (value === "print designer") {
         project1.style.display = "none";
+        project4.style.display = "none";
       } else {
         project1.style.display = "";
       }
+    
+      if (value === "designer") {
+        project5.style.display = "none";
+      } else {
+        project5.style.display = "";
+      } 
+    }
+
+    // Run once on page load with default text
+    applySelection(button.childNodes[0].nodeValue.trim());
+
+    options.forEach(option => {
+      option.addEventListener('click', function(e) {
+        e.preventDefault(); // Prevent link navigation
+        button.childNodes[0].nodeValue = this.textContent + ' '; // Update button text, keep chevron
+        dropdown.classList.remove('open'); // Optionally close dropdown
+
+        applySelection(this.textContent.trim());
+      });
     });
   });
-});
-</script>
+</script>  
 
 <script>
   // ITS MY FIRST TIME LEARNING HTML CSS AND JS OKAY
