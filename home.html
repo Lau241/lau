@@ -37,7 +37,7 @@
         <ul>
           <li><a href="https://richardlau.ca/home">home</a></li>
           <li><a href="#">about</a></li>
-          <li><a href="#">scraps</a></li>
+          <li><a href="#">sparks</a></li>
           <li><a href="#">resume</a></li>
         </ul>
       </nav>
@@ -67,7 +67,7 @@
             <a href="#">system builder</a>
             <a href="#">product designer</a>
             <a href="#">ui/ux designer</a>
-            <a href="#">data specialist</a>
+            <a href="#">brand builder</a>
             <a href="#">storyteller</a>
           </div>
         </div>
@@ -130,7 +130,7 @@
           <a href="https://richardlau.ca/queensgambit" tabindex="-1">THIS PAGE IS A COVER</a>
           <a href="https://richardlau.ca/queensgambit" class="more">see project<span class="visually-hidden">details for the project 'THIS PAGE IS A COVER'</span></a>
         </header>
-        <p class="description">Breaking the bounderies of conventional book design by unlocking the visual soul of print.</p>
+        <p class="description">Breaking the bounderies of conventional book design by unlocking the visual soul of print</p>
         <div class="space"></div>
       </article>         
 
@@ -162,7 +162,35 @@
         </header>
         <p class="description">Typographical magazine feature about the existence of spirals within everything in the world</p>
         <div class="space"></div>
-      </article>      
+      </article>
+      
+      <article class="project6 fadeinup">
+        <a href="#"><span class="visually-hidden">View project: Illegal Arts</span>  
+          <div class="thumbnailParent">
+            <img src="media/illegal_arts_zine.png" alt="Zine cover and spread of 'Illegal Arts,' a scrappy collage style mixed with digital features." class="Thumbnail2"></img>
+          </div>
+        </a>
+        <header class="projectHeaders">
+          <a href="#" tabindex="-1">ILLeGAL ARtS</a>
+          <a href="#" class="more" tabindex="-1">see project<span class="visually-hidden">details for Illegal Arts</span></a>
+        </header>
+        <p class="description">A zine uncovering the 1990s Danish graffiti scene through the magazine 'Sneaktip'</p>
+        <div class="space"></div>
+      </article>
+      
+      <article class="project7 fadeinup">
+        <a href="#"><span class="visually-hidden">View project: Domain of Escher</span>  
+          <div class="thumbnailParent">
+            <img src="media/domain_of_escher.png" alt="3D environment of M.C Escher's 'Relativity' inspired architecture." class="Thumbnail2"></img>
+          </div>
+        </a>
+        <header class="projectHeaders">
+          <a href="#" tabindex="-1">Domain of Escher</a>
+          <a href="#" class="more" tabindex="-1">see project<span class="visually-hidden">details for Domain of Escher</span></a>
+        </header>
+        <p class="description">Architecture and myths of the abandoned world of M.C. Escher</p>
+        <div class="space"></div>
+      </article>       
       
       <div class="seeAll">
         <a href="#" class="more">See All Works</a>
@@ -224,18 +252,40 @@
       const project3 = document.querySelector('.project3');  
       const project4 = document.querySelector('.project4');                    
       const project5 = document.querySelector('.project5');        
+      const project6 = document.querySelector('.project6');     
+      const project7 = document.querySelector('.project7');
+      
+const projects = [project1, project2, project3, project4, project5, project6, project7];      
+projects.forEach(p => {
+  p.style.display = ""; // make visible
+});
+
+      if (value === "designer") {
+        project5.style.display = "none";
+        project6.style.display = "none";
+        project7.style.display = "none";        
+      }
+
       if (value === "print designer") {
         project1.style.display = "none";
         project4.style.display = "none";
-      } else {
-        project1.style.display = "";
-      }
-    
-      if (value === "designer") {
+        project7.style.display = "none";
+      }    
+      
+      if (value === "system builder") {     
+        project3.style.display = "none";        
+        project4.style.display = "none";
         project5.style.display = "none";
-      } else {
-        project5.style.display = "";
-      } 
+        project6.style.display = "none";
+        project7.style.display = "none";        
+      }
+      
+      if (value === "storyteller") {     
+        project2.style.display = "none";
+        project3.style.display = "none";        
+        project5.style.display = "none";
+        project6.style.display = "none";        
+      }     
     }
 
     // Run once on page load with default text
