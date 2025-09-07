@@ -31,7 +31,7 @@
         <ul>
           <li><a href="https://richardlau.ca/home">home</a></li>
           <li><a href="#">about</a></li>
-          <li><a href="#">tidbits</a></li>
+          <li><a href="#">sparks</a></li>
           <li><a href="#">resume</a></li>
         </ul>
       </nav>
@@ -40,9 +40,22 @@
   </div>
 </section>
 
+<!--
+<aside class="pageNavigation">
+  <nav class="navigationLinks">
+      <ul>
+        <li><a href="#testing1">Project Overview</a></li>
+        <li><a href="#testing2">Affinity Mapping</a></li>
+        <li><a href="#testing3">Findings & Goals</a></li>
+        <li><a href="#testing4">Users & Personas</a></li>
+      </u l>
+    </nav>  
+</aside>
+-->
+
 <main>
 
-  <section class="fadeinup">
+  <section>
     <header class="prHeader">
       <h1 class="prTitle">Art of <span style="white-space: nowrap;">Visual Data</span></h1>
       <div class="scrollIndicator">
@@ -50,7 +63,7 @@
       </div>    
     </header>
 
-    <div class="imageContainer fadeinup">
+    <div class="imageContainer">
       <img src="caseStudy1/aovdWebsiteMockup.png" alt="Desktop Mockup showing Article Home Screen." class="mockupImage"></img>
     </div>
   </section>
@@ -110,7 +123,7 @@
   </section>
 
 
-  <section class="gatheringData fadeinup">
+  <section class="gatheringData">
     <header class="gatheringDataHeaders fadeinup">
       <h3>gathering data</h3>
       <h2>Building empathetic narratives</h2>
@@ -448,7 +461,7 @@
     </article>
   </div>
   
-  <section class="finalDesigns fadeinup">
+  <section class="finalDesigns">
     <header class="gatheringDataHeaders fadeinup">
       <h3>final designs</h3>
       <h2>This is Art of <span class="line-break"></span>Visual Data</h2>
@@ -457,8 +470,8 @@
     <p class="paragraphStyle2 fadeinup" id="finalIntroduction">Art of Visual Data (AoVD) is a platform and brand that translates complex global datasets into visual stories, improving data literacy for all through accessible design, storytelling, and gamification. The ultimate goal of AoVD is to advocate awareness of global issues through the power of design.</p>
     
     <!-- desktop version -->
-    <section class="finalDesignImages desktopFinals fadeinup">
-      <video aria-label="Desktop Mockup of Art of Visual Data's homepage." class="mockupImage" autoplay muted loop playsinline>
+    <section class="finalDesignImages desktopFinals">
+      <video aria-label="Desktop Mockup of Art of Visual Data's homepage." class="mockupImage fadeinup" autoplay muted loop playsinline>
         <source src="https://dl.dropboxusercontent.com/scl/fi/y1w3c3i9j4l52jrnzc6mh/homePageMockup.mp4?rlkey=gybzsfu61upzaqydcbquip8b6&st=ho6cv7bz" type="video/mp4">
       </video>
       
@@ -493,8 +506,8 @@
 
     <!-- mobile version -->
 
-    <section class="finalDesignImages mobileFinals fadeinup">
-      <video aria-label="Desktop Mockup of Art of Visual Data's homepage." class="mockupImage" autoplay muted loop playsinline>
+    <section class="finalDesignImages mobileFinals">
+      <video aria-label="Desktop Mockup of Art of Visual Data's homepage." class="mockupImage fadeinup" autoplay muted loop playsinline>
         <source src="https://dl.dropboxusercontent.com/scl/fi/y1w3c3i9j4l52jrnzc6mh/homePageMockup.mp4?rlkey=gybzsfu61upzaqydcbquip8b6&st=ho6cv7bz" type="video/mp4">
       </video>
       
@@ -769,22 +782,21 @@ document.addEventListener("DOMContentLoaded", function() {
 <!-- Fade In Animation -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+//  if (window.innerWidth < 540) return; // skip mobile if you want
+
   const sections = document.querySelectorAll('.fadeinup');
-  const viewportHeight = document.documentElement.clientHeight;
-  const triggerPoint = 0.65; // desktop trigger
-
-  function checkFade() {
-    if (window.innerWidth < 540) return; // skip mobile
-
-    sections.forEach(section => {
-      if (!section.classList.contains('animateUp') && section.getBoundingClientRect().top <= viewportHeight * triggerPoint) {
-        section.classList.add('animateUp');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animateUp');
+        observer.unobserve(entry.target); // run once
       }
     });
-  }
+  }, {
+    threshold: 0.4 // element triggers when 40% visible
+  });
 
-  window.addEventListener('scroll', checkFade);
-  checkFade(); // initial check
+  sections.forEach(section => observer.observe(section));
 });
 </script>
 
