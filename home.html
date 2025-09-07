@@ -408,23 +408,24 @@ lastScrollY = window.scrollY;
 <!-- Fade In Animation -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+//  if (window.innerWidth < 540) return; // skip mobile if you want
+
   const sections = document.querySelectorAll('.fadeinup');
-  const viewportHeight = window.innerHeight;
-  const triggerPoint = 0.65; // desktop trigger
-
-  function checkFade() {
-
-    sections.forEach(section => {
-      if (!section.classList.contains('animateUp') && section.getBoundingClientRect().top <= viewportHeight * triggerPoint) {
-        section.classList.add('animateUp');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animateUp');
+        observer.unobserve(entry.target); // run once
       }
     });
-  }
+  }, {
+    threshold: 0.35 // element triggers when 35% visible
+  });
 
-  window.addEventListener('scroll', checkFade);
-  checkFade(); // initial check
+  sections.forEach(section => observer.observe(section));
 });
 </script>
+
 
 <!-- Loading Screen -->
 <script>
@@ -445,5 +446,4 @@ window.addEventListener("load", function() {
 });
 </script>
 </body>
-
 </html>
