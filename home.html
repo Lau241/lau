@@ -190,7 +190,21 @@
         </header>
         <p class="description">Architecture and myths of the abandoned world of M.C. Escher</p>
         <div class="space"></div>
-      </article>       
+      </article> 
+      
+      <article class="project8 fadeinup">
+        <a href="#"><span class="visually-hidden">View project: Black and White All Over</span>  
+          <div class="thumbnailParent">
+            <img src="media/domain_of_escher.png" alt="Screens of Desktop and Mobile mockups of website article." class="Thumbnail2"></img>
+          </div>
+        </a>
+        <header class="projectHeaders">
+          <a href="#" tabindex="-1">Black and White All Over</a>
+          <a href="#" class="more" tabindex="-1">see project<span class="visually-hidden">details for Domain of Escher</span></a>
+        </header>
+        <p class="description">A typographic focused article website</p>
+        <div class="space"></div>
+      </article>         
       
       <div class="seeAll">
         <a href="#" class="more">See All Works</a>
@@ -254,8 +268,10 @@
       const project5 = document.querySelector('.project5');        
       const project6 = document.querySelector('.project6');     
       const project7 = document.querySelector('.project7');
+      const project8 = document.querySelector('.project8');
+            
       
-const projects = [project1, project2, project3, project4, project5, project6, project7];      
+const projects = [project1, project2, project3, project4, project5, project6, project7, project8];      
 projects.forEach(p => {
   p.style.display = ""; // make visible
 });
@@ -263,7 +279,8 @@ projects.forEach(p => {
       if (value === "designer") {
         project5.style.display = "none";
         project6.style.display = "none";
-        project7.style.display = "none";        
+        project7.style.display = "none";
+        project8.style.display = "none";        
       }
 
       if (value === "print designer") {
@@ -286,6 +303,14 @@ projects.forEach(p => {
         project5.style.display = "none";
         project6.style.display = "none";        
       }     
+
+      if (value === "ui/ux designer") {     
+        project2.style.display = "none";
+        project3.style.display = "none";        
+        project5.style.display = "none";
+        project6.style.display = "none"; 
+        project7.style.display = "none";       
+      }         
     }
 
     // Run once on page load with default text
@@ -384,7 +409,7 @@ lastScrollY = window.scrollY;
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('.fadeinup');
-  const viewportHeight = document.documentElement.clientHeight;
+  const viewportHeight = window.innerHeight;
   const triggerPoint = 0.65; // desktop trigger
 
   function checkFade() {
