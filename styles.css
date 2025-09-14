@@ -8,6 +8,40 @@ body {
     min-height: 100vh;
 }
 
+.dragSection {
+  right: 30%;
+  margin-top: 15rem;
+  position: absolute;
+  z-index: 1;
+}
+
+.dragSection .draggable {
+  position: absolute;
+  width: 15vw;
+  height: auto;
+}
+
+.dragSection #A1 {
+  transform: translate(-32%, 5%);
+  zoom: 115%;
+}
+
+.dragSection #A2 {
+  transform: translate(15%, 20%);
+  zoom: 135%;
+}
+
+.dragSection #A3 {
+  transform: translateY(-15%);
+  zoom: 115%;
+}
+
+.dragSection #A4 {
+  width: 3vw;
+  height: auto;
+  transform: translate(600%, -25%);  
+}
+
 .loadingContainer {
   position: fixed;
   z-index: 25;
@@ -577,6 +611,11 @@ body {
 }
 
 @media (max-width: 1024px) {
+
+.dragSection {
+  display: none;
+}
+
 .fixedContainer header {
         margin-left: 8rem !important;
         margin-right: 8rem !important;

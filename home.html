@@ -17,6 +17,8 @@
   <meta property="og:image" content="https://richardlau.ca/media/type_specimen_mockup_concrete.png">
   <meta property="og:url" content="https://richardlau.ca/">
   <meta property="og:type" content="website">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.10.17/interact.min.js"></script>
 </head>
 
 <body>
@@ -48,11 +50,18 @@
 
 <main>
 
+      <div class="dragSection">
+        <img src="media/collageSelf.png" class="draggable" id="A1">
+        <img src="media/awardwinner.png" class="draggable" id="A2">
+        <img src="media/waterlooSelf.png" class="draggable" id="A3">
+        <img src="media/dragIcon.svg" class="draggable" id="A4">
+      </div>
+
   <!-- This is our hero section. -->
   <section class="mainpage fadeinup">
     <div class="mainTitle fadeinup">
       <h1>ENTER:<wbr>RICHARD</wbr></h1>
-      <img src="media/annoyingDog.gif" alt="8-Bit Dancing Dog." class="dog fadeinup">
+      <img src="media/annoyingDog.gif" alt="8-Bit Dancing Dog." class="dog fadeinup">      
     </div>
     <div class="subTitle"> 
       <div class="nowrap-container">  
@@ -76,6 +85,8 @@
       <p class="typewriter" id="typewriter">immersive experiences  </p>
     </div>
   </section>
+
+
 
   <!-- This section is for the scroll indicator as well as the dropdown menu indicator -->
   <section class="ornaments">
@@ -388,6 +399,38 @@ showNextPhrase();  // Show first immediately
 setInterval(showNextPhrase, 2250);
 </script>
 
+<script>
+interact('.draggable')
+  .draggable({
+    listeners: {
+      // when a user drags the object ('on dragmove') run this function
+      move: dragMoveListener,
+      // call this function on every dragend event
+      end (event) {
+        console.log("item dropped!")
+      }
+    }
+  })
+
+function dragMoveListener (event) {
+  // all this stuff gets the position of the item while it's being dragged
+  var target = event.target
+  // keep the dragged position in the data-x/data-y attributes
+  var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+  var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+
+  // translate the element
+  target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+
+  // update the position attributes
+  target.setAttribute('data-x', x)
+  target.setAttribute('data-y', y)
+}
+
+// this function is used later in the resizing and gesture demos
+window.dragMoveListener = dragMoveListener
+</script>  
+
 <!-- This is the navigation bar scroll effect -->
 <script>  
   const fixedContainer = document.querySelector('.fixedContainer');
@@ -419,7 +462,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }, {
-    threshold: 0.35 // element triggers when 35% visible
+    threshold: 0.4 // element triggers when 40% visible
   });
 
   sections.forEach(section => observer.observe(section));
