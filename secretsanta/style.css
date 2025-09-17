@@ -7,13 +7,8 @@
 }
 
 main {
-    display: flex;
-    flex-direction: row;
-    flex: 9;
-}
-
-.spacer {
-    flex: .1;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
 }
 
 header {
@@ -46,24 +41,22 @@ header {
 .item {
     display: flex;
     flex-direction: column;
-    width: 20%;
-    height: 20%;
-    margin: 0;
+    width: 15%;
+    height: 15%;
+    margin-bottom: 1rem;
     gap: 1rem;
-}
-
-.imgContainer {
-    width: 20%;
-    height: 20%;
+    text-decoration: none;
 }
 
 .item h2 {
     font-size: 100%;
+    color: #2968EF;
 }
 
 .wishlist {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    flex-direction:row;
     gap: 2.5%;
 }
 
