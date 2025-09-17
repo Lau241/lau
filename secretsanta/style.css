@@ -63,7 +63,7 @@ header {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
    transition: transform 0.5s ease-out;
    border-radius: 5%;    
-   margin-bottom: .5rem;
+   margin-bottom: .75rem;
 }
 
 .thumbnail:hover {
