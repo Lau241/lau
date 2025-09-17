@@ -44,7 +44,6 @@ header {
     width: 15%;
     height: 15%;
     margin-bottom: 1rem;
-    gap: 1rem;
     text-decoration: none;
 }
 
@@ -60,14 +59,20 @@ header {
     gap: 2.5%;
 }
 
-.wishlist img {
+.thumbnail {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
    transition: transform 0.5s ease-out;
    border-radius: 5%;    
+   margin-bottom: .5rem;
 }
 
-.wishlist img:hover {
+.thumbnail:hover {
     transform: scale(1.05);
+}
+
+.moneyIcon {
+    margin-bottom: .25rem;
+    color:darkgoldenrod;   
 }
 
 /* Base styles */
