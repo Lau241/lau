@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Forma DJR Mono';
+    src: url('FormaDJRMono-Regular.woff2') format('woff2'),
+        url('FormaDJRMono-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halenoir';
+    src: url('Halenoir-Bold.woff2') format('woff2'),
+        url('Halenoir-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HalenoirCompactText';
+    src: url('HalenoirCompactText-Regular.woff2') format('woff2'),
+        url('HalenoirCompactText-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halenoir';
+    src: url('Halenoir-DemiBold.woff2') format('woff2'),
+        url('Halenoir-DemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
