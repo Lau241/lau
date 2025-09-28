@@ -10,6 +10,10 @@
     offset-distance: 51.9%; /* % along the curve */
 }
 
+#d4Alt h3 {
+    color: #8C00FF;
+}
+
 #d4Alt {
     offset-distance: 55.25%; /* % along the curve */
 }
