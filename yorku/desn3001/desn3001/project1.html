@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Designed and coded by Richard Lau -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESN3001 Project 1</title>
+    <link rel="icon" href="../../media/RL.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dotid.css">
+    <link rel="stylesheet" href="dotidAlt.css">
+</head>
+
+
+
+    <!--I don't like how the line animation is being adaptive to mobile...-->
+    <!--Please future me, don't make this adaptive. Don't do this to yourself.-->
+    <!--Future me here. It's basically adaptive.-->
+<body>  
+
+    <main>
+
+    <!--ignore why its outside of main, its like 4am bro-->
+        <section class="legendImage visibility--hide">
+                <img src="media/legend.png"></img>
+        </section>          
+
+        <aside class="menu">
+            <header class="title">
+                <h1 class="demi">The Workflow System</h1>
+                <div class="subTitle">
+                    <h2 class="demi">ft. richard's brain</h2>
+                    <div class="indicatorGroup">
+                        <!-- ADD THESE IF MORE INDICATORS
+                        <div class="scrollIndicator">
+                            <div class="scrollIndicator-inner"></div>
+                        </div>     
+                        <div class="scrollIndicator">
+                            <div class="scrollIndicator-inner"></div>
+                        </div>
+                    -->
+                        <div class="scrollIndicator">
+                            <div class="scrollIndicator-inner"></div>
+                        </div>                                                 
+                    </div>             
+                </div>
+            </header>
+
+            <ul class="forma menuList">
+                <li class="mainList">
+                    <div class="flowBtn">[ <span class="underlineEffect">FLOWS</span> ]</div>
+                    <ul class="innerList flowList visibility--hide">
+                        <li class="txt increaseBtn">Increases in PSS Levels</li>
+                        <li class="txt decreaseBtn">Decreases in PSS Levels</li>
+                        <li class="txt allFlowBtn">Highlight Flows</li>
+                    </ul>
+                </li>
+                <li class="mainList">
+                    <div class="stockBtn">[ <span class="underlineEffect">STOCK</span> ]</div>
+                    <ul class="innerList stockList visibility--hide">
+                        <li class="txt pssLevelBtn">PSS Levels</li>
+                        <li class="txt timeBtn">Time Allocation</li>
+                        <li class="txt allStockBtn">Highlight Stocks</li>
+                    </ul>
+                </li>
+                <li class="mainList">
+                    <div class="loopBtn">[ <span class="underlineEffect">LOOPS</span> ]</div>
+                    <ul class="innerList loopList visibility--hide">
+                        <li class="txt copingBtn">Coping Feedback Loop</li>
+                    </ul>                    
+                </li>
+            </ul>
+
+            <div class="bottomHUD">
+                <div class="legend menuList2">
+                    <div class="forma">[ <span class="underlineEffect">LEGEND</span> ]</div>
+                </div>            
+                <div class="countdown forma">1d 12h 0m till Due</div>
+            </div>
+        </aside>        
+
+        <section class="lineDrawing">
+<!--the pathway starts here for path 1 n shit-->
+        <section class="line1">
+            <svg width="10225" height="480" class="line" viewBox="0 0 10225 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 252.829C115.125 215.299 239.597 222.932 354.677 252.511C439.196 274.138 514.802 316.916 598.685 339.816C691.8 365.26 791.282 369.076 888.216 362.556C935.649 359.376 983.4 355.718 1029.72 345.063C1095.62 329.797 1158.97 305.466 1223.59 285.588C1288.69 265.551 1355.54 245.991 1422.39 229.77C1461.39 220.388 1500.7 212.119 1540.18 205.599C1575.51 201.464 1623.27 204.486 1647.94 228.021C1670.54 248.694 1664.65 277.637 1640.3 293.539C1568.83 335.204 1486.06 284.952 1427.96 238.358C1402.66 218.957 1376.23 196.216 1345.83 187.47C1268.32 167.751 1265.29 262.689 1304.61 307.057C1383.87 404.221 1539.7 373.211 1609.74 279.704C1637.27 250.921 1674.68 169.659 1718.29 179.36C1759.67 196.216 1760.15 267.777 1742.96 304.512C1713.67 372.098 1627.25 372.575 1566.76 351.583C1481.76 325.821 1394.54 247.74 1416.19 153.757C1428.12 109.389 1479.06 91.737 1520.28 105.254C1577.27 120.52 1611.17 177.928 1643.16 224.523C1676.27 275.888 1737.39 315.167 1786.1 263.484C1841.49 195.898 1774.8 102.551 1693.94 108.753C1563.42 114.637 1514.71 284.634 1410.3 309.442C1357.77 321.051 1322.59 268.095 1341.85 219.275C1371.46 143.738 1471.42 133.242 1527.13 188.901C1590.48 245.355 1613.24 378.141 1718.61 362.874C1789.12 349.834 1824.93 266.505 1817.77 199.556C1812.84 97.4619 1716.86 60.2501 1618.97 78.856C1521.87 97.3029 1476.03 166.32 1459.16 253.624C1447.06 302.922 1442.13 352.856 1400.9 380.208C1352.99 408.673 1302.06 353.333 1339.46 309.283C1370.98 270.799 1438.63 268.095 1473.96 306.102C1521.87 355.877 1548.14 445.567 1632.66 423.781C1707.15 402.312 1724.34 311.509 1715.27 243.765C1706.67 179.837 1683.75 117.022 1630.91 76.4706C1600.66 53.253 1563.26 41.9623 1525.38 42.5984C1455.82 43.5525 1373.37 83.1497 1355.7 155.188C1336.28 235.336 1324.66 347.449 1402.02 397.224C1446.11 425.371 1508.34 425.212 1550.21 392.93C1593.02 359.694 1607.03 305.307 1607.35 248.376C1607.67 196.693 1597.16 137.536 1550.37 107.321C1503.57 77.1067 1436.88 85.5351 1385.78 101.119C1330.23 117.976 1280.25 153.439 1266.56 212.596C1255.74 259.667 1269.75 309.601 1295.53 349.357C1338.19 415.352 1415.55 457.176 1494.66 443.182C1641.25 413.285 1619.45 180.791 1814.75 171.249C1862.18 170.772 1908.02 184.766 1953.86 195.103C2019.12 209.892 2086.29 223.409 2153.46 220.388C2240.85 216.412 2325.21 187.947 2403.52 150.258C2469.73 118.294 2531.33 67.4062 2602.01 45.9379C2691.94 18.5856 2792.05 61.8404 2855.56 125.927C2898.7 169.5 2933.88 220.388 2979.4 261.734C3009.16 288.769 3044.02 309.601 3081.43 324.39C3124.56 341.406 3170.4 350.311 3216.56 353.651C3252.38 356.195 3285.48 351.742 3320.98 349.516C3356.47 347.29 3390.38 349.834 3423.64 354.764C3461.21 360.171 3499.57 366.214 3537.61 362.556C3555.44 360.807 3574.22 356.513 3590.77 350.152C3605.42 344.427 3611.78 337.43 3606.85 321.528C3599.37 297.833 3592.05 274.138 3584.88 250.444C3571.83 206.871 3556.87 163.616 3545.57 119.566C3544.14 114.16 3544.61 106.844 3537.45 105.572C3532.36 104.618 3526.31 108.594 3521.53 110.184C3515.64 112.251 3509.91 114.319 3504.02 116.386C3484.29 123.224 3464.39 129.267 3444.49 135.31C3436.38 137.854 3420.3 137.377 3415.37 145.169C3412.66 149.463 3415.37 155.824 3416.64 159.959C3433.51 211.642 3449.43 263.484 3465.51 315.485C3467.73 322.641 3472.99 332.66 3472.99 339.975C3478.72 358.74 3481.1 369.553 3489.22 387.046C3494.79 399.291 3504.82 395.633 3514.69 392.294C3549.71 380.208 3584.09 365.896 3620.22 357.149C3634.54 353.651 3625.95 333.137 3623.56 325.185C3618.47 308.488 3614.17 302.763 3609.87 285.747C3598.73 249.013 3587.75 212.278 3576.61 175.543C3569.44 152.007 3563.08 128.313 3556.39 104.618C3552.73 91.896 3544.61 81.8775 3530.29 84.1038C3518.67 85.8531 3500.2 90.9419 3490.34 97.4619C3485.24 101.438 3485.08 108.753 3479.83 112.887C3475.37 116.386 3469.96 118.612 3464.55 118.93C3456.11 119.566 3463.91 114.955 3466.78 112.569C3471.55 109.548 3478.88 100.96 3468.69 102.71C3452.14 107.799 3435.1 110.82 3418.71 116.386C3405.18 120.998 3394.2 129.426 3394.83 144.851C3395.63 164.888 3406.93 185.244 3412.66 204.327C3425.55 246.309 3440.67 295.448 3453.73 338.066C3457.87 351.583 3462.16 365.101 3466.14 378.777C3468.85 387.682 3472.03 395.792 3479.35 401.835C3501.32 419.964 3538.41 409.309 3562.92 403.426C3651.1 381.957 3726.23 325.026 3787.19 259.667C3805.33 240.107 3821.09 218.321 3840.19 199.556C3904.66 136.582 4006.05 173.635 4071.47 214.822C4108.55 238.358 4135.93 272.866 4175.09 294.653C4214.24 316.439 4254.67 328.207 4296.06 331.546C4375.01 337.907 4456.18 319.778 4528.61 291.631C4576.67 273.025 4632.54 239.471 4659.28 193.672C4671.54 172.999 4675.68 145.805 4663.74 124.973C4655.62 110.979 4640.66 101.279 4624.59 99.5292C4601.82 96.9848 4577.63 112.41 4565.85 131.334C4550.09 156.46 4554.23 188.265 4568.08 213.391C4583.04 240.425 4608.99 261.893 4636.68 274.934C4675.52 293.062 4718.02 302.763 4760.68 305.625C4816.07 309.442 4872.09 302.127 4925.1 286.383C4951.2 278.591 4976.35 268.732 5000.86 256.646C5028.72 242.97 5054.03 223.728 5079.81 206.235C5100.19 192.4 5118.81 175.384 5138.71 160.754C5140.3 159.641 5141.89 158.368 5143.64 157.255C5167.36 140.081 5192.19 123.86 5219.72 113.364C5233.41 108.117 5247.58 104.936 5262.06 103.346C5276.55 101.756 5293.9 104.936 5309.18 106.208C5322.87 107.48 5337.35 106.844 5349.13 98.8931C5362.66 89.8287 5369.82 70.7458 5368.87 55.1613C5362.02 16.5183 5334.17 63.5896 5336.71 86.4892C5335.92 115.114 5350.88 150.735 5380.01 158.527C5421.87 165.684 5441.77 107.799 5431.58 70.9048C5415.66 16.3593 5368.23 50.3906 5356.45 88.5565C5334.96 152.962 5391.79 162.185 5426.65 179.837C5430.62 182.858 5429.67 186.834 5425.21 189.219C5394.17 204.008 5307.11 214.981 5293.9 174.112C5291.19 113.523 5417.89 80.4463 5453.23 118.771C5491.27 151.371 5475.99 205.599 5434.13 227.385C5420.12 235.813 5404.52 242.015 5390.2 243.447C5358.84 248.535 5337.51 217.844 5354.86 192.4C5377.78 157.096 5469.78 139.126 5502.57 165.206C5521.67 181.904 5511.48 210.528 5493.5 224.523C5466.28 250.444 5380.17 263.007 5385.26 209.097C5391.79 184.13 5433.97 174.43 5449.41 188.265C5466.6 203.849 5456.89 235.177 5478.06 248.058C5511.16 268.414 5572.13 245.991 5560.51 199.238C5532.33 90.4648 5380.8 119.089 5379.37 227.862C5382.55 331.705 5505.59 343.791 5576.58 292.426C5600.78 277.796 5617.65 251.08 5608.58 222.455C5584.7 155.029 5514.35 116.545 5457.84 82.5136C5349.13 17.4725 5374.44 297.674 5584.38 241.061C5607.62 232.792 5632.93 226.431 5657.6 230.248C5690.55 235.177 5714.9 260.303 5745.15 272.071C5784.94 287.656 5827.6 279.863 5868.5 273.82C5909.41 267.777 5951.91 268.732 5993.93 274.774C6031.49 280.181 6069.85 286.224 6107.9 282.567C6125.72 280.817 6144.5 276.524 6161.06 270.163C6175.7 264.438 6182.07 257.441 6177.13 241.538C6169.65 217.844 6162.33 194.149 6155.17 170.454C6142.12 126.881 6127.15 83.6268 6115.85 39.5769C6114.42 34.1701 6114.9 26.8549 6107.74 25.5827C6102.64 24.6286 6096.59 28.6042 6091.82 30.1945C6085.93 32.2618 6080.2 34.3291 6074.31 36.3964C6054.57 43.2345 6034.68 49.2774 6014.78 55.3204C6006.66 57.8648 5990.59 57.3877 5985.65 65.1799C5982.95 69.4736 5985.65 75.8345 5986.93 79.9692C6003.8 131.652 6019.71 183.494 6035.79 235.495C6038.02 242.651 6043.27 252.67 6043.27 259.985C6049 278.75 6051.39 289.564 6059.51 307.057C6065.08 319.301 6075.11 315.644 6084.97 312.304C6119.99 300.218 6154.37 285.906 6190.5 277.16C6204.83 273.661 6196.23 253.147 6193.85 245.196C6188.75 228.498 6184.46 222.773 6180.16 205.758C6169.02 169.023 6158.03 132.288 6146.89 95.5536C6139.73 72.018 6133.36 48.3233 6126.68 24.6286C6123.02 11.9066 6114.9 1.88805 6100.57 4.11439C6088.95 5.86367 6070.49 10.9525 6060.62 17.4725C6055.53 21.4481 6055.37 28.7632 6050.12 32.8979C6045.66 36.3964 6040.25 38.6228 6034.84 38.9408C6026.4 39.5769 6034.2 34.9652 6037.06 32.5798C6041.84 29.5584 6049.16 20.971 6038.97 22.7203C6022.42 27.8091 6005.39 30.8305 5988.99 36.3964C5975.47 41.0081 5964.48 49.4364 5965.12 64.8618C5965.92 84.899 5977.22 105.254 5982.95 124.337C5995.84 166.32 6010.96 215.458 6024.01 258.077C6028.15 271.594 6032.45 285.111 6036.43 298.787C6039.13 307.693 6042.32 315.803 6049.64 321.846C6071.6 339.975 6108.69 329.32 6133.2 323.436C6151.99 318.824 6171.88 317.234 6190.5 323.436C6206.1 328.684 6219.16 338.702 6232.53 348.085C6248.28 359.058 6264.84 367.963 6283.62 372.257C6298.26 375.596 6313.54 376.391 6328.51 377.664C6343.47 378.936 6359.54 380.208 6375.14 381.003C6400.61 382.275 6426.08 382.275 6451.54 379.731C6477.01 377.186 6500.57 372.098 6523.33 362.397C6546.09 352.697 6567.42 338.384 6584.45 319.778C6624.72 277.478 6659.58 158.686 6589.23 131.97C6542.11 124.655 6516.33 190.968 6528.42 231.838C6547.05 314.213 6633.32 372.257 6711.47 379.095C6773.55 389.272 6854.09 334.091 6831.96 267.141C6818.11 238.358 6787.87 256.964 6784.37 283.362C6775.77 323.277 6811.75 364.623 6853.13 360.33C6897.06 358.581 6941.95 321.369 6989.86 309.76C7042.23 295.766 7094.43 313.418 7143.78 329.638C7193.12 345.859 7246.92 359.535 7298.17 355.877C7328.26 353.81 7357.38 344.904 7383.01 328.684C7401.63 316.916 7417.87 301.968 7432.19 285.27C7450.5 263.802 7463.55 239.312 7476.6 214.345C7487.9 192.718 7500.48 171.567 7514.49 151.53C7541.7 112.41 7575.61 74.2443 7619.38 53.5711C7637.05 45.1428 7656.47 40.213 7676.04 40.054C7799.72 45.9379 7801.47 176.338 7750.69 257.6C7748.94 260.462 7754.2 252.352 7765.66 236.131C7789.69 207.348 7812.93 151.848 7847.47 134.197C7882.49 136.264 7842.69 322.005 7836.17 368.122C7825.98 421.554 7815.79 465.127 7811.02 478.803C7817.55 440.319 7851.13 337.589 7871.35 284.157C7886.63 245.991 7926.58 124.973 7933.1 147.078C7924.99 235.972 7889.33 333.773 7854 415.034C7839.19 448.111 7828.69 468.308 7829.16 466.399C7857.02 407.401 7924.35 291.313 7969.55 224.046C7997.41 181.745 8027.17 139.126 8044.68 134.197C8081.45 127.995 8057.57 232.156 8052.96 254.26C8003.62 448.589 7912.09 434.276 7942.97 236.609C7955.39 152.325 8069.83 128.472 8128.09 179.042C8175.52 223.887 8144.32 300.855 8099.6 336.476C8050.09 377.504 7984.83 391.34 7922.92 394.679C7874.53 396.428 7821.37 391.34 7781.41 362.079C7724.11 322.323 7731.59 239.312 7781.73 196.057C7858.77 128.154 8003.62 106.844 8079.22 184.448C8106.92 214.186 8109.31 260.303 8078.11 284.316C8027.97 321.846 7927.06 321.687 7875.17 286.383C7845.88 263.643 7871.5 237.245 7898.72 229.93C8001.07 195.898 8152.92 285.906 8210.06 164.252C8214.04 157.255 8215.63 153.757 8215.47 156.142C8198.92 228.498 8183.48 366.85 8082.56 371.143C8034.18 375.596 7911.93 332.023 7899.04 290.518C7910.82 264.438 7998.04 310.237 8026.22 319.301C8130 354.923 8251.6 411.218 8357.77 366.85C8443.4 330.433 8484.63 219.434 8577.43 197.488C8648.73 182.858 8652.4 238.676 8602.42 269.209C8560.24 297.992 8503.73 299.741 8453.75 296.402C8307.15 284.157 8159.92 249.331 8018.26 203.372C7986.11 190.809 7958.25 171.408 7941.38 141.194C7919.89 103.187 7917.19 54.8433 7910.18 49.1184C7905.09 43.2345 7898.4 64.3848 7899.84 97.6209C7900.47 144.056 7922.6 189.219 7962.39 213.709C7994.54 234.859 8033.22 243.924 8071.1 249.012C8194.94 268.254 8324.34 244.242 8447.22 266.346C8525.06 288.769 8569.15 394.202 8660.67 384.184C8661.63 384.184 8662.42 384.025 8663.38 383.865C8682.16 381.321 8700.78 377.504 8719.25 372.734C8735.8 368.44 8752.19 363.192 8768.27 357.626C8783.23 352.379 8798.2 346.813 8813.16 341.565C8828.12 336.317 8841.81 331.546 8856.29 327.571C8870.78 323.595 8885.42 320.574 8900.38 318.824C8916.14 317.075 8932.22 316.916 8947.97 318.347C8966.12 320.097 8984.11 323.913 9001.61 329.32C9022.94 335.84 9043 345.063 9063.21 354.446C9083.43 363.828 9106.99 366.055 9129.11 366.691C9152.83 367.327 9176.7 364.942 9200.1 360.648C9223.5 356.354 9247.37 349.993 9270.29 342.678C9293.21 335.363 9315.98 327.094 9338.58 318.506C9421.51 287.178 9508.26 253.306 9596.28 264.597C9670.45 274.138 9736.98 314.849 9810.04 331.387C9834.24 336.794 9858.75 339.498 9883.42 342.201C9908.25 344.904 9938.01 351.265 9962.85 347.29C9985.77 343.632 10006.9 333.455 10028.3 324.708C10064.1 310.078 10107.2 312.304 10145.1 313.577C10171.7 314.531 10198.4 313.577 10225 313.577" stroke="black" stroke-width="6"/>
+            </svg>            
+            <div class="dot-container">
+            <div class="classContainer">
+                <img class="dot" id="d1" src="../desn3001/media/circle.svg">
+                    <img src="media/img01.png" class="imgInfo i1" id="d1"></img>
+                    <div class="pointInfo bot" id="d1">
+                        <header>
+                            <h3 class="forma">[ system input ]</h3>
+                            <h2 class="demi">Work Assigned!</h2>
+                        </header>
+                    </div>
+                    <img src="media/img02.png" class="imgInfo i2" id="d1"></img>
+                <div class="effect pointInfo" id="d1">
+                </div>                  
+                </img>
+            </div>
+            </div>
+
+            <div class="dot-container">  
+            <div class="classContainer flowIncrease allFlowClass">
+                <img class="dot" id="d2" src="../desn3001/media/circle.svg">
+                    <img src="media/thoughtBubble.png" class="imgInfo i3" id="d2"></img>
+                    <div class="pointInfo top" id="d2">
+                        <header>
+                            <h3 class="forma">[ flow ]</h3>
+                            <h2 class="demi">Brainstorming Ideas</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfo" id="d2">
+                </div>                  
+                </img>
+            </div>
+            </div>            
+
+            <div class="dot-container">  
+            <div class="classContainer pssLevels allStockBtn allStockClass copingLoop">
+                <img class="dot" id="d3" src="../desn3001/media/circle.svg">
+                <img src="media/img03.png" class="imgInfo i6" id="d3"></img>
+                    <div class="pointInfo bot" id="d3">
+                        <header>
+                            <h3 class="forma">[ stock ]</h3>
+                            <h2 class="demi">PSS Levels Rising</h2>
+                        </header>
+                        <div class="statPss">
+                            <div class="slider">
+                                <div class="clip" id="d3">
+                                    <img class="gradient" src="media/gradient.png"></img>
+                                </div>
+                                    <p class="halText pssLevel">25PSS</p>
+                            </div>
+                            <p class="halText pssLevel">Moderate Stress</p>                     
+                        </div>
+                    </div>
+                <div class="effect pointInfo" id="d3">
+                </div>                   
+                </img>    
+            </div>       
+            </div>
+
+            <div class="dot-container">
+            <div class="classContainer">
+                <img class="dot" id="d4" src="../desn3001/media/circle_choice.svg">
+                    <img src="media/pathwayTop.svg" class="imgInfo i4 swapBtn" id="d4"></img>
+                    <div class="pointInfo bot" id="d4">
+                        <header>
+                            <h3 class="forma">[ choice ]</h3>
+                            <h2 class="demi">Choose a Path!</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfo" id="d4">
+                </div>                  
+                </img>
+            </div>
+            </div>    
+            
+            <div class="dot-container">
+            <div class="classContainer flowDecrease allFlowClass copingLoop">
+                <img class="dot" id="d5" src="../desn3001/media/circle_selected.svg">
+                    <div class="pointInfo bot" id="d5">
+                        <header>
+                            <h3 class="forma">[ flow ]</h3>
+                            <h2 class="demi">Cope with Stress</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfo" id="d4">
+                </div>                  
+                </img>
+            </div>
+            </div>
+            
+            <div class="dot-container">
+            <div class="classContainer timeStock allStockClass copingLoop">
+                <img class="dot" id="d6" src="../desn3001/media/circle.svg">
+                <img src="media/timergif.gif" class="imgInfo i5" id="d6"></img>   
+                    <div class="pointInfo top" id="d6">                     
+                        <header>
+                            <h3 class="forma">[ stock ]</h3>
+                            <h2 class="demi">Time Invested Gaming</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfo" id="d6">
+                </div>                  
+                </img>
+            </div>
+            </div>      
+            
+            <div class="dot-container">  
+            <div class="classContainer pssLevels allStockClass copingLoop">
+                <img class="dot" id="d7" src="../desn3001/media/circle.svg">
+                <img src="media/img04.png" class="imgInfo i6" id="d7"></img>                  
+                    <div class="pointInfo bot custom1" id="d7">
+                        <header>
+                            <h3 class="forma">[ stock ]</h3>
+                            <h2 class="demi">PSS Levels Dropping</h2>
+                        </header>
+                        <div class="statPss">
+                            <div class="slider">
+                                <div class="clip" id="d7">
+                                    <img class="gradient" src="media/gradient.png"></img>
+                                </div>
+                                    <p class="halText pssLevel">23PSS</p>
+                            </div>
+                            <p class="halText pssLevel">Moderate Stress</p>                     
+                        </div>
+                    </div>
+                <div class="effect pointInfo" id="d7">
+                </div>                   
+                </img>      
+            </div>     
+            </div>            
+
+            <div class="dot-container">
+            <div class="classContainer flowIncrease allFlowClass copingLoop">
+                <img class="dot" id="d8" src="../desn3001/media/circle.svg">   
+                    <div class="pointInfo bot" id="d8">                     
+                        <header>
+                            <h3 class="forma">[ flow ]</h3>
+                            <h2 class="demi">Time Pressure</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfo" id="d8">
+                </div>                  
+                </img>
+            </div>
+            </div>
+
+            <div class="dot-container">
+            <div class="classContainer flowIncrease allFlowClass copingLoop">
+                <img class="dot" id="d9" src="../desn3001/media/circle.svg">   
+                    <div class="pointInfo top" id="d9">                     
+                        <header>
+                            <h3 class="forma">[ flow ]</h3>
+                            <h2 class="demi">Productivity Guilt</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfo" id="d9">
+                </div>                  
+                </img>
+            </div>
+            </div>
+            
+            <div class="dot-container">  
+            <div class="classContainer pssLevels allStockClass copingLoop">
+                <img class="dot" id="d10" src="../desn3001/media/circle.svg">
+                <img src="media/img05.png" class="imgInfo i7" id="d10"></img>                  
+                    <div class="pointInfo bot custom2" id="d10">
+                        <header>
+                            <h3 class="forma">[ stock ]</h3>
+                            <h2 class="demi">PSS Levels Rising</h2>
+                        </header>
+                        <div class="statPss">
+                            <div class="slider">
+                                <div class="clip" id="d10">
+                                    <img class="gradient" src="media/gradient.png"></img>
+                                </div>
+                                    <p class="halText pssLevel">30PSS</p>
+                            </div>
+                            <p class="halText pssLevel">High Stress</p>                     
+                        </div>
+                    </div>
+                <div class="effect pointInfo" id="d10">
+                </div>                   
+                </img>     
+            </div>      
+            </div>     
+            
+            <div class="dot-container">
+            <div class="classContainer flowDecrease allFlowClass copingLoop">
+                <img class="dot" id="d11" src="../desn3001/media/circle.svg">
+                    <div class="pointInfo bot" id="d11">
+                        <header>
+                            <h3 class="forma">[ flow ]</h3>
+                            <h2 class="demi">Cope with Stress</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfo" id="d11">
+                </div>                  
+                </img>
+            </div>
+            </div> 
+            
+            <div class="dot-container">
+            <div class="classContainer timeStock allStockClass copingLoop">
+                <img class="dot" id="d12" src="../desn3001/media/circle.svg">
+                <img src="media/timergif.gif" class="imgInfo i5" id="d12"></img>   
+                    <div class="pointInfo top" id="d12">                     
+                        <header>
+                            <h3 class="forma">[ stock ]</h3>
+                            <h2 class="demi">Time Invested Gaming</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfo" id="d12">
+                </div>                  
+                </img>
+            </div>
+            </div>
+            
+            <div class="dot-container">  
+            <div class="classContainer pssLevels allStockClass copingLoop">
+                <img class="dot" id="d13" src="../desn3001/media/circle.svg">
+                <img src="media/img06.png" class="imgInfo i8" id="d13"></img>                  
+                    <div class="pointInfo bot custom3" id="d13">
+                        <header>
+                            <h3 class="forma">[ stock ]</h3>
+                            <h2 class="demi">PSS Levels Dropping</h2>
+                        </header>
+                        <div class="statPss">
+                            <div class="slider">
+                                <div class="clip" id="d7">
+                                    <img class="gradient" src="media/gradient.png"></img>
+                                </div>
+                                    <p class="halText pssLevel">27PSS</p>
+                            </div>
+                            <p class="halText pssLevel">High Stress</p>                     
+                        </div>
+                    </div>
+                <div class="effect pointInfo" id="d13">
+                </div>                   
+                </img>    
+            </div>       
+            </div>     
+            
+            <div class="dot-container">
+            <div class="classContainer flowIncrease allFlowClass copingLoop">
+                <img class="dot" id="d14" src="../desn3001/media/circle.svg">   
+                    <div class="pointInfo top" id="d14">                     
+                        <header>
+                            <h3 class="forma">[ flow ]</h3>
+                            <h2 class="demi">Productivity Guilt</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfo" id="d14">
+                </div>                  
+                </img>
+            </div>
+            </div>        
+
+            <div class="dot-container">
+            <div class="classContainer flowIncrease allFlowClass copingLoop">
+                <img class="dot" id="d15" src="../desn3001/media/circle.svg">   
+                    <div class="pointInfo bot" id="d15">                     
+                        <header>
+                            <h3 class="forma">[ flow ]</h3>
+                            <h2 class="demi">Time Pressure</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfo" id="d15">
+                </div>                  
+                </img>
+            </div>
+            </div>       
+            
+            <div class="dot-container">  
+            <div class="classContainer pssLevels allStockClass copingLoop">
+                <img class="dot" id="d16" src="../desn3001/media/circle.svg">
+                <img src="media/img06.png" class="imgInfo i8" id="d16"></img>                  
+                    <div class="pointInfo top" id="d16">
+                        <header>
+                            <h3 class="forma">[ stock ]</h3>
+                            <h2 class="demi">PSS Levels Rising</h2>
+                        </header>
+                        <div class="statPss">
+                            <div class="slider">
+                                <div class="clip" id="d16">
+                                    <img class="gradient" src="media/gradient.png"></img>
+                                </div>
+                                    <p class="halText pssLevel">33PSS</p>
+                            </div>
+                            <p class="halText pssLevel">Severe Stress</p>                     
+                        </div>
+                    </div>
+                <div class="effect pointInfo" id="d16">
+                </div>                   
+                </img>       
+            </div>    
+            </div>   
+            
+            <div class="dot-container">
+            <div class="classContainer allFlowClass">
+                <img class="dot" id="d17" src="../desn3001/media/circle.svg">   
+                    <div class="pointInfo bot" id="d17">                     
+                        <header>
+                            <h3 class="forma">[ flow ]</h3>
+                            <h2 class="demi">Time Pressure</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfo" id="d17">
+                </div>                  
+                </img>
+            </div>
+            </div>
+
+            <div class="dot-container">
+            <div class="classContainer timeStock allStockClass">
+                <img class="dot" id="d18" src="../desn3001/media/circle.svg">  
+                <img src="media/img07.png" class="imgInfo i9" id="d18"></img>  
+                    <div class="pointInfo top" id="d18">                     
+                        <header>
+                            <h3 class="forma">[ stock ]</h3>
+                            <h2 class="demi">Time Reinvested Working</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfo" id="d18">
+                </div>                  
+                </img>
+            </div>
+            </div>        
+            
+            <div class="dot-container">  
+            <div class="classContainer pssLevels allStockClass">
+                <img class="dot" id="d19" src="../desn3001/media/circle.svg">
+                <img src="media/img08.png" class="imgInfo i10" id="d19"></img>                  
+                    <div class="pointInfo top" id="d19">
+                        <header>
+                            <h3 class="forma">[ stock ]</h3>
+                            <h2 class="demi">PSS Levels Conclusion</h2>
+                        </header>
+                        <div class="statPss">
+                            <div class="slider">
+                                <div class="clip" id="d19">
+                                    <img class="gradient" src="media/gradient.png"></img>
+                                </div>
+                                    <p class="halText pssLevel">33PSS</p>
+                            </div>
+                            <p class="halText pssLevel">Severe Stress</p>                     
+                        </div>
+                    </div>
+                <div class="effect pointInfo" id="d19">
+                </div>                   
+                </img>      
+            </div>     
+            </div>       
+            
+            <div class="dot-container">
+            <div class="classContainer">
+                <img class="dot" id="d20" src="../desn3001/media/circle.svg">  
+                <img src="media/img09.png" class="imgInfo i11" id="d20"></img> 
+                <img src="media/img10.png" class="imgInfo i12" id="d20"></img>   
+                    <div class="pointInfo bot" id="d20">                     
+                        <header>
+                            <h3 class="forma">[ system output ]</h3>
+                            <h2 class="demi">Work Complete!</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfo" id="d20">
+                </div>                  
+                </img>
+            </div>
+            </div>
+        </section>    
+
+        <section class="line2">
+
+<svg width="7408" height="446" class="lineAlt" viewBox="0 0 7408 446" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 249.57C115.17 212.04 239.62 219.72 354.66 249.21C439.17 270.87 514.7 313.65 598.63 336.6C691.76 362.06 791.19 365.81 888.12 359.37C935.49 356.22 983.28 352.57 1029.61 341.88C1095.56 326.65 1158.86 302.31 1223.44 282.39C1288.55 262.3 1355.43 242.74 1422.19 226.59C1461.16 217.16 1500.42 208.89 1539.98 202.35C1575.39 198.26 1623.07 201.27 1647.68 224.84C1670.31 245.45 1664.4 274.5 1639.99 290.38C1568.54 332.1 1485.69 281.85 1427.75 235.15C1402.5 215.77 1376.07 193.04 1345.6 184.21C1268.08 164.53 1265.02 259.46 1304.42 303.89C1383.71 401.18 1539.49 370.16 1609.56 276.47C1637.13 247.62 1674.55 166.41 1718.09 176.02C1759.51 192.88 1760 264.48 1742.7 301.32C1713.36 368.98 1627.06 369.37 1566.51 348.46C1481.55 322.67 1394.26 244.51 1415.96 150.42C1427.94 105.94 1478.78 88.3404 1520.06 101.85C1577.11 117.19 1610.94 174.63 1642.99 221.23C1676.13 272.71 1737.27 312.01 1785.89 260.19C1841.27 192.58 1774.55 99.1904 1693.73 105.3C1563.25 111.27 1514.53 281.34 1410.09 306.1C1357.57 317.79 1322.36 264.78 1341.69 215.86C1371.23 140.27 1471.23 129.81 1526.9 185.43C1590.22 241.94 1613.05 374.84 1718.33 359.55C1788.85 346.43 1824.6 263.15 1817.45 196.03C1812.52 93.8104 1716.48 56.6504 1618.69 75.2404C1521.64 93.7304 1475.77 162.79 1458.9 250.12C1446.82 299.38 1441.94 349.43 1400.61 376.8C1352.78 405.25 1301.74 349.93 1339.12 305.74C1370.68 267.18 1438.33 264.47 1473.59 302.63C1521.42 352.48 1547.75 442.23 1632.27 420.44C1706.78 398.99 1723.99 308.11 1714.87 240.21C1706.28 176.3 1683.37 113.43 1630.51 72.7504C1600.34 49.5304 1562.83 38.2504 1524.93 38.7904C1455.42 39.7704 1372.93 79.4004 1355.34 151.45C1335.91 231.73 1324.37 343.86 1401.64 393.72C1445.68 421.93 1508.01 421.73 1549.87 389.38C1592.72 356.14 1606.68 301.7 1607.02 244.75C1607.33 193.09 1596.81 133.78 1550.12 103.54C1502.77 72.8704 1436.59 81.8104 1385.63 97.3204C1330.05 114.23 1280.04 149.61 1266.44 208.82C1255.63 255.9 1269.66 305.86 1295.36 345.73C1337.96 411.8 1415.37 453.65 1494.54 439.63C1641.09 409.65 1619.25 176.95 1814.62 167.43C1862.01 166.99 1907.92 180.94 1953.68 191.3C2018.87 206.04 2086.08 219.65 2153.29 216.55C2240.67 212.52 2325.02 184.14 2403.25 146.31C2466.65 115.65 2522.57 73.9604 2588.53 47.7904C2660.36 19.2904 2739.63 0.510383 2817.31 3.27038C2921.6 6.98038 3031.79 24.8804 3125.44 73.2204C3135.46 78.3904 3144.43 86.7804 3154.18 92.8104C3186.39 112.74 3211.05 144.45 3240.15 168.44C3245.9 173.18 3251.5 179.1 3258.76 181.48C3267.47 184.33 3275.43 180.03 3283.52 177.17C3318.94 164.65 3356.8 158.13 3391.24 143.03C3392.91 142.3 3394.65 129.52 3395.21 127.28C3397 120.11 3398.35 112.89 3400.52 105.77C3402.15 100.45 3403.68 94.9404 3403.21 89.4004C3401.76 72.3104 3384.25 74.2904 3371.59 72.7904C3343.19 68.0604 3314.14 65.7604 3285.58 61.9404C3255.5 57.9204 3225.44 53.7804 3195.38 49.6104C3182.22 47.4904 3171.35 51.3404 3164.21 62.9804C3153.36 107 3147.72 130.48 3142.91 175.56C3139.8 204.7 3157.49 215.82 3184.19 219.37C3217.17 223.76 3250.11 228.46 3283.05 233.14C3298.81 235.45 3314.65 237.28 3330.23 240.49C3337.06 241.9 3344.09 243.08 3350.99 242.03C3380.65 237.52 3382.25 192.64 3385.91 169.94C3386.91 163.72 3388.23 156.64 3393.61 153.38C3402.43 148.05 3417.56 155.66 3426.34 158.11C3474.11 171.41 3511.49 159.88 3559.22 153.78C3720.78 133.14 3778.29 315.22 3915.65 354.71C3991.95 376.64 4080 359.6 4136.15 301.24C4171.12 264.89 4200.57 196.33 4262.7 210.89C4265.13 211.46 4267.53 212.14 4269.9 212.91C4314.37 227.35 4337.62 271.54 4378.01 292.02C4459.02 333.1 4573.27 307.63 4661.08 320.29C4698.65 325.71 4737 331.75 4775.05 328.08C4792.84 326.36 4811.62 322.06 4828.25 315.62C4842.94 309.94 4849.27 302.87 4844.25 286.9C4836.81 263.2 4829.48 239.47 4822.27 215.72C4809.14 172.18 4794.2 128.77 4783.01 84.6904C4781.64 79.3104 4781.98 71.9904 4774.97 70.6704C4769.85 69.7104 4763.83 73.6204 4759.13 75.3004C4753.29 77.4004 4747.45 79.4804 4741.59 81.5304C4721.89 88.4204 4701.96 94.4204 4682 100.51C4673.91 102.98 4657.86 102.51 4652.94 110.38C4650.3 114.61 4652.78 121 4654.15 125.21C4671 176.89 4686.9 228.88 4702.94 280.82C4705.14 287.94 4710.42 297.99 4710.42 305.3C4716.15 324 4718.55 334.9 4726.59 352.33C4732.22 364.54 4742.15 360.99 4752.11 357.56C4787.17 345.5 4821.43 331.15 4857.55 322.39C4871.9 318.91 4863.34 298.34 4860.96 290.46C4855.91 273.71 4851.59 267.99 4847.35 251.02C4836.26 214.27 4825.18 177.52 4814.09 140.78C4806.99 117.24 4800.52 93.5304 4793.84 69.8504C4790.24 57.0704 4782.09 47.1404 4767.71 49.2604C4756.16 50.9604 4737.56 56.1404 4727.82 62.6304C4722.68 66.6704 4722.61 73.8704 4717.25 78.1304C4712.78 81.6804 4707.38 83.8104 4701.93 84.2104C4693.44 84.8404 4701.22 80.2904 4704.12 77.9004C4708.85 74.9104 4716.21 66.2404 4705.99 68.1004C4689.51 73.1204 4672.33 76.1704 4656.03 81.7404C4642.57 86.3404 4631.57 94.7104 4632.2 110.22C4633.02 130.27 4644.26 150.7 4650.03 169.69C4662.91 211.66 4677.97 260.81 4691.09 303.55C4695.25 317.11 4699.54 330.64 4703.57 344.24C4706.2 353.12 4709.4 361.26 4716.77 367.35C4739.1 385.79 4756.8 375.72 4782.43 368.29C4870.32 342.83 4967.58 289.94 5026.29 220.65C5052.35 189.9 5077.68 154.84 5118.1 142.43C5199.24 117.53 5273.56 213.4 5292.82 280.44C5305.65 325.11 5308.49 391.4 5370.08 396.66C5409.53 400.03 5435.71 359.88 5443.5 326.07C5453.82 281.3 5439.41 236.3 5431.57 192.39C5424.41 152.29 5424.03 105.67 5468.63 88.5904C5508.65 78.1604 5543.97 111.64 5554.58 148C5562.71 175.87 5534.14 342.5 5602.31 309.23C5633.51 294 5647.21 245.76 5680.2 235.3C5728.84 219.91 5780.5 265.12 5831.55 260.08C5881.7 255.13 5925.06 223.39 5975.25 217.89C6064.2 208.13 6145.76 283.89 6234.78 274.74C6274.45 270.66 6310.23 250.03 6348.15 237.7C6412.95 216.63 6480.99 234.31 6546.94 240.25C6616.32 246.5 6685.96 250.09 6755.63 249.71C6842.99 249.24 7320.62 248.45 7407.99 248.91" stroke="black" stroke-width="6"/>
+</svg>
+            <div class="dot-container">
+            <div class="classContainer">
+                <img class="dotAlt" id="d1Alt" src="../desn3001/media/circle.svg">
+                    <img src="media/img01.png" class="imgInfoAlt i1" id="d1Alt"></img>
+                    <div class="pointInfoAlt bot" id="d1Alt">
+                        <header>
+                            <h3 class="forma">[ system input ]</h3>
+                            <h2 class="demi">Work Assigned!</h2>
+                        </header>
+                    </div>
+                    <img src="media/img02.png" class="imgInfoAlt i2" id="d1Alt"></img>
+                <div class="effect pointInfoAlt" id="d1Alt">
+                </div>                  
+                </img>
+            </div> 
+            </div> 
+
+            <div class="dot-container">  
+            <div class="classContainer flowIncrease allFlowClass">
+                <img class="dotAlt" id="d2Alt" src="../desn3001/media/circle.svg">
+                    <img src="media/thoughtBubble.png" class="imgInfoAlt i3" id="d2Alt"></img>
+                    <div class="pointInfoAlt top" id="d2Alt">
+                        <header>
+                            <h3 class="forma">[ flow ]</h3>
+                            <h2 class="demi">Brainstorming Ideas</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfoAlt" id="d2Alt">
+                </div>                  
+                </img>
+            </div>        
+            </div>      
+
+            <div class="dot-container">  
+            <div class="classContainer pssLevels allStockClass">
+                <img class="dotAlt" id="d3Alt" src="../desn3001/media/circle.svg">
+                <img src="media/img03.png" class="imgInfoAlt i6" id="d3Alt"></img>
+                    <div class="pointInfoAlt bot" id="d3Alt">
+                        <header>
+                            <h3 class="forma">[ stock ]</h3>
+                            <h2 class="demi">PSS Levels Rising</h2>
+                        </header>
+                        <div class="statPss">
+                            <div class="slider">
+                                <div class="clip" id="d3Alt">
+                                    <img class="gradient" src="media/gradient.png"></img>
+                                </div>
+                                    <p class="halText pssLevel">25PSS</p>
+                            </div>
+                            <p class="halText pssLevel">Moderate Stress</p>                     
+                        </div>
+                    </div>
+                <div class="effect pointInfoAlt" id="d3Alt">
+                </div>                   
+                </img>           
+            </div> 
+            </div> 
+
+            <div class="dot-container">
+            <div class="classContainer">
+                <img class="dotAlt" id="d4Alt" src="../desn3001/media/circle_choice.svg">
+                    <img src="media/pathway.svg" class="imgInfoAlt i4Alt swapBtn" id="d4Alt"></img>
+                    <div class="pointInfoAlt bot" id="d4Alt">
+                        <header>
+                            <h3 class="forma">[ choice ]</h3>
+                            <h2 class="demi">Choose a Path!</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfoAlt" id="d4Alt">
+                </div>                  
+                </img>
+            </div> 
+            </div> 
+            
+            <div class="dot-container">
+            <div class="classContainer flowDecrease allFlowClass">
+                <img class="dotAlt" id="d5Alt" src="../desn3001/media/circle_selected.svg">
+                    <div class="pointInfoAlt top" id="d5Alt">
+                        <header>
+                            <h3 class="forma">[ flow ]</h3>
+                            <h2 class="demi">Work through Stress</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfoAlt" id="d4Alt">
+                </div>                  
+                </img>
+            </div>      
+            </div> 
+            
+            <div class="dot-container">
+            <div class="classContainer timeStock allStockClass">
+                <img class="dotAlt" id="d6Alt" src="../desn3001/media/circle.svg">
+                <img src="media/altImg01.png" class="imgInfoAlt i5Alt" id="d6Alt"></img>
+                    <div class="pointInfoAlt top" id="d6Alt">
+                        <header>
+                            <h3 class="forma">[ stock ]</h3>
+                            <h2 class="demi">Time Invested Working</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfoAlt" id="d6Alt">
+                </div>                  
+                </img>
+            </div>      
+            </div>        
+            
+            <div class="dot-container">
+            <div class="classContainer flowDecrease allFlowClass">
+                <img class="dotAlt" id="d7Alt" src="../desn3001/media/circle.svg">
+                <img src="media/altImg02.png" class="imgInfoAlt i6Alt" id="d7Alt"></img>
+                    <div class="pointInfoAlt bot" id="d7Alt">
+                        <header>
+                            <h3 class="forma">[ flow ]</h3>
+                            <h2 class="demi">Feeling Productive</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfoAlt" id="d7Alt">
+                </div>                  
+                </img>
+            </div>    
+            </div> 
+            
+            <div class="dot-container">  
+            <div class="classContainer pssLevels allStockClass">
+                <img class="dotAlt" id="d8Alt" src="../desn3001/media/circle.svg">
+                    <div class="pointInfoAlt bot custom4" id="d8Alt">
+                        <header>
+                            <h3 class="forma">[ stock ]</h3>
+                            <h2 class="demi">PSS Levels Dropping</h2>
+                        </header>
+                        <div class="statPss">
+                            <div class="slider">
+                                <div class="clip" id="d8Alt">
+                                    <img class="gradient" src="media/gradient.png"></img>
+                                </div>
+                                    <p class="halText pssLevel">19PSS</p>
+                            </div>
+                            <p class="halText pssLevel">Mild Stress</p>                     
+                        </div>
+                    </div>
+                <div class="effect pointInfoAlt" id="d8Alt">
+                </div>                   
+                </img>           
+            </div>     
+            </div>  
+            
+            <div class="dot-container">
+            <div class="classContainer flowDecrease allFlowClass">
+                <img class="dotAlt" id="d9Alt" src="../desn3001/media/circle.svg">
+                <img src="media/timergif.gif" class="imgInfoAlt i5" id="d9Alt"></img>   
+                    <div class="pointInfoAlt top" id="d9Alt">                     
+                        <header>
+                            <h3 class="forma">[ flow ]</h3>
+                            <h2 class="demi">Self Reward</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfoAlt" id="d9Alt">
+                </div>                  
+                </img>
+            </div>       
+            </div> 
+            
+            <div class="dot-container">
+            <div class="classContainer timeStock allStockClass">
+                <img class="dotAlt" id="d10Alt" src="../desn3001/media/circle.svg">
+                <img src="media/img05.png" class="imgInfoAlt i5Alt" id="d10Alt"></img>
+                    <div class="pointInfoAlt custom5 top" id="d10Alt">
+                        <header>
+                            <h3 class="forma">[ stock ]</h3>
+                            <h2 class="demi">Time Invested Gaming</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfoAlt" id="d10Alt">
+                </div>                  
+                </img>
+            </div>      
+            </div>         
+
+            <div class="dot-container">
+            <div class="classContainer flowDecrease allFlowClass">
+                <img class="dotAlt" id="d11Alt" src="../desn3001/media/circle.svg">
+                <img src="media/img06.png" class="imgInfoAlt i7Alt" id="d11Alt"></img>
+                    <div class="pointInfoAlt top" id="d11Alt">
+                        <header>
+                            <h3 class="forma">[ flow ]</h3>
+                            <h2 class="demi">Lack of Stress</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfoAlt" id="d11Alt">
+                </div>                  
+                </img>
+            </div>     
+            </div>  
+
+
+            <div class="dot-container">
+            <div class="classContainer pssLevels allStockClass">
+                <img class="dotAlt" id="d12Alt" src="../desn3001/media/circle.svg">
+                <img src="media/img08.png" class="imgInfoAlt i8Alt" id="d12Alt"></img>
+                    <div class="pointInfoAlt custom4 bot" id="d12Alt">
+                        <header>
+                            <h3 class="forma">[ stock ]</h3>
+                            <h2 class="demi">PSS Levels Dropping</h2>
+                        </header>
+                        <div class="statPss">
+                            <div class="slider">
+                                <div class="clip" id="d12Alt">
+                                    <img class="gradient" src="media/gradient.png"></img>
+                                </div>
+                                    <p class="halText pssLevel">17PSS</p>
+                            </div>
+                            <p class="halText pssLevel">Mild Stress</p>                     
+                        </div>                        
+                    </div>
+                <div class="effect pointInfoAlt" id="d12Alt">
+                </div>                  
+                </img>
+            </div>     
+            </div>         
+            
+            <div class="dot-container">
+            <div class="classContainer flowIncrease allFlowClass">
+                <img class="dotAlt" id="d13Alt" src="../desn3001/media/circle.svg">
+                    <div class="pointInfoAlt top" id="d13Alt">
+                        <header>
+                            <h3 class="forma">[ flow ]</h3>
+                            <h2 class="demi">Time Pressure</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfoAlt" id="d13Alt">
+                </div>                  
+                </img>
+            </div>   
+            </div>            
+
+            <div class="dot-container">
+            <div class="classContainer pssLevels allStockClass">
+                <img class="dotAlt" id="d14Alt" src="../desn3001/media/circle.svg">
+                <img src="media/img09.png" class="imgInfoAlt i9Alt" id="d14Alt"></img>
+                    <div class="pointInfoAlt top custom5" id="d14Alt">
+                        <header>
+                            <h3 class="forma">[ stock ]</h3>
+                            <h2 class="demi">PSS Level Conclusion</h2>
+                        </header>
+                        <div class="statPss">
+                            <div class="slider">
+                                <div class="clip" id="d14Alt">
+                                    <img class="gradient" src="media/gradient.png"></img>
+                                </div>
+                                    <p class="halText pssLevel">17PSS</p>
+                            </div>
+                            <p class="halText pssLevel">Mild Stress</p>                     
+                        </div>                        
+                    </div>
+                <div class="effect pointInfoAlt" id="d14Alt">
+                </div>                  
+                </img>
+            </div>     
+            </div> 
+            
+            <div class="dot-container">
+            <div class="classContainer">
+                <img class="dotAlt" id="d15Alt" src="../desn3001/media/circle.svg">
+                <img src="media/img10.png" class="imgInfoAlt i10Alt" id="d15Alt"></img>                
+                    <div class="pointInfoAlt bot" id="d15Alt">
+                        <header>
+                            <h3 class="forma">[ system output ]</h3>
+                            <h2 class="demi">Work Complete!</h2>
+                        </header>
+                    </div>
+                <div class="effect pointInfoAlt" id="d15Alt">
+                </div>                  
+                </img>
+            </div> 
+            </div>            
+
+        </section>
+
+        </section>    
+
+    <script src="scripting/scroll.js"></script>
+    <script src="scripting/timer.js"></script>
+    <script src="scripting/menutitle.js"></script>   
+    <script src="scripting/swap.js"></script> 
+    <script src="scripting/scrollAlt.js"></script>    
+
+    </main>  
+
+<body>
+  

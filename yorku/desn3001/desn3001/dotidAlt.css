@@ -1,0 +1,111 @@
+#d1Alt {
+    offset-distance: 1%; /* % along the curve */
+}
+
+#d2Alt {
+    offset-distance: 4.75%; /* % along the curve */
+}
+
+#d3Alt {
+    offset-distance: 51.9%; /* % along the curve */
+}
+
+#d4Alt h3 {
+    color: #8C00FF;
+}
+
+#d4Alt {
+    offset-distance: 55.25%; /* % along the curve */
+}
+
+.i4Alt {
+    transform: translate(15.5rem, 12.125rem);
+}
+
+#d5Alt {
+    offset-distance: 57.5%; /* % along the curve */
+}
+
+#d6Alt {
+    offset-distance: 65%; /* % along the curve */
+}
+
+.i5Alt {
+    transform: translate(-10rem, 16rem);   
+}
+
+#d7Alt {
+    offset-distance: 67.2%; /* % along the curve */
+}
+
+.i6Alt {
+    transform: translate(8rem, -20rem);   
+}
+
+#d8Alt {
+    offset-distance: 70.5%; /* % along the curve */
+}
+
+.custom4 {
+    margin-top: 6rem;
+}
+
+.slider #d8Alt {
+    width: 47.5%;
+}
+
+#d9Alt {
+    offset-distance: 78.25%; /* % along the curve */
+}
+
+#d10Alt {
+    offset-distance: 84.5%; /* % along the curve */
+}
+
+.custom5 {
+    padding-bottom: 13rem;
+}
+
+#d11Alt {
+    offset-distance: 91%; /* % along the curve */
+}
+
+.i7Alt {
+    transform: translate(-4rem, -16rem); 
+}
+
+#d12Alt {
+    offset-distance: 93%; /* % along the curve */
+}
+
+.i8Alt {
+    transform: translate(7rem, -14rem);         
+}
+
+.slider #d12Alt {
+    width: 42.5%;
+}
+
+#d13Alt {
+    offset-distance: 95%; /* % along the curve */
+}
+
+#d14Alt {
+    offset-distance: 97.5%; /* % along the curve */
+}
+
+.i9Alt {
+    transform: translate(-4rem, 10rem);         
+}
+
+.slider #d14Alt {
+    width: 42.5%;
+}
+
+#d15Alt {
+    offset-distance: 100%; /* % along the curve */
+}
+
+.i10Alt {
+    transform: translate(22rem, -2rem);         
+}
