@@ -1,5 +1,5 @@
 // total span of time we want to map scroll to (example: 7 days)
-const totalMinutes = 1 * 24 * 60; // 1 day
+const totalMinutes = 1.5 * 24 * 60; // 1 day
 
 function formatTime(minutes) {
   const days = Math.floor(minutes / (60 * 24));
