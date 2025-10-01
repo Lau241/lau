@@ -265,10 +265,9 @@
       const project5 = document.querySelector('.project5');        
       const project6 = document.querySelector('.project6');     
       const project7 = document.querySelector('.project7');
-      const project8 = document.querySelector('.project8');
             
       
-const projects = [project1, project2, project3, project4, project5, project6, project7, project8];      
+const projects = [project1, project2, project3, project4, project5, project6, project7];      
 projects.forEach(p => {
   p.style.display = ""; // make visible
 });
@@ -276,8 +275,7 @@ projects.forEach(p => {
       if (value === "designer") {
         project5.style.display = "none";
         project6.style.display = "none";
-        project7.style.display = "none";
-        project8.style.display = "none";        
+        project7.style.display = "none";        
       }
 
       if (value === "print designer") {
