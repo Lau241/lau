@@ -14,13 +14,7 @@
 
 <body>
 <!-- DO NOT QUESTION ME ON MY CODE NAMING CONVENTIONS -->
- 
-<div class="loadingContainer">
-  <video autoplay muted loop playsinline class="loadingVideo">
-    <source src="../media/loadingvid.webm" type="video/webm">
-    Your browser does not support the video tag.
-  </video>
-</div>
+
 
 <!-- This is our navigation bar. -->  
 <section class="fixedContainer">
@@ -827,24 +821,5 @@ window.addEventListener("resize", function() {
 });
 </script>
 
-
-<!-- Loading Screen -->
-<script>
-window.addEventListener("load", function() {
-  setTimeout(() => {
-    const loader = document.querySelector(".loadingContainer"); // select by class
-    const page = document.getElementById("pageContent");
-
-    if(loader) {
-      loader.classList.add('playAnimation')
-    }
-
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 500);
-
-  }, 1000);
-});
-</script>
 </body>
 </html>
