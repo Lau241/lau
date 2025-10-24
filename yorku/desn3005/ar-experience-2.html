@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESN3005 Augmented Reality</title>
+
+    <link rel="icon" href="../media/RL.png" type="image/png">
+    <link rel="stylesheet" href="../portfolioStyles/siteToolkit.css">
+    <link rel="stylesheet" href="../projects.css">
+    <link rel="stylesheet" href="style.css">
+
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="SIAFF AR EXPERIENCE">
+  <meta property="og:description" content="Augmented Reality Experience, coded by Richard Lau.">
+  <meta property="og:url" content="https://richardlau.ca/yorku/desn3005/ar-experience-2">
+  <meta property="og:type" content="website">        
+
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+      body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background: #ffffff; }
+      model-viewer { width: 100%; max-width: 100%; height: 80vh; }
+    </style>    
+  </head>
+
+  <body>
+    <model-viewer 
+      src="boxArchitecture.glb"
+      ios-src="boxArchitecture.usdz"
+      alt="Escher's Room by Richard Lau"
+      camera-controls 
+      auto-rotate 
+      ar 
+      ar-modes="webxr scene-viewer quick-look">
+    </model-viewer>
+  </body>
+</html>
