@@ -6,6 +6,10 @@
     font-display: swap;
 }
 
+.italics {
+    font-style: italic;
+}
+
 main {
     margin-left: 5%;
     margin-right: 5%;
@@ -41,7 +45,7 @@ header {
 .item {
     display: flex;
     flex-direction: column;
-    width: 15rem;
+    width: 13rem;
     margin-bottom: 1rem;
     text-decoration: none;
 }
@@ -58,11 +62,19 @@ header {
     gap: 2rem;
 }
 
+.desc {
+    font-size: .75rem;
+    font-weight: lighter;
+    color: #2968EF;
+    margin-bottom: .25rem;
+}
+
 .thumbnail {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
    transition: transform 0.5s ease-out;
    border-radius: 5%;    
    margin-bottom: .75rem;
+   background-color: #FFF9F0;
 }
 
 .thumbnail:hover {
@@ -71,7 +83,7 @@ header {
 
 .moneyIcon {
     margin-bottom: .25rem;
-    color:darkgoldenrod;   
+    color:rgb(235, 174, 19);   
 }
 
 /* Base styles */
@@ -80,7 +92,7 @@ body {
     font-family: Arial, sans-serif;
     font-size: 1rem;
     color: #2968EF;
-    background-color: #FFF9F0;
+    background-color: #fffdfa;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
