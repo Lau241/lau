@@ -45,8 +45,8 @@ header {
 .item {
     display: flex;
     flex-direction: column;
-    width: 13rem;
-    margin-bottom: 1rem;
+    width: 15rem;
+    margin-bottom: 2rem;
     text-decoration: none;
 }
 
