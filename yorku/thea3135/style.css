@@ -339,7 +339,11 @@ blockquote {
  background-color: #4a4c51;
 }
 
-
+.nav-links li:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-decoration-thickness: .10rem;
+}
 
 
 
