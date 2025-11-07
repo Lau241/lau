@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('HalyardDisplay-Regular.woff2') format('woff2'),
+        url('HalyardDisplay-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display Book';
+    src: url('HalyardDisplayBook-Italic.woff2') format('woff2'),
+        url('HalyardDisplayBook-Italic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display Book';
+    src: url('HalyardDisplayBook.woff2') format('woff2'),
+        url('HalyardDisplayBook.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VCR OSD Mono';
+    src: url('VCROSDMono.woff2') format('woff2'),
+        url('VCROSDMono.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Halyard Display';
+    src: url('HalyardDisplayMedium.woff2') format('woff2'),
+        url('HalyardDisplayMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
