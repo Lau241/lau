@@ -45,6 +45,13 @@
     font-display: swap;    
 }
 
+.book {
+    font-family: 'Halyard Display Book';
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;    
+}
+
 #logo {
     font-family: 'VCR OSD MONO';
     color: #ffffff;
@@ -81,17 +88,82 @@
     color: #1E3765;
 }
 
+.header-style1 {
+    font-family: 'Halyard Display';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    font-size: 2.25rem;
+}
 
 
+.login-box {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff; /* Optional overlay color */
+}
 
+#error {
+  display: none;
+  color: red;
+}
 
+#content {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+}
 
+#enterField {
+    max-width: 20%;
+    padding-left: 7.5rem;
+    margin-top: 10rem;
+}
 
+#enterField h2 {
+    font-family: 'Halyard Display';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;    
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
 
+#enterField input, button {
+    padding: .25rem;
+    font-size: 1rem;
+}
 
+#inputs {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
 
+#loginInfo {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+}
 
+#contactSheet {
+    margin-left: 7.5rem;
+    margin-right: 7.5rem;
+    margin-top: 7.5rem;
+}
 
+.headingStyle {
+    display: flex;
+    flex-direction: column;
+}
+
+.headingStyle p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
 
 
 
