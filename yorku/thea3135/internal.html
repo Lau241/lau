@@ -14,7 +14,7 @@
 
 
     <body>
-<!-- temp block
+
         <div class="login-box" id="login">
             <div id="enterField">
                 <h2>Internal Login Portal</h2>
@@ -26,18 +26,18 @@
                 <aside id="txtLogin">
                     <p id="error" class="error">Incorrect username or password.</p>
                     <p class="book" id="loginInfo">
-                    Note for THEA3135: <br>Username: officehours@toasterlab.com Password: thea3135<br></br>
+                    Note for THEA3135: <br>Username: officehours@toasterlab.com <br>Password: thea3135<br></br>
                     This is a simple security barrier. While it would be more optimal to use third party encrypted applications such as Netlify for webpage security, I've opted to used the google suite for secure file sharing paired with a basic html/css/js blocker to initially hide these forms.</p>
                 </div>
             </div>
         </div>  
--->             
+             
 
         <header class="navigationBar">
             <nav>
             <a href="https://richardlau.ca/yorku/thea3135/theatreTO" id="logo">TheatreTO</a>
             <ul class="nav-links">
-                <li><a href="#Community Content">Community Content</a></li>
+                <li><a href="https://www.richardlau.ca/yorku/thea3135/community-content">Community Content</a></li>
                 <li><a href="https://www.richardlau.ca/yorku/thea3135/internal">Internal Login</a></li>
                 <li id="ticketBtn"><a href="#Buy Tickets">Buy Tickets</a></li>
             </ul>
@@ -45,32 +45,61 @@
         </header>
 
         <aside id="announcement">
-            <p>Purchase early bird tickets to <span class="italics">‘Alice in Wonderland’</span> before Nov 5th, 2025 for 50% off!</p>
+            <p>Note for THEA3135: Files are shared with officehours@toasterlab.com & file passwords are thea3135</p>
         </aside>        
 
         <main>
 
             <section id="contactSheet">
                 <div class="headingStyle">
+                    <div class="book" style="font-size: 1.5rem; color: black;margin-bottom: 1rem;">
+                        <a href="https://richardlau.ca/yorku/thea3135/theatreTO">Back to home</a>
+                    </div>                    
                     <h1 class="header-style1">Information Table (Contact Sheet)</h1>
                     <p class="book"><a href="https://docs.google.com/spreadsheets/d/1Bk3hSBwNKqAKcuVaxxgIvl6m0niS-kRXl5u2ojSYXHk">This list</a> contains a secure list of emails, phone numbers, and names.</p>
                 </div>
-<iframe
-  src="https://docs.google.com/spreadsheets/d/1Bk3hSBwNKqAKcuVaxxgIvl6m0niS-kRXl5u2ojSYXHk/htmlembed?gid=0&headers=false"
-  width="100%"
-  height="800"
-  style="border:none; overflow:hidden;"
-  ></iframe>
-        </main>
+                <iframe
+                    src="https://docs.google.com/spreadsheets/d/1Bk3hSBwNKqAKcuVaxxgIvl6m0niS-kRXl5u2ojSYXHk/htmlembed?gid=0&headers=false"
+                    width="60%"
+                    height="600"
+                    id="formA"
+                    style="padding: 1rem ; border: 4px solid rgb(237, 237, 237); border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); overflow:hidden;"
+                ></iframe>
+            </section>
+
+            <div class="line"></div>
+            
+            <section id="secureDownload">
+                <div class="headingStyle">
+                    <h1 class="header-style1">Secure Documents</h1>
+                    <p class="book">This is a list of secure and archived documents. <br>Alongside Google Security, there are passwords to open the actual file [pw: thea3135].</p>
+                </div>
+
+                <div id="secureFiles">
+                <ul class="regular" id="current">Current Files
+                    <li class="book"><a href="https://drive.google.com/file/d/1N9baNkgc7C5AgeWHo1ipkhHjnjbtoSG4/view?usp=sharing" target="_blank">Week 12</a></li>
+                    <li class="book"><a href="https://drive.google.com/file/d/1Ws10TfYXVc3pdPL2rF9mSsQ4uIvjnAdU/view?usp=sharing" target="_blank">Show Photos</a></li>
+                </ul>
+                <ul class="regular" id="archive">Archived Files
+                    <li class="book"><a href="https://drive.google.com/file/d/1madCAFEXH3xwpqJ5dQcWxyUlfLvhDvKm/view?usp=sharing" target="_blank">Week 11</a></li>
+                    <li class="book"><a href="https://drive.google.com/file/d/1gXQwfirUxGLvqJvyUL4KDXT3kkshVKW_/view?usp=sharing" target="_blank">Week 10</a></li>
+                    <li class="book"><a href="https://drive.google.com/file/d/1ebM1yVAAS0daNFOs9-A6u5BrUSe_qHwU/view?usp=sharing" target="_blank">Week 09</a></li>
+                </ul>
+                </div>
+            </section>  
+            
+            <div class="line"></div>
 
         <footer>
-                <a href="#" id="logo">TheatreTO</a>
-                <ul class="nav-links">
-                    <li><a href="#Community Content">Community Content</a></li>
-                    <li><a href="#Internal Login">Internal Login</a></li>
-                    <li id="ticketBtn"><a href="#Buy Tickets">Buy Tickets</a></li>
-                </ul>          
-        </footer>    
+            <a href="https://richardlau.ca/yorku/thea3135/theatreTO" id="logo">TheatreTO</a>
+            <ul class="nav-links">
+                <li><a href="https://www.richardlau.ca/yorku/thea3135/community-content">Community Content</a></li>
+                <li><a href="https://www.richardlau.ca/yorku/thea3135/internal">Internal Login</a></li>
+                <li id="ticketBtn"><a href="#Buy Tickets">Buy Tickets</a></li>
+            </ul>          
+        </footer>             
+
+        </main>   
 
         <script src="internal.js"></script>
   </body>

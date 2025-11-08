@@ -358,70 +358,82 @@ blockquote {
     }
 
     .navigationBar nav {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
         margin-left: .5rem;
-        margin-right: .5rem;    
-        align-items: center;
+        margin-right: .5rem;
+        justify-content: center;
     }
 
-    .nav-links {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
+        .nav-links {
+            gap: 1rem;
+        }    
+        
+    .nav-links a {
+    font-size: 1rem;
+    }
+
+
+    #heroSection {
+        margin-left: .5rem;
+        margin-right: .5rem;   
+        flex-direction: column;
+        gap: 2rem;
     }    
 
-#heroSection {
-    margin-left: .5rem;
-    margin-right: .5rem;   
-    flex-direction: column;
-    gap: 2rem;
-}    
-
-.marginSetting {
-    margin-left: .5rem;
-    margin-right: .5rem;       
-}
+    .marginSetting {
+        margin-left: .5rem;
+        margin-right: .5rem;       
+    }
 
 
 
-#map {
-    flex-direction: column;
-}
+    #map {
+        flex-direction: column;
+    }
 
-#directorInfoContainer {
-    flex-direction: column;
-}
+    #directorInfoContainer {
+        flex-direction: column;
+    }
 
-#googleForm {
-    width: 95% !important;
-    height: 100;
-    margin-bottom: 4rem;
-}
+    #googleForm {
+        width: 95% !important;
+        height: 100;
+        margin-bottom: 4rem;
+    }
 
-#calendarFrame {
-    width: 95% !important;
-    height: 100;
-}
+    #calendarFrame {
+        width: 95% !important;
+        height: 100;
+    }
 
-#mapFrame {
-    width: 95% !important;
-    height: 100;
-}
+    #mapFrame {
+        width: 98% !important;
+        height: 100;
+        align-self: center;
+    }
 
-#forms {
-    flex-direction: column;
-}
+    #forms {
+        flex-direction: column;
+    }
 
-#downloadHeader p {
-    max-width: 100%;    
-}
+    #downloadHeader p {
+        max-width: 100%;    
+    }
 
-#downloadSection {
-    margin-left: .5rem;
-    margin-right: .5rem;
-}
+    #downloadSection {
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
+
+    footer #logo {
+        margin-left: .5rem;
+    }
+
+    footer .nav-links {
+        margin-right: .5rem;
+    }
+
+    footer {
+        justify-content: center;
+    }
 
 }

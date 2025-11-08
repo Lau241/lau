@@ -175,7 +175,7 @@
     margin-bottom: 2rem;
 }
 
-#secureDownload {
+#sharingSection {
     margin-left: 7.5rem;
     margin-right: 7.5rem;    
 }
@@ -198,21 +198,6 @@
 #archive {
     margin-top: 2rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 footer {
@@ -299,12 +284,6 @@ blockquote {
 
 @media (max-width: 768px) {
 
-    #enterField {
-        padding-left: 1rem;
-        margin-right: .5rem;
-        max-width: 100%;
-    }
-
     #logo {
         display: none;
     }
@@ -334,7 +313,7 @@ blockquote {
         margin-right: .5rem;        
     }
 
-    #secureDownload {
+    #sharingSection {
         margin-left: .5rem;
         margin-right: .5rem;    
     }
