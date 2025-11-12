@@ -143,7 +143,7 @@ body {
 
 .tempNotice {
     padding-top: 25rem;
-    padding-bottom: 35rem;
+    padding-bottom: 15rem;
     display: flex;
     align-self: center;
     justify-self: center;
@@ -162,8 +162,65 @@ body {
 
 .tempNotice p {
     font-size: 2rem;
+    line-height: 150%;
 }
 
+/* Responsive Image Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 2.5fr));
+  gap: 16px;
+  margin-bottom: 35rem;
+  margin-right: 15rem;
+  margin-left: 15rem;
+}
+
+/* Card container */
+.card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Image wrapper (maintains aspect ratio) */
+.img-wrap {
+  position: relative;
+  padding-top: 66.6%; /* 3:2 ratio */
+  overflow: hidden;
+}
+
+.img-wrap img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Image link focus (keyboard accessible) */
+.img-link:focus {
+  outline: 3px solid #007bff;
+  outline-offset: -3px;
+}
+
+/* Responsive tweak for small screens */
+@media (max-width: 480px) {
+  .grid {
+    gap: 10px;
+  }
+  .meta {
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+}
 
 
 
