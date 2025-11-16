@@ -54,14 +54,6 @@
     font-display: swap;    
 }
 
-
-
-
-
-#bar1, #bar2, #bar3 {
-    transition: background-color 0.8s ease; /* adjust speed */
-}
-
 /* Base styles */
 body {
     width: auto;
