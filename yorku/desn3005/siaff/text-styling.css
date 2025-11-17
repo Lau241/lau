@@ -19,25 +19,34 @@
     text-decoration: none;
 }
 
-.notoRegular {
-    font-family: 'Source Han Sans KR Regular';
-    font-weight: normal;
+.notoLight {
+    font-family: 'Source Han Sans KR', sans-serif;
+    font-weight: 200;
     font-style: normal;
-    font-display: swap;    
 }
 
 .notoNormal {
-    font-family: 'Source Han Sans KR Normal';
-    font-weight: normal;
+    font-family: 'Source Han Sans KR', sans-serif;
+    font-weight: 300;
     font-style: normal;
-    font-display: swap;    
+}
+
+.notoRegular {
+    font-family: 'Source Han Sans KR', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.notoMedium {
+    font-family: 'Source Han Sans KR', sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .notoBold {
-    font-family: 'Source Han Sans KR Bold';
-    font-weight: bold;
+    font-family: 'Source Han Sans KR', sans-serif;
+    font-weight: 700;
     font-style: normal;
-    font-display: swap;    
 }
 
 .siaffRegular {
@@ -64,7 +73,8 @@
 /* Base styles */
 body {
     width: auto;
-    font-family: 'Source Han Sans KR Regular';
+    font-family: 'Source Han Sans KR', sans-serif;
+    font-weight: 400;
     font-size: 1rem;
     color: black;
     background-color: #ffffff;
