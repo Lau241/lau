@@ -123,6 +123,7 @@ Every year a new theme is dedicated to the spirit of architecture. This year, th
 
             <section id="awardContainer" class="sectionSpacing-2 marginProperties">
                 <div id="award-box">
+
                     <div id="award-margins">
                         
                         <div id="award-left">
@@ -133,19 +134,20 @@ Every year a new theme is dedicated to the spirit of architecture. This year, th
                                 <div id="bar3" class="bar"></div>
                             </div>
 
-                            <p class="notoRegular" id="awardParagraph">This piece represents commemorates the life and work of M.C Escher through architectural creativity in beautiful forms of brutalist optic illusions and homeliness.</p>
-                        
+                            <p class="notoRegular switch-model1" id="awardParagraph">'Tower of Escher' by Richard Lau represents the life and work of M.C Escher through architectural creativity in beautiful forms of brutalist optic illusions and homeliness.</p>
+                            <p class="notoRegular switch-model2" id="awardParagraph">'Cafe and Bars' by Jinny Jeon embodies creativity in architecture, pushing toward new forms and ideas through basic geometry, reshaping how we experience structure.</p>
+                            <p class="notoRegular switch-model3" id="awardParagraph">'Pillars' by Shisays Condi explores how the forms of stacked pillars, creating rhythm, depth, and a sense of architectural balance through repetition.</p>
                         </div>
 
                         <!-- Need to make the 3d model -->
-                        <figure id="award-center">
+                        <figure id="award-center" >
                             <model-viewer
+                            class="switch-model1"
                             id="award1" 
                             src="models/pieceA/towerofescher.glb"
                             ios-src="models/pieceA/towerofescher.usdz"
                             shadow-intensity="1"
                             shadow-softness="0.8"
-                            rotation="45 0 0"
                             environment-image="https://richardlau.ca/yorku/desn3005/siaff/models/lightbox.png"                            
                             alt="Tower of Escher by Richard Lau"
                             camera-controls 
@@ -153,15 +155,65 @@ Every year a new theme is dedicated to the spirit of architecture. This year, th
                             ar 
                             ar-modes="webxr scene-viewer quick-look">
                             </model-viewer>
+
+                            <model-viewer
+                            class="switch-model2"
+                            id="award1" 
+                            src="models/pieceB/cafenbars.glb"
+                            ios-src="models/pieceB/cafenbars.usdz"
+                            shadow-intensity="1"
+                            shadow-softness="0.8"
+                            environment-image="https://richardlau.ca/yorku/desn3005/siaff/models/lightbox.png"                            
+                            alt="Cafe N Bars by Jinny Jeon"
+                            camera-controls 
+                            auto-rotate 
+                            ar 
+                            ar-modes="webxr scene-viewer quick-look">
+                            </model-viewer>     
+                            
+                            <model-viewer
+                            class="switch-model3"
+                            id="award1" 
+                            src="models/pieceC/abstractpillar.glb"
+                            ios-src="models/pieceC/abstractpillar.usdz"
+                            shadow-intensity="1"
+                            shadow-softness="0.8"
+                            environment-image="https://richardlau.ca/yorku/desn3005/siaff/models/lightbox.png"                            
+                            alt="Pillars by Shisays Condi"
+                            camera-controls 
+                            auto-rotate 
+                            ar 
+                            ar-modes="webxr scene-viewer quick-look">
+                            </model-viewer>                                 
                         </figure>
                         
                         <!-- Right: Title / Heading -->
-                        <header id="award-right">
-                            <h2 class="siaffRounded">SIAFF AWARD NOMINEES</h2>
-                            <p class="notoRegular">Nominee for Creativity, Richard Lau</p>
-                        </header>
+                        <div id="award-right">
+                            <header id="awardheader-right">
+                                <h2 class="siaffRounded">SIAFF AWARD NOMINEES</h2>
+                                <p class="notoRegular  switch-model1">Nominee for Gravity, Richard Lau</p>
+                                <p class="notoRegular  switch-model2">Nominee for Creativity, Jinny Jeon</p>
+                                <p class="notoRegular  switch-model3">Nominee for Abstraction, Shisays Condi</p>
+                            </header>
+
+                            <div class="qrCode switch-model1">
+                                <p class="notoRegular">Scan the QR Code for an<br>Augmented Reality Experience</p>
+                                <img src="models/richardlau_qrcode.png" alt="QR Code to 3D Model">
+                            </div>    
+
+
+                            <div class="qrCode switch-model2">
+                                <p class="notoRegular">Scan the QR Code for an<br>Augmented Reality Experience</p>
+                                <img src="models/richardlau_qrcode_2.png" alt="QR Code to 3D Model">
+                            </div>       
+                            <div class="qrCode switch-model3">
+                                <p class="notoRegular">Scan the QR Code for an<br>Augmented Reality Experience</p>
+                                <img src="models/richardlau_qrcode_2.png" alt="QR Code to 3D Model">
+                            </div>                                                     
+                        </div>
 
                     </div>
+
                 </div>                    
                 <a href="#" id="btn-style2" class="btn notoRegular">View Past Festival Themes</a>
             </section>
