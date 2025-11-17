@@ -1,18 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const descImage = document.getElementsByClassName("reveal");
+  const descImages = document.getElementsByClassName("reveal");
 
   const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        descImage.classList.add("visible");
-        observer.unobserve(descImage); // animate only once
+        entry.target.classList.add("visible");
+        observer.unobserve(entry.target); // animate only once
       }
     });
   }, {
     threshold: 0.6
   });
 
-  observer.observe(descImage);
+  // Observe each element individually
+  Array.from(descImages).forEach(img => observer.observe(img));
 });
 
 
