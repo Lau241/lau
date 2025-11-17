@@ -36,14 +36,14 @@
                 <div id="heroTitle">   
                     <h1 id="architectureHeader" aria-label="Seoul International Architecture Film Festival">
                         <div id="hero-side">
-                            <h2 class="hero-subhead1" id="seoulinternational">
+                            <h2 class="hero-spacer" id="seoulinternational">
                                 <img src="media/txt/seoulinternational.svg" alt="">
                             </h2>                                
                             <div id="archit">
                                 <img src="media/txt/ARC.svg" id="arc" alt="">
                                 <img src="media/txt/HIT.svg" id="hit" alt="">
                             </div>
-                            <div id="spacer"> </div>
+                            <div class="hero-spacer"> </div>
                         </div>
                         <div id="hero-center">
                             <h3 class="siaffRounded">
@@ -51,12 +51,12 @@
                             </h3>
                         </div>
                         <div id="hero-side">
-                        <div id="spacer"> </div>
+                        <div class="hero-spacer"> </div>
                             <div id="ecture">   
                                 <img src="media/txt/ECT.svg" id="ect" alt="">
                                 <img src="media/txt/URE.svg" id="ure" alt="">
                             </div>
-                        <h2 class="hero-subhead1" id="filmFest">
+                        <h2 class="hero-spacer" id="filmFest">
                             <img src="media/txt/filmfest.svg" alt="">
                         </h2>                               
                         </div>
@@ -96,7 +96,7 @@
         
         <article id="festivalDescription">            
             <section id="descContainer" class="sectionSpacing marginProperties">
-                <div id="descTxt">
+                <div id="descTxt" class="reveal">
                     <h1 class="notoBold">Structure in our lives comes from a sense of balance.</h1>
                     <p class="notoRegular">The Seoul International Architecture Film Festival (SIAFF) is an annual festival based in South Korea dedicated to showcasing films across the world about architecture, design, city planning, and urban development.<br></br>
 Every year a new theme is dedicated to the spirit of architecture. This year, the festival will follow the theme of balance. Balance between form and function, structure and creativity, work and life. Is architecture fair, equal, or sustainable? As an industry, we must delve deeper into investigating these balances.
@@ -121,7 +121,7 @@ Every year a new theme is dedicated to the spirit of architecture. This year, th
 
         <article id="awards">
 
-            <section id="awardContainer" class="sectionSpacing-2 marginProperties">
+            <section id="awardContainer" class="sectionSpacing-2 marginProperties reveal">
                 <div id="award-box">
 
                     <div id="award-margins">
@@ -140,7 +140,7 @@ Every year a new theme is dedicated to the spirit of architecture. This year, th
                         </div>
 
                         <!-- Need to make the 3d model -->
-                        <figure id="award-center" >
+                        <figure id="award-center">
                             <model-viewer
                             class="switch-model1"
                             id="award1" 
@@ -196,28 +196,87 @@ Every year a new theme is dedicated to the spirit of architecture. This year, th
                                 <p class="notoRegular  switch-model3">Nominee for Abstraction, Shisays Condi</p>
                             </header>
 
-                            <div class="qrCode switch-model1">
-                                <p class="notoRegular">Scan the QR Code for an<br>Augmented Reality Experience</p>
+                            <a href="https://richardlau.ca/yorku/desn3005/arexperience" target="_blank" class="qrCode switch-model1">
+                                <p class="notoRegular">Tap or scan the QR code with your phone to open the AR experience</p>
                                 <img src="models/richardlau_qrcode.png" alt="QR Code to 3D Model">
-                            </div>    
+                            </a>    
 
-
-                            <div class="qrCode switch-model2">
-                                <p class="notoRegular">Scan the QR Code for an<br>Augmented Reality Experience</p>
+                            <a href="https://richardlau.ca/yorku/desn3005/ar-experience-2" target="_blank" class="qrCode switch-model2">
+                                <p class="notoRegular">Tap or scan the QR code with your phone to open the AR experience</p>
                                 <img src="models/richardlau_qrcode_2.png" alt="QR Code to 3D Model">
-                            </div>       
-                            <div class="qrCode switch-model3">
-                                <p class="notoRegular">Scan the QR Code for an<br>Augmented Reality Experience</p>
-                                <img src="models/richardlau_qrcode_2.png" alt="QR Code to 3D Model">
-                            </div>                                                     
+                            </a>       
+                            <a href="https://richardlau.ca/yorku/desn3005/ar-experience-3" target="_blank" class="qrCode switch-model3">
+                                <p class="notoRegular">Tap or scan the QR code with your phone to open the AR experience</p>
+                                <img src="models/richardlau_qrcode_3.png" alt="QR Code to 3D Model">
+                            </a>                                                     
                         </div>
-
                     </div>
 
                 </div>                    
                 <a href="#" id="btn-style2" class="btn notoRegular">View Past Festival Themes</a>
             </section>
-            
+            <div id="object3">
+                <img src="media/sketch.png" alt="Architecture Sketch">
+            </div>            
+        </article>
+
+        <article id="shop">            
+            <section id="shopContainer" class="sectionSpacing-2 marginProperties">
+                <h2 id="shopTxt" class="siaffRegular">
+                    <img src="media/txt/SHOP.svg" id="checkoutourshop" alt="Check out our shop">
+                </h2>
+
+                <div class="shopGrid">
+                    <article class="shopItem reveal">
+                        <div class="shop-imageContainer">   
+                            <img src="media/shop/item1.png" alt="SIAFF Tote Bag - Fabric">
+                        </div>
+                        <h3 class="notoRegular">SIAFF Tote Bag - Fabric</h3>
+                        <p class="notoNormal">$24.99</p>
+                    </article>
+
+                    <article class="shopItem reveal">
+                        <div class="shop-imageContainer">
+                            <img src="media/shop/item2.png" alt="SIAFF “I Love Buildings” Hat - EN">
+                        </div>
+                        <h3 class="notoRegular">SIAFF “I Love Buildings” Hat - EN</h3>
+                        <p class="notoNormal">$22.99</p>
+                    </article>
+
+                    <article class="shopItem reveal">
+                        <div class="shop-imageContainer">
+                            <img src="media/shop/item3.png" alt="SIAFF “I Love Buildings” Hat - KR">
+                        </div>
+                        <h3 class="notoRegular">SIAFF “I Love Buildings” Hat - KR</h3>
+                        <p class="notoNormal">$22.99</p>
+                    </article>
+
+                    <article class="shopItem reveal">
+                        <div class="shop-imageContainer">
+                            <img src="media/shop/item4.png" alt="SIAFF ‘Balance’ Metal Poster">
+                        </div>
+                        <h3 class="notoRegular">SIAFF ‘Balance’ Metal Poster</h3>
+                        <p class="notoNormal">$14.99</p>
+                    </article>
+
+                    <article class="shopItem reveal">
+                        <div class="shop-imageContainer">
+                            <img src="media/shop/item5.png" alt="SIAFF Augmented Reality Full Card Set">
+                        </div>
+                        <h3 class="notoRegular">SIAFF Augmented Reality Full Card Set</h3>
+                        <p class="notoNormal">$17.99</p>
+                    </article>
+
+                    <article class="shopItem reveal">
+                        <div class="shop-imageContainer">
+                            <img src="media/shop/item6.png" alt="SIAFF ‘Balance’ Sweater - Cotton">
+                        </div>
+                        <h3 class="notoRegular">SIAFF ‘Balance’ Sweater - Cotton</h3>
+                        <p class="notoNormal">$34.99</p>
+                    </article>
+                </div>
+                <a href="#" id="view-more" class="notoRegular">VIEW MORE</a>
+            </section>
         </article>
 
     </section>

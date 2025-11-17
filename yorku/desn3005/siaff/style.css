@@ -194,7 +194,7 @@
     gap: 2rem;
 }
 
-#spacer {
+.hero-spacer {
     height: 3.35rem;
 }
 
@@ -274,8 +274,8 @@
 
 .reveal {
     opacity: 0;          
-    transform: translateY(-8rem) scale(0.8);  
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;      
+    transform: translateY(-2rem) scale(1.1);  
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;      
 }
 
 .reveal.visible {
@@ -305,7 +305,7 @@
     color: white;
 }
 
-#object, #object2 {
+#object, #object2, #object3 {
     position: absolute;
     width: 100%;
 }
@@ -326,10 +326,13 @@
 /*festival description*/
 
 #awards {
+    height: 400vh;
     background-color: white;
 }
 
 #awardContainer {
+    position: sticky;
+    top: -12vh;    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -365,8 +368,8 @@
 .bar {
     border-radius: 1rem;
     display: inline-block;
-    flex: 0 0 auto;             /* ← THIS is the key */
-    width: 10%;                 /* default width */
+    flex: 0 0 auto;
+    width: 10%;
     height: 4px;
     background-color: #D9D9D9;
     transition: background-color 0.8s ease, width 0.8s ease;
@@ -416,7 +419,12 @@
     text-align: right;
     align-items: flex-end;
     justify-content: flex-end;
+    text-decoration: none;
     gap: 1rem;
+}
+
+.qrCode p {
+    width: 50%;
 }
 
 .qrCode img {
@@ -437,6 +445,13 @@
     height: 100%;
 }
 
+#object3 img {
+    float:left;
+    margin-top: 5rem;
+    width: 15%;
+    z-index: 5;
+}
+
 /* ROTATION ANIMATION */
 
 .switch-model1, .switch-model2, .switch-model3 {
@@ -448,6 +463,89 @@
 .hidden {
     opacity: 0;
     pointer-events: none;
+}
+
+/* SHOP SECTION */
+
+#shopContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+#shop {
+    background-color: #000000;
+}
+
+#shopTxt {
+    color: white;
+    font-size: 5rem;
+}
+
+.shopGrid {
+    display: grid;
+    gap: 2rem;
+    width: 100%;
+
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.shopItem {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.shop-imageContainer {
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.shopItem p, h3 {
+    font-size: 1.25rem;
+}
+
+.shopItem h3:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+}
+
+.shopItem img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    transition: transform 0.5s ease;
+}
+
+.shopItem img:hover {
+    transform: scale(1.10);
+    transition: transform 0.5s ease;
+}
+
+#view-more {
+    padding: 1rem;
+    padding-top: 1rem;
+    padding-bottom: .75rem;
+    margin-top: 1rem;
+    background-color: white;
+    font-size: 1.5rem;
+    letter-spacing: 15%;
+    text-decoration: none;
+    color: inherit;  
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s ease;
+}
+
+#view-more:hover {
+    background-color: #D9D9D9;
 }
 
 @media (max-width: 1024px) {

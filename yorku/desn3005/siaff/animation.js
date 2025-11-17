@@ -81,7 +81,7 @@ function rotateModels() {
     modelIndex = (modelIndex + 1) % models.length;
 }
 
-// Run every 15 seconds (sync with progress bars)
+// Run every 20 seconds (sync with progress bars)
 setInterval(rotateModels, 20000);
 
 // Initial visibility setup

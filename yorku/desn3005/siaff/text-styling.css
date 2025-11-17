@@ -26,6 +26,13 @@
     font-display: swap;    
 }
 
+.notoNormal {
+    font-family: 'Source Han Sans KR Normal';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;    
+}
+
 .notoBold {
     font-family: 'Source Han Sans KR Bold';
     font-weight: bold;
