@@ -37,7 +37,7 @@ function rotateBars() {
     index = (index + 1) % bars.length;
 }
 
-setInterval(rotateBars, 15000);
+setInterval(rotateBars, 20000);
 rotateBars();
 
 const models = [
@@ -75,7 +75,7 @@ function rotateModels() {
 }
 
 // Run every 15 seconds (sync with progress bars)
-setInterval(rotateModels, 15000);
+setInterval(rotateModels, 20000);
 
 // Initial visibility setup
 models.forEach((group, i) => {
