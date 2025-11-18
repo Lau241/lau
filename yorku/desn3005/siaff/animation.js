@@ -22,28 +22,53 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // Progress bar animation im going to dahdahleh 4th building myself holy fuck
-const bars = ["bar1", "bar2", "bar3"];
-let index = 0;
+document.querySelectorAll(".rotating-progressbar").forEach(container => {
+    createRotatingProgressbar(container);
+});
 
-function rotateBars() {
-    // reset all bars
-    bars.forEach(id => {
-        const el = document.getElementById(id);
-        el.style.backgroundColor = "#D9D9D9";
-        el.style.width = "10%";     // default width
-    });
+function createRotatingProgressbar(container) {
+    const bars = Array.from(container.querySelectorAll(".bar"));
+    let index = 0;
+    let previousIndex = null;
 
-    // activate one
-    const active = document.getElementById(bars[index]);
-    active.style.backgroundColor = "#FF0000";
-    active.style.width = "80%";     // animated width change
+    function rotateBars() {
+        bars.forEach((bar, i) => {
+            const fill = bar.querySelector(".fill");
 
-    // rotate index
-    index = (index + 1) % bars.length;
+            if (i === index) {
+                // ACTIVE BAR = 80%
+                bar.style.width = "80%";
+
+                // Reset then fill
+                fill.style.transition = "none";
+                fill.style.width = "0%";
+                setTimeout(() => {
+                    fill.style.transition = "width 20s linear";
+                    fill.style.width = "100%";
+                }, 50);
+
+            } else if (i === previousIndex) {
+                // JUST-DEACTIVATED: SHRINK
+                bar.style.width = "10%";
+                fill.style.transition = "width .5s linear";
+                fill.style.width = "0%";
+            } else {
+                // OTHER INACTIVE BARS
+                bar.style.width = "10%";
+                fill.style.transition = "none";
+                fill.style.width = "0%";
+            }
+        });
+
+        previousIndex = index;
+        index = (index + 1) % bars.length;
+    }
+
+    // Run every 20 seconds
+    setInterval(rotateBars, 20000);
+    rotateBars();
 }
 
-setInterval(rotateBars, 20000);
-rotateBars();
 
 // yes because making animations alongside ar is fun and not a nightmare at all
 
