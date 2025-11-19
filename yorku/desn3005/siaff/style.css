@@ -26,6 +26,7 @@
     font-display: swap;    
     text-decoration: none;    
     height: auto;
+    padding-top: .5rem;
 }
 
 .nav-links {
@@ -43,6 +44,17 @@
     text-decoration: none;
     color: #ffffff;
     font-size: 1.25rem;
+}
+
+#hamburger a img  {
+    height: 2.5rem;
+    width: auto;
+    padding-top: .5rem;
+}
+
+#hamburger {
+    align-items: center;
+    display: none;
 }
 
 .nav-hover:hover {
@@ -253,7 +265,7 @@
 
 .box-Section {
     position: sticky;
-    top: 0;
+    top: 5vh;
 
     display: flex;
     flex-direction: row;
@@ -278,7 +290,7 @@
 
 .reveal {
     opacity: 0;          
-    transform: translateY(-2rem) scale(1.1);  
+    transform: translateY(-2rem) scale(1.05);  
     transition: opacity 0.4s ease-out, transform 0.4s ease-out;      
 }
 
@@ -348,6 +360,10 @@
     justify-content: center;
 }
 
+#mobileContainer-phone {
+    display: none;
+}
+
 #award-box {
     background-color: #232323;
     border:#1B1BFF 4px solid;
@@ -367,8 +383,6 @@
     flex-direction: row;
     gap: .5rem;
 }
-
-
 
 #award-left, #award-right {
     flex: 1;
@@ -392,18 +406,22 @@
     gap: 40vh;
 }
 
-#awardheader-right h2 {
+.awardheader-right h2 {
     color: white;
     text-align: right;
     font-size: 4rem;
     white-space: nowrap;
 }
 
-#awardheader-right p {
+.awardheader-right p {
     color: white;
     text-align: right;
     font-size: 1.5rem;
     white-space: nowrap;
+}
+
+#mobileContainer .awardheader-right {
+    display: none;
 }
 
 .qrCode {
@@ -443,7 +461,7 @@
     margin-top: 1.75rem;
 }
 
-#award1 {
+#award1, #award2, #award3 {
     width: 100%;
     height: 100%;
 }
@@ -732,6 +750,10 @@
     gap: 2rem;    
 }
 
+#festival-register-prompt {
+    font-size: 1.25rem;
+}
+
 #festival-list {
     font-size: 1.25rem;
     display: flex;
@@ -808,9 +830,625 @@ footer {
     bottom: 0;
     width: 100%;
     height: 70vh;
-    z-index: -1;
+    z-index: -1; 
 }
 
+
 @media (max-width: 1024px) {
+
+.nav-links {
+    gap: 1.5rem;
+}
+
+
+
+.box-txt {
+    flex: 2;
+}
+
+.box-txt h2 {
+    font-size: 2rem;
+}
+
+.box-txt p {
+    font-size: 1.25rem;
+}
+
+.box-gap {
+    flex: .5;
+}
+
+/* AR MODEL */
+
+#mobileContainer .awardheader-right {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-bottom: .5rem;
+}
+
+#mobileContainer .awardheader-right h2 {
+    font-size: 3.75rem;
+    text-align: left;
+}
+
+#mobileContainer .awardheader-right p {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+#object3 {
+    display: none;
+}
+
+#awards {
+    height: auto;
+}
+
+#awardContainer {
+    position: relative;
+    top: 0;  
+}
+
+#awardParagraph {
+    font-size: 1.25rem;
+}
+
+#award-margins {
+    margin-right: 2rem;
+    margin-left: 2rem;
+    gap: 2rem;
+}
+
+#award-left, #award-right {
+    flex: 1.5;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;    
+}
+
+#award-center {
+    flex: 1.5;
+}
+
+#award-left {
+    gap: 45vh;
+}
+
+#award-right {
+    display: none;
+}
+
+/* booths */
+
+#booths {
+    height: auto;
+}
+
+#boothContainer {
+    position: relative;
+    top: 0; 
+}
+
+#boothheader-right h2 {
+    display: none;
+}
+
+#booth-center {
+    display: none;
+}
+
+#booth-right {
+    flex: 40;
+}
+
+#boothInfo {
+    margin-top: 0;
+    justify-content: space-between;
+    height: 100%;
+    gap: 1rem;
+}
+
+.boothDescription {
+    gap: .5rem;
+    width: 65%;
+}
+
+.boothParagraph {
+    font-size: 1.5rem;
+}
+
+.boothTitle {
+    font-size: 1.5rem;
+}
+
+.boothTime {
+    font-size: 1.25rem;
+}
+
+#booth-margins {
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;    
+    gap: 1rem;
+    flex-direction: column;
+}
+
+/* register */
+
+#register-container {
+    height: auto;
+}
+
+#register-section {
+    position: relative;
+    top: 0;
+}
+
+
+}
+
+@media (max-width: 768px) {
+
+/* Hero section */
+
+#architectureHeader {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#herocontainer {
+    top: 15vh;
+}
+
+.mobile-hero-spacer {
+    display: none;
+}
+
+#archit {
+    margin-bottom: 1rem;
+}
+
+#ecture {
+    margin-top: 1rem;
+}
+
+#prompt-1 {
+    font-size: 1.5rem;
+}
+    
+/* Navigation Bar */
+
+#logo {
+    display: none;
+}
+
+.nav-links {
+    gap: 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Description Section */
+
+.box-txt {
+    flex: 2;
+}
+
+.box-gap {
+    flex: .3;
+}
+
+.boxImage {
+    flex: 1.75;
+}
+
+.box-txt h2 {
+    font-size: 2.5rem;
+    width: 65%;
+}
+
+.box-txt p {
+    font-size: 1.25rem;
+}
+
+#descContainer {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#object, #object2, #object3 {
+    display: none;
+}
+
+#festivalDescription {
+    height: auto;
+}
+
+.box-Section {
+    position: relative;
+    top: 0;
+}
+
+/* AR MODEL */
+
+#mobileContainer .awardheader-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#mobileContainer .awardheader-right h2 {
+    font-size: 3rem;
+    text-align: left;
+}
+
+#mobileContainer .awardheader-right p {
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+#awards {
+    height: auto;
+}
+
+#awardContainer {
+    position: relative;
+    top: 0;  
+}
+
+#awardParagraph {
+    font-size: 1.25rem;
+}
+
+#award-margins {
+    margin-right: 2rem;
+    margin-left: 2rem;
+    gap: 2rem;
+}
+
+#award-left, #award-right {
+    flex: 1.5;
+    margin-top: 1rem;
+    margin-bottom: 1rem;    
+}
+
+#award-center {
+    flex: 1.5;
+}
+
+#award-left {
+    gap: 35vh;
+}
+
+#award-right {
+    display: none;
+}
+
+/* booths */
+
+#booths {
+    height: auto;
+}
+
+#boothContainer {
+    position: relative;
+    top: 0; 
+}
+
+#boothheader-right h2 {
+    display: none;
+}
+
+#booth-center {
+    display: none;
+}
+
+#booth-right {
+    flex: 40;
+}
+
+#boothInfo {
+    margin-top: 0;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.boothDescription {
+    gap: .5rem;
+    width: 65%;
+}
+
+.boothParagraph {
+    font-size: 1.25rem;
+}
+
+.boothTitle {
+    font-size: 1.25rem;
+}
+
+.boothTime {
+    font-size: 1rem;
+}
+
+#booth-margins {
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;    
+    gap: 2rem;
+    flex-direction: column;
+}
+
+/* register */
+
+#register-container {
+    height: auto;
+}
+
+#register-section {
+    position: relative;
+    top: 0;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+}
+
+@media (max-width: 426px) {
+    /*temp disable map*/
+#map-container, #map {
+    display: none;
+}
+
+
+/* Hero section */
+
+#architectureHeader {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#herocontainer {
+    top: 15vh;
+}
+
+.mobile-hero-spacer {
+    display: none;
+}
+
+#archit {
+    margin-bottom: 1rem;
+}
+
+#ecture {
+    margin-top: 1rem;
+}
+
+#archit img, #ecture img {
+    height: 8rem;
+}
+
+#seoulinternational img, #filmfestival img {
+    height: 2rem;
+}
+
+.hero-spacer {
+    height: 2rem;
+}
+    
+/* Navigation Bar */
+
+#logo {
+    display: block;
+}
+
+.mobile-hidden-nav {
+    display: none;
+}
+
+#hamburger {
+    display: block;
+    gap: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Description Section */
+
+.box-txt {
+    flex: 2;
+}
+
+.box-gap {
+    flex: .3;
+}
+
+.boxImage {
+    flex: 1.75;
+}
+
+.box-txt h2 {
+    font-size: 2.5rem;
+    width: 100%;
+}
+
+.box-txt p {
+    font-size: 1.25rem;
+}
+
+#descContainer {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#object, #object2, #object3 {
+    display: none;
+}
+
+#festivalDescription {
+    height: auto;
+}
+
+.box-Section {
+    position: relative;
+    top: 0;
+}
+
+/* AR MODEL */
+
+#mobileContainer-phone {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+}
+
+#mobileContainer-phone-model {
+    height: 35vh;
+    width: 100%;
+}
+
+.mobileContainer-phone-hidden {
+    display: none;
+}
+
+#mobileContainer .awardheader-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#mobileContainer .awardheader-right h2 {
+    font-size: 3rem;
+    text-align: left;
+}
+
+#mobileContainer .awardheader-right p {
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+#awards {
+    height: auto;
+}
+
+#awardContainer {
+    position: relative;
+    top: 0;  
+}
+
+#awardParagraph {
+    font-size: 1.25rem;
+}
+
+#award-margins {
+    margin-right: 2rem;
+    margin-left: 2rem;
+    gap: 2rem;
+}
+
+#award-left, #award-right {
+    flex: 1.5;
+    margin-top: 1rem;
+    margin-bottom: 1rem;    
+}
+
+#award-center {
+    flex: 1.5;
+}
+
+#award-left {
+    gap: 2rem;
+}
+
+#award-right {
+    display: none;
+}
+
+/* booths */
+
+#booths {
+    height: auto;
+}
+
+#boothContainer {
+    position: relative;
+    top: 0; 
+}
+
+#boothheader-right h2 {
+    display: none;
+}
+
+#booth-center {
+    display: none;
+}
+
+#booth-right {
+    flex: 40;
+}
+
+#boothInfo {
+    margin-top: 0;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.boothDescription {
+    gap: .5rem;
+    width: 65%;
+}
+
+.boothParagraph {
+    font-size: 1.25rem;
+}
+
+.boothTitle {
+    font-size: 1.25rem;
+}
+
+.boothTime {
+    font-size: 1rem;
+}
+
+#booth-margins {
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;    
+    gap: 2rem;
+    flex-direction: column;
+}
+
+/* register */
+
+#register-container {
+    height: auto;
+}
+
+#register-section {
+    position: relative;
+    top: 0;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footerContainer {
+    flex-direction: column;
+    gap: 6rem;
+}
+
+#footer-site-information {
+    text-align: left;
+}
 
 }

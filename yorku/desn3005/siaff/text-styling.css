@@ -101,6 +101,7 @@ body {
     font-size: 1rem;
     color: black;
     background-color: #ffffff;
+    overflow-x: hidden;
 
     -webkit-font-smoothing: none; /* For WebKit browsers (Chrome, Safari) */
     -moz-osx-font-smoothing: grayscale; /* For Firefox on macOS */
@@ -135,4 +136,61 @@ blockquote, em {
 
 ::-webkit-scrollbar-thumb:hover {
  background-color: #4a4c51;
+}
+
+@media (max-width: 1024px) {
+
+.marginProperties {
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.sectionSpacing {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+}
+
+.sectionSpacing-2 {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+}    
+
+}
+
+@media (max-width: 768px) {
+
+.marginProperties {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+.sectionSpacing {
+    padding-top: 7.5rem;
+    padding-bottom: 7.5rem;
+}
+
+.sectionSpacing-2 {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}    
+
+}
+
+@media (max-width: 426px) {
+
+.marginProperties {
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+.sectionSpacing {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.sectionSpacing-2 {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}    
+
 }

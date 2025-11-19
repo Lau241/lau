@@ -47,11 +47,11 @@
                             </div>
 
                             <div id="archit">
-                                <img src="media/txt/ARC.svg" id="arc" alt="" aria-hidden="true">
-                                <img src="media/txt/HIT.svg" id="hit" alt="" aria-hidden="true">
+                                <img src="media/txt/ARC.svg" class="img-txt-hero" id="arc" alt="" aria-hidden="true">
+                                <img src="media/txt/HIT.svg" class="img-txt-hero" id="hit" alt="" aria-hidden="true">
                             </div>
 
-                            <div class="hero-spacer"> </div>
+                            <div class="hero-spacer mobile-hero-spacer"> </div>
 
                         </div>
 
@@ -63,11 +63,11 @@
 
                         <div class="hero-side">
 
-                        <div class="hero-spacer"> </div>
+                        <div class="hero-spacer mobile-hero-spacer"> </div>
 
                             <div id="ecture">   
-                                <img src="media/txt/ECT.svg" id="ect" alt="" aria-hidden="true">
-                                <img src="media/txt/URE.svg" id="ure" alt="" aria-hidden="true">
+                                <img src="media/txt/ECT.svg" class="img-txt-hero" id="ect" alt="" aria-hidden="true">
+                                <img src="media/txt/URE.svg" class="img-txt-hero" id="ure" alt="" aria-hidden="true">
                             </div>
 
                         <div class="hero-spacer" id="filmFest">
@@ -94,18 +94,26 @@
                 </a>
 
                 <ul class="nav-links notoRegular">
-                    <li><a href="#" class="nav-hover">PROGRAM</a></li>
-                    <li><a href="#" class="nav-hover">NEWS</a></li>
-                    <li><a href="#" class="nav-hover">AWARDS</a></li>
-                    <li><a href="#" class="nav-hover">SHOP</a></li>
-                    <li><a href="#" class="nav-hover">ABOUT</a></li>                              
+                    <li class="mobile-hidden-nav"><a href="#" class="nav-hover">PROGRAM</a></li>
+                    <li class="mobile-hidden-nav"><a href="#" class="nav-hover">NEWS</a></li>
+                    <li class="mobile-hidden-nav"><a href="#" class="nav-hover">AWARDS</a></li>
+                    <li class="mobile-hidden-nav"><a href="#" class="nav-hover">SHOP</a></li>
+                    <li class="mobile-hidden-nav"><a href="#" class="nav-hover">ABOUT</a></li>                              
                     <li class="button-white"><a href="#" class="nav-hover">REGISTER</a></li>
+
                     <li>
                         <div class="lang-group">
                             <a href="#" class="nav-hover">KR</a>
                             <a href="#" class="nav-hover">EN</a>
                         </div>
                     </li>
+
+                    <li id="hamburger">
+                        <a href="#" class="nav-hover">
+                            <img src="media/hamburger_icon.svg" alt="Menu Icon">
+                        </a>
+                    </li>
+
                 </ul>
             </nav>
         </header>
@@ -143,20 +151,16 @@ Every year a new theme is dedicated to the spirit of architecture. This year, th
                     <div id="award-margins">
                         
                         <div id="award-left">
-
-                            <div class="rotating-progressbar">
-                                <div class="bar1 bar"><div class="fill"></div></div>
-                                <div class="bar2 bar"><div class="fill"></div></div>
-                                <div class="bar3 bar"><div class="fill"></div></div>
+                            <div id="mobileContainer-phone">
+                                <div class="rotating-progressbar">
+                                    <div class="bar1 bar"><div class="fill"></div></div>
+                                    <div class="bar2 bar"><div class="fill"></div></div>
+                                    <div class="bar3 bar"><div class="fill"></div></div>
+                                </div>
+                                                          
                             </div>
 
-                            <p class="notoRegular switch-model1" id="awardParagraph">'Tower of Escher' by Richard Lau represents the life and work of M.C Escher through architectural creativity in beautiful forms of brutalist optic illusions and homeliness.</p>
-                            <p class="notoRegular switch-model2" id="awardParagraph">'Cafe and Bars' by Jinny Jeon embodies creativity in architecture, pushing toward new forms and ideas through basic geometry, reshaping how we experience structure.</p>
-                            <p class="notoRegular switch-model3" id="awardParagraph">'Pillars' by Shisays Condi explores how the forms of stacked pillars, creating rhythm, depth, and a sense of architectural balance through repetition.</p>
-                        </div>
-
-                        <!-- Need to make the 3d model -->
-                        <figure id="award-center">
+                        <figure id="award-center" id="mobileContainer-phone-model">
                             <model-viewer
                             tabindex="-1"
                             class="switch-model1"
@@ -204,11 +208,76 @@ Every year a new theme is dedicated to the spirit of architecture. This year, th
                             ar 
                             ar-modes="webxr scene-viewer quick-look">
                             </model-viewer>                                 
+                        </figure>                              
+
+                            <div id="mobileContainer">
+                                <header class="awardheader-right">
+                                    <p class="notoRegular  switch-model1">Nominee for Gravity, Richard Lau</p>
+                                    <p class="notoRegular  switch-model2">Nominee for Creativity, Jinny Jeon</p>
+                                    <p class="notoRegular  switch-model3">Nominee for Abstraction, Shisays Condi</p>
+                                    <h2 class="siaffRounded">SIAFF AWARD NOMINEES</h2>
+                                </header>
+
+                                <p class="notoRegular switch-model1" id="awardParagraph">'Tower of Escher' by Richard Lau represents the life and work of M.C Escher through architectural creativity in beautiful forms of brutalist optic illusions and homeliness.</p>
+                                <p class="notoRegular switch-model2" id="awardParagraph">'Cafe and Bars' by Jinny Jeon embodies creativity in architecture, pushing toward new forms and ideas through basic geometry, reshaping how we experience structure.</p>
+                                <p class="notoRegular switch-model3" id="awardParagraph">'Pillars' by Shisays Condi explores how the forms of stacked pillars, creating rhythm, depth, and a sense of architectural balance through repetition.</p>
+                            </div>
+                        </div>
+
+                        <!-- 3d models -->
+                        <figure id="award-center" class="mobileContainer-phone-hidden">
+                            <model-viewer
+                            tabindex="-1"
+                            class="switch-model1"
+                            id="award1" 
+                            src="models/pieceA/towerofescher.glb"
+                            ios-src="models/pieceA/towerofescher.usdz"
+                            shadow-intensity="1"
+                            shadow-softness="0.8"
+                            environment-image="https://richardlau.ca/yorku/desn3005/siaff/models/lightbox.png"                            
+                            alt="Tower of Escher by Richard Lau"
+                            camera-controls 
+                            auto-rotate 
+                            ar 
+                            ar-modes="webxr scene-viewer quick-look">
+                            </model-viewer>
+
+                            <model-viewer
+                            tabindex="-1"
+                            class="switch-model2"
+                            id="award2" 
+                            src="models/pieceB/cafenbars.glb"
+                            ios-src="models/pieceB/cafenbars.usdz"
+                            shadow-intensity="1"
+                            shadow-softness="0.8"
+                            environment-image="https://richardlau.ca/yorku/desn3005/siaff/models/lightbox.png"                            
+                            alt="Cafe N Bars by Jinny Jeon"
+                            camera-controls 
+                            auto-rotate 
+                            ar 
+                            ar-modes="webxr scene-viewer quick-look">
+                            </model-viewer>     
+                            
+                            <model-viewer
+                            tabindex="-1"
+                            class="switch-model3"
+                            id="award3" 
+                            src="models/pieceC/abstractpillar.glb"
+                            ios-src="models/pieceC/abstractpillar.usdz"
+                            shadow-intensity="1"
+                            shadow-softness="0.8"
+                            environment-image="https://richardlau.ca/yorku/desn3005/siaff/models/lightbox.png"                            
+                            alt="Pillars by Shisays Condi"
+                            camera-controls 
+                            auto-rotate 
+                            ar 
+                            ar-modes="webxr scene-viewer quick-look">
+                            </model-viewer>                                 
                         </figure>
                         
                         <!-- Right: Title / Heading -->
                         <div id="award-right">
-                            <header id="awardheader-right">
+                            <header class="awardheader-right">
                                 <h2 class="siaffRounded">SIAFF AWARD NOMINEES</h2>
                                 <p class="notoRegular  switch-model1">Nominee for Gravity, Richard Lau</p>
                                 <p class="notoRegular  switch-model2">Nominee for Creativity, Jinny Jeon</p>
@@ -235,12 +304,12 @@ Every year a new theme is dedicated to the spirit of architecture. This year, th
                                     <img src="models/richardlau_qrcode_3.png" alt="QR Code to 3D Model">
                                 </a>
                             </div>  
-                                                                               
+
                         </div>
                     </div>
 
                 </div>                    
-                <a href="#" id="btn-style2" class="btn notoRegular">View Past Festival Themes</a>
+                <a href="#" id="btn-style2" class="btn notoRegular">View the SIAFF Awards</a>
             </section>
             <div id="object3">
                 <img src="media/sketch.png" alt="Architecture Sketch">
@@ -253,55 +322,55 @@ Every year a new theme is dedicated to the spirit of architecture. This year, th
                     <img src="media/txt/SHOP.svg" id="checkoutourshop" alt="Check out our shop">
                 </h2>
 
-                <div class="shopGrid" role="list">
-                    <article class="shopItem reveal" role="listitem" tabindex="0">
+                <ul class="shopGrid" role="list">
+                    <li class="shopItem reveal" tabindex="0">
                         <div class="shop-imageContainer">   
                             <img src="media/shop/item1.png" alt="SIAFF Tote Bag - Fabric">
                         </div>
                         <h3 class="notoRegular">SIAFF Tote Bag - Fabric</h3>
                         <p class="notoNormal">$24.99</p>
-                    </article>
+                    </li>
 
-                    <article class="shopItem reveal" role="listitem" tabindex="0">
+                    <li class="shopItem reveal" tabindex="0">
                         <div class="shop-imageContainer">
                             <img src="media/shop/item2.png" alt="SIAFF “I Love Buildings” Hat - EN">
                         </div>
                         <h3 class="notoRegular">SIAFF “I Love Buildings” Hat - EN</h3>
                         <p class="notoNormal">$22.99</p>
-                    </article>
+                    </li>
 
-                    <article class="shopItem reveal" role="listitem" tabindex="0">
+                    <li class="shopItem reveal" tabindex="0">
                         <div class="shop-imageContainer">
                             <img src="media/shop/item3.png" alt="SIAFF “I Love Buildings” Hat - KR">
                         </div>
                         <h3 class="notoRegular">SIAFF “I Love Buildings” Hat - KR</h3>
                         <p class="notoNormal">$22.99</p>
-                    </article>
+                    </li>
 
-                    <article class="shopItem reveal" role="listitem" tabindex="0">
+                    <li class="shopItem reveal" tabindex="0">
                         <div class="shop-imageContainer">
                             <img src="media/shop/item4.png" alt="SIAFF ‘Balance’ Metal Poster">
                         </div>
                         <h3 class="notoRegular">SIAFF ‘Balance’ Metal Poster</h3>
                         <p class="notoNormal">$14.99</p>
-                    </article>
+                    </li>
 
-                    <article class="shopItem reveal" role="listitem" tabindex="0">
+                    <li class="shopItem reveal" tabindex="0">
                         <div class="shop-imageContainer">
                             <img src="media/shop/item5.png" alt="SIAFF Augmented Reality Full Card Set">
                         </div>
                         <h3 class="notoRegular">SIAFF Augmented Reality Full Card Set</h3>
                         <p class="notoNormal">$17.99</p>
-                    </article>
+                    </li>
 
-                    <article class="shopItem reveal" role="listitem" tabindex="0">
+                    <li class="shopItem reveal" tabindex="0">
                         <div class="shop-imageContainer">
                             <img src="media/shop/item6.png" alt="SIAFF ‘Balance’ Sweater - Cotton">
                         </div>
                         <h3 class="notoRegular">SIAFF ‘Balance’ Sweater - Cotton</h3>
                         <p class="notoNormal">$34.99</p>
-                    </article>
-                </div>
+                    </li>
+                </ul>
                 <a href="#" id="view-more" class="notoRegular" role="button">VIEW MORE</a>
             </section>
         </article>
@@ -342,7 +411,7 @@ Every year a new theme is dedicated to the spirit of architecture. This year, th
                                 <section class="switch-model1 boothDescription">
                                     <p class="boothTime notoMedium">11:30AM-6:30PM [Hall C, Day 1]</p>
                                     <h3 class="notoBold boothTitle">The Giveaway Booth</h3>
-                                    <p class="notoRegular boothParagraph">Come hang out at our booth! Take a break, have a chat, and pick up some fun freebies while you’re here. It’s a space to relax, connect, and enjoy a little treat on us.</p>
+                                    <p class="notoRegular boothParagraph">Come hang out at the giveaway booth! Take a break and have a chat with some of the greatest industry professionals!</p>
                                 </section>
                                 <section class="switch-model2 boothDescription">
                                     <p class="boothTime notoMedium">9:30AM-5:30PM [Hall A-E]</p>
@@ -351,8 +420,8 @@ Every year a new theme is dedicated to the spirit of architecture. This year, th
                                 </section>
                                 <section class="switch-model3 boothDescription">
                                     <p class="boothTime notoMedium">9:30AM-4:30PM [Hall E, Day 3]</p>
-                                    <h3 class="notoBold boothTitle">The Connection Booth</h3>
-                                    <p class="notoRegular boothParagraph">Come hang out at our booth! Take a break and have a chat with some of the greatest industry professionals!</p>
+                                    <h3 class="notoBold boothTitle">The Giveaway Booth</h3>
+                                    <p class="notoRegular boothParagraph">Come hang out at the giveaway booth! Take a break and have a chat with some of the greatest industry professionals!</p>
                                 </section>                                                                
 
                                 <div class="tickets">
@@ -382,7 +451,7 @@ Every year a new theme is dedicated to the spirit of architecture. This year, th
                 <div class="reveal box-txt">
                     <h2 class="notoBold">Get your SIAFF Tickets!</h2>
                     <div id="points">
-                        <p class="notoRegular">Don’t miss out—here’s what you’ll experience:</p>
+                        <p class="notoRegular" id="festival-register-prompt">Don’t miss out—here’s what you’ll experience:</p>
                         <ul class="notoRegular" id="festival-list">
                             <li>Gain fresh perspectives and global architectural insights across screenings, talks, and panels</li>
                             <li>Connect with professional architects in roundtables, director Q&As, and interactive workshops</li>
@@ -438,7 +507,7 @@ Every year a new theme is dedicated to the spirit of architecture. This year, th
             <div id="map-container">
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.7113877220822!2d126.94425897618588!3d37.56186302439557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9884f66a1abb%3A0x5f0fd2b3810d9bd1!2sArt%20house%20MOMO!5e0!3m2!1sen!2sca!4v1763501984691!5m2!1sen!2sca" 
-                    id="map" width="100%" height="100%" style="border:0; border-radius: .25rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    id="map" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>   
             </div>    
 
