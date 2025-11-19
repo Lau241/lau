@@ -368,6 +368,10 @@
     display: none;
 }
 
+.mobileContainer-phone-hidden {
+    display: flex;
+}
+
 #award-box {
     background-color: #232323;
     border:#1B1BFF 4px solid;
@@ -396,12 +400,15 @@
 
 #award-center {
     flex: 1.5;
-    width: 100%;
-    height: 100%;    
+    width: 100%; 
 }
 
 .height100 {
     height: 100%;
+}
+
+.width100 {
+    width: 100%;
 }
 
 #award-left {
