@@ -985,8 +985,8 @@ footer {
 #booth-margins {
     margin-right: 2rem;
     margin-left: 2rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;    
+    margin-top: 2rem;
+    margin-bottom: 2rem;    
     gap: 1rem;
     flex-direction: column;
 }
@@ -1193,8 +1193,8 @@ footer {
 #booth-margins {
     margin-right: 2rem;
     margin-left: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;    
+    margin-top: 2rem;
+    margin-bottom: 2rem;     
     gap: 2rem;
     flex-direction: column;
 }
@@ -1213,6 +1213,30 @@ footer {
 }
 
 }
+
+/* transition between platforms */
+@media (max-width: 580px) {
+#logo {
+    display: block;
+}
+
+.mobile-hidden-nav {
+    display: none;
+}
+
+#hamburger {
+    display: block;
+    gap: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: flex-end;
+}    
+}
+
 
 @media (max-width: 426px) {
     /*temp disable map*/
@@ -1422,7 +1446,7 @@ footer {
 
 .boothDescription {
     gap: .5rem;
-    width: 65%;
+    width: 100%;
 }
 
 .boothParagraph {
@@ -1438,10 +1462,10 @@ footer {
 }
 
 #booth-margins {
-    margin-right: 2rem;
-    margin-left: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;    
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;    
     gap: 2rem;
     flex-direction: column;
 }
@@ -1466,6 +1490,49 @@ footer {
 
 #footer-site-information {
     text-align: left;
+}
+
+}
+
+@media (max-width: 400px) {
+#archit img, #ecture img {
+    height: 7rem;
+}
+
+#seoulinternational img, #filmFest img {
+    height: 1rem;
+}
+
+.hero-side {
+    gap: .5rem;
+}
+
+#logo {
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 0rem;
+    align-items: center;
+    justify-content: space-between;
+}   
+
+#award-margins {
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+
+#shopContainer {
+    align-items: center;
+}
+.shopGrid li {
+    width: 96%;
+}
+
+#footer-header h2 img {
+    width: 100%;
 }
 
 }
