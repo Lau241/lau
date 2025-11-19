@@ -364,6 +364,10 @@
     display: none;
 }
 
+.mobileContainer-phone-model {
+    display: none;
+}
+
 #award-box {
     background-color: #232323;
     border:#1B1BFF 4px solid;
@@ -1312,7 +1316,7 @@ footer {
 }
 
 #mobileContainer-phone-model {
-    height: 35vh;
+    height: 80vh;
     width: 100%;
 }
 
