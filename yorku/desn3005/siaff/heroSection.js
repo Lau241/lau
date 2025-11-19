@@ -1,7 +1,7 @@
 document.addEventListener("scroll", function () {
   const heroContainer = document.getElementById("heroSection");
   const heroCenter = document.getElementById("hero-center");
-  const heroH3 = heroCenter.querySelector("h3");
+  const heroH3 = heroCenter.querySelector("h2");
 
   // Correct progress calculation for sticky sections
   const sectionTop = heroContainer.offsetTop;
