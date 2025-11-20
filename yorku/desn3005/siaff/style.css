@@ -1006,7 +1006,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-
+    
 /* Hero section */
 
 #architectureHeader {
@@ -1239,17 +1239,16 @@ footer {
 
 
 @media (max-width: 426px) {
-    /*temp disable map*/
-#map-container, #map {
-    display: none;
-}
-
 
 /* Hero section */
 
 #architectureHeader {
     flex-direction: column;
     gap: 1rem;
+}
+
+#heroSection {
+    height: 160vh;
 }
 
 #herocontainer {
@@ -1531,8 +1530,16 @@ footer {
     width: 96%;
 }
 
-#footer-header h2 img {
+.shopGrid {
     width: 100%;
+}
+
+#shopTxt img {
+    width: 100%;
+}
+
+#footer-header h2 img {
+width: 100%;
 }
 
 }
