@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Source Han Sans KR';
+    src: url('SourceHanSansKR-Light-Alphabetic.woff2') format('woff2'),
+         url('SourceHanSansKR-Light-Alphabetic.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Han Sans KR';
+    src: url('SourceHanSansKR-Regular-Alphabetic.woff2') format('woff2'),
+         url('SourceHanSansKR-Regular-Alphabetic.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Han Sans KR';
+    src: url('SourceHanSansKR-Normal-Alphabetic.woff2') format('woff2'),
+         url('SourceHanSansKR-Normal-Alphabetic.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Han Sans KR';
+    src: url('SourceHanSansKR-Medium-Alphabetic.woff2') format('woff2'),
+         url('SourceHanSansKR-Medium-Alphabetic.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Source Han Sans KR';
+    src: url('SourceHanSansKR-Bold-Alphabetic.woff2') format('woff2'),
+         url('SourceHanSansKR-Bold-Alphabetic.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SIAFF Oblique';
+    src: url('SIAFF-Oblique.woff2') format('woff2'),
+        url('SIAFF-Oblique.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SIAFF Regular';
+    src: url('SIAFF-Regular.woff2') format('woff2'),
+        url('SIAFF-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SIAFF Rounded';
+    src: url('SIAFF-Rounded.woff2') format('woff2'),
+        url('SIAFF-Rounded.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
