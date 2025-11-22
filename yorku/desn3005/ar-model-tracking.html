@@ -27,8 +27,8 @@
   <body>
         <model-viewer
         id="award1" 
-        src="towerofescher-small.glb"
-        ios-src="towerofescher-small.usdz"
+        src="siaff-en/models/pieceA/towerofescher.glb"
+        ios-src="siaff-en/models/pieceA/towerofescher.usdz"
         shadow-intensity="1"
         shadow-softness="0.8"
         environment-image="https://richardlau.ca/yorku/desn3005/siaff-en/models/lightbox.png"                            
@@ -38,43 +38,7 @@
         ar 
         ar-modes="webxr scene-viewer quick-look">
         </model-viewer>
-
-
-      <script>
-      const modelViewer = document.querySelector('#award1');
-
-      async function launchAR() {
-        const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-
-        if (isiOS) {
-          const usdzURL = modelViewer.getAttribute('ios-src');
-          if (usdzURL) {
-            // Create an invisible link for Quick Look
-            const link = document.createElement('a');
-            link.rel = 'ar';
-            link.href = usdzURL;
-            link.style.display = 'none';
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-          }
-        } else {
-          if (await modelViewer.canActivateAR) {
-            try {
-              await modelViewer.activateAR();
-              console.log('AR mode activated');
-            } catch (err) {
-              console.warn('AR could not be activated automatically:', err);
-            }
-          }
-        }
-      }
-
-      // Wait for the model to load
-      modelViewer.addEventListener('load', launchAR);
-      </script>
-
   </body>
 
-
+  
 </html>
