@@ -1,0 +1,1034 @@
+@import url('../fonts/stylesheet.css');
+
+/*nav bar*/
+
+.navigationBar {
+    background-color: #000000;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navigationBar nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;   
+    align-items: center;
+}
+
+#logo {
+    font-family: 'SIAFF Regular';
+    color: #ffffff;
+    font-size: 64px;  
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;    
+    text-decoration: none;    
+    height: auto;
+    padding-top: .5rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    padding-top: .35rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.25rem;
+}
+
+#hamburger a img  {
+    height: 2.5rem;
+    width: auto;
+    padding-top: .5rem;
+}
+
+#hamburger {
+    align-items: center;
+    display: none;
+}
+
+.nav-hover:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+    text-decoration-thickness: .10rem;
+}
+
+.button-white {
+    background-color: #ffffff;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+    border-radius: 2rem;
+}
+
+.button-white a {
+    color: #000000;
+}
+
+.button-white:hover {
+    cursor: pointer;
+    background-color: #D9D9D9;
+    text-decoration: none;
+}
+
+.lang-group {
+    display: flex;
+    flex-direction: row;
+    gap: .75rem;
+}
+
+.lang-group a {
+    color: black;
+    text-decoration: none;
+    padding-bottom: .25rem;
+    padding-top: .3rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    background-color: white;
+    border-radius: .5rem;
+}
+
+.lang-group a:hover {
+    background-color: #D9D9D9;
+    text-decoration: none;
+}
+
+
+/*main*/
+
+#heroSection {
+    position: relative;
+    height: 120vh;
+    display: flex;
+    justify-content: center;
+    background-image: url(media-schedule/grid-background.png);
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#heroTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+    height: 100%;
+    align-items: center;
+}
+
+.schedule-download-row {
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+    color: white;
+}
+
+/* RESET BUTTON */
+
+.schedule-download-row a {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+
+    font-size: 2.5rem;
+    color: white;
+    cursor: pointer;
+
+    padding-right: 3rem;
+    padding-left: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 4rem;
+    border: #ffffff 2px solid;
+    display: flex;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+.schedule-download-row a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: #ff0000 2px solid;
+}
+
+.download-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#heroTitle p {
+    color: #ffffff;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+.fade {
+    width: 100%;
+}
+
+.fade img {
+    display: block;    
+    width: 100%;
+}
+
+#fadebottom {
+    display: flex;
+    align-items: baseline;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+#fadeContainer {
+    width: 100%;
+    height: 100%;
+    position: relative; 
+}
+
+#fadetop {
+    width: 100%;
+    height: 12rem;
+    overflow: hidden;
+    position: relative;
+} 
+
+#herocontainer {
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+    margin-bottom: 20rem;  
+    overflow-x: hidden;
+}
+
+#hero-center {
+    padding: 5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    border: #1B1BFF 2px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+}
+
+#hero-center {
+  display: none;
+  padding: 0rem;
+  transition: padding 0.05s linear;
+}
+
+#hero-center h2 {
+  font-size: 0px;
+  transition: font-size 0.05s linear;
+}
+
+.hero-side {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero-spacer {
+    height: 3.35rem;
+}
+
+
+#hero-center h2 {
+    color: white;
+    font-size: 3rem;
+    white-space: nowrap;   
+}
+
+#prompt-1 {
+    color: white;
+    opacity: 1;
+    font-size: 2.5rem;
+    align-self: center;
+    margin-top: 6rem;
+    animation: pulseOpacity 4s ease-in-out infinite;
+}
+
+@keyframes pulseOpacity {
+  0%   { opacity: 0.25; }
+  50%  { opacity: 1; }
+  100% { opacity: 0.25; }
+}
+
+.blink-in {
+  opacity: 0;
+  animation: blinkIn .3s ease-in-out forwards;
+}
+
+@keyframes blinkIn {
+  0% { opacity: 0; }
+  30% { opacity: 1; }
+  60% { opacity: .4; }
+  80% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+
+
+/* footer */
+
+footer { 
+    width: 100%;
+}
+
+#footer-background {
+    background-color: #000000;
+    background-image: url(media/gridBackground_plain.png);       
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;    
+    z-index: 5;
+}
+
+#footerContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: space-between;
+}
+
+#footer-header {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#footer-right {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+#footer-site-information {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    gap: 2.5rem;
+    font-size: 1.25rem;
+    color: white;
+}
+
+#footer-spacer {
+    margin-bottom: 70vh;
+    width: 1px;
+    z-index: -2;
+}
+
+#map-container {
+   position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70vh;
+    z-index: -1; 
+}
+
+
+@media (max-width: 1024px) {
+
+.nav-links {
+    gap: 1.5rem;
+}
+
+
+
+.box-txt {
+    flex: 2;
+}
+
+.box-txt h2 {
+    font-size: 2rem;
+}
+
+.box-txt p {
+    font-size: 1.25rem;
+}
+
+.box-gap {
+    flex: .5;
+}
+
+/* AR MODEL */
+
+#mobileContainer .awardheader-right {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-bottom: .5rem;
+}
+
+#mobileContainer .awardheader-right h2 {
+    font-size: 3.75rem;
+    text-align: left;
+}
+
+#mobileContainer .awardheader-right p {
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+#object3 {
+    display: none;
+}
+
+#awards {
+    height: auto;
+}
+
+#awardContainer {
+    position: relative;
+    top: 0;  
+}
+
+#awardParagraph {
+    font-size: 1.25rem;
+}
+
+#award-margins {
+    margin-right: 2rem;
+    margin-left: 2rem;
+    gap: 2rem;
+}
+
+#award-left, #award-right {
+    flex: 1.5;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;    
+}
+
+#award-center {
+    flex: 1.5;
+}
+
+#award-left {
+    gap: 45vh;
+}
+
+#award-right {
+    display: none;
+}
+
+/* booths */
+
+#booths {
+    height: auto;
+}
+
+#boothContainer {
+    position: relative;
+    top: 0; 
+}
+
+#boothheader-right h2 {
+    display: none;
+}
+
+#booth-center {
+    display: none;
+}
+
+#booth-right {
+    flex: 40;
+}
+
+#boothInfo {
+    margin-top: 0;
+    justify-content: space-between;
+    height: 100%;
+    gap: 1rem;
+}
+
+.boothDescription {
+    gap: .5rem;
+    width: 65%;
+}
+
+.boothParagraph {
+    font-size: 1.5rem;
+}
+
+.boothTitle {
+    font-size: 1.5rem;
+}
+
+.boothTime {
+    font-size: 1.25rem;
+}
+
+#booth-margins {
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;    
+    gap: 1rem;
+    flex-direction: column;
+}
+
+/* register */
+
+#register-container {
+    height: auto;
+}
+
+#register-section {
+    position: relative;
+    top: 0;
+}
+
+
+}
+
+@media (max-width: 768px) {
+    
+.schedule-download-row {
+    flex-direction: column;
+    gap: 3rem;
+}
+
+/* Hero section */
+
+.mobile-hero-spacer {
+    display: none;
+}
+
+#archit {
+    margin-bottom: 1rem;
+}
+
+#ecture {
+    margin-top: 1rem;
+}
+
+#prompt-1 {
+    font-size: 1.5rem;
+}
+    
+/* Navigation Bar */
+
+#logo {
+    display: none;
+}
+
+.nav-links {
+    gap: 0;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Description Section */
+
+.box-txt {
+    flex: 2;
+}
+
+.box-gap {
+    flex: .3;
+}
+
+.boxImage {
+    flex: 1.75;
+}
+
+.box-txt h2 {
+    font-size: 2.5rem;
+    width: 65%;
+}
+
+.box-txt p {
+    font-size: 1.25rem;
+}
+
+#descContainer {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#object, #object2, #object3 {
+    display: none;
+}
+
+#festivalDescription {
+    height: auto;
+}
+
+.box-Section {
+    position: relative;
+    top: 0;
+}
+
+/* AR MODEL */
+
+#mobileContainer .awardheader-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#mobileContainer .awardheader-right h2 {
+    font-size: 3rem;
+    text-align: left;
+}
+
+#mobileContainer .awardheader-right p {
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+#awards {
+    height: auto;
+}
+
+#awardContainer {
+    position: relative;
+    top: 0;  
+}
+
+#awardParagraph {
+    font-size: 1.25rem;
+}
+
+#award-margins {
+    margin-right: 2rem;
+    margin-left: 2rem;
+    gap: 2rem;
+}
+
+#award-left, #award-right {
+    flex: 1.5;
+    margin-top: 1rem;
+    margin-bottom: 1rem;    
+}
+
+#award-center {
+    flex: 1.5;
+}
+
+#award-left {
+    gap: 35vh;
+}
+
+#award-right {
+    display: none;
+}
+
+/* booths */
+
+#booths {
+    height: auto;
+}
+
+#boothContainer {
+    position: relative;
+    top: 0; 
+}
+
+#boothheader-right h2 {
+    display: none;
+}
+
+#booth-center {
+    display: none;
+}
+
+#booth-right {
+    flex: 40;
+}
+
+#boothInfo {
+    margin-top: 0;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.boothDescription {
+    gap: .5rem;
+    width: 65%;
+}
+
+.boothParagraph {
+    font-size: 1.25rem;
+}
+
+.boothTitle {
+    font-size: 1.25rem;
+}
+
+.boothTime {
+    font-size: 1rem;
+}
+
+#booth-margins {
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;     
+    gap: 2rem;
+    flex-direction: column;
+}
+
+/* register */
+
+#register-container {
+    height: auto;
+}
+
+#register-section {
+    position: relative;
+    top: 0;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+}
+
+/* transition between platforms */
+@media (max-width: 580px) {
+#logo {
+    display: block;
+}
+
+.mobile-hidden-nav {
+    display: none;
+}
+
+#hamburger {
+    display: block;
+    gap: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: flex-end;
+}    
+
+#footerContainer {
+    flex-direction: column;
+    gap: 6rem;
+}
+
+#footer-site-information {
+    text-align: left;
+}
+}
+
+
+@media (max-width: 426px) {
+
+/* Hero section */
+
+#heroSection {
+    height: 160vh;
+}
+
+.mobile-hero-spacer {
+    display: none;
+}
+
+#archit {
+    margin-bottom: 1rem;
+}
+
+#ecture {
+    margin-top: 1rem;
+}
+
+#archit img, #ecture img {
+    height: 8rem;
+}
+
+#seoulinternational img, #filmfestival img {
+    height: 2rem;
+}
+
+.hero-spacer {
+    height: 2rem;
+}
+    
+/* Navigation Bar */
+
+#logo {
+    display: block;
+}
+
+.mobile-hidden-nav {
+    display: none;
+}
+
+#hamburger {
+    display: block;
+    gap: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Description Section */
+
+.box-txt {
+    flex: 2;
+}
+
+.box-gap {
+    flex: .3;
+}
+
+.boxImage {
+    flex: 1.75;
+}
+
+.box-txt h2 {
+    font-size: 2.5rem;
+    width: 100%;
+}
+
+.box-txt p {
+    font-size: 1.25rem;
+}
+
+#descContainer {
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#object, #object2, #object3 {
+    display: none;
+}
+
+#festivalDescription {
+    height: auto;
+}
+
+.box-Section {
+    position: relative;
+    top: 0;
+}
+
+/* AR MODEL */
+
+#mobileContainer-phone {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+}
+
+#mobileContainer-phone-model {
+    height: 80vh;
+    width: 100%;
+}
+
+.mobileContainer-phone-hidden {
+    display: none;
+}
+
+#mobileContainer .awardheader-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+#mobileContainer .awardheader-right h2 {
+    font-size: 3rem;
+    text-align: left;
+}
+
+#mobileContainer .awardheader-right p {
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+#awards {
+    height: auto;
+}
+
+#awardContainer {
+    position: relative;
+    top: 0;  
+}
+
+#awardParagraph {
+    font-size: 1.25rem;
+}
+
+#award-margins {
+    margin-right: 2rem;
+    margin-left: 2rem;
+    gap: 2rem;
+}
+
+#award-left, #award-right {
+    flex: 1.5;
+    margin-top: 1rem;
+    margin-bottom: 1rem;    
+}
+
+#award-center {
+    flex: 1.5;
+}
+
+#award-left {
+    gap: 2rem;
+}
+
+#award-right {
+    display: none;
+}
+
+/* booths */
+
+#booths {
+    height: auto;
+}
+
+#boothContainer {
+    position: relative;
+    top: 0; 
+}
+
+#boothheader-right h2 {
+    display: none;
+}
+
+#booth-center {
+    display: none;
+}
+
+#booth-right {
+    flex: 40;
+}
+
+#boothInfo {
+    margin-top: 0;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.boothDescription {
+    gap: .5rem;
+    width: 100%;
+}
+
+.boothParagraph {
+    font-size: 1.25rem;
+}
+
+.boothTitle {
+    font-size: 1.25rem;
+}
+
+.boothTime {
+    font-size: 1rem;
+}
+
+#booth-margins {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;    
+    gap: 2rem;
+    flex-direction: column;
+}
+
+/* register */
+
+#register-container {
+    height: auto;
+}
+
+#register-section {
+    position: relative;
+    top: 0;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+#footerContainer {
+    flex-direction: column;
+    gap: 6rem;
+}
+
+#footer-site-information {
+    text-align: left;
+}
+
+}
+
+@media (max-width: 400px) {
+#archit img, #ecture img {
+    height: 7rem;
+}
+
+#seoulinternational img, #filmFest img {
+    height: 1rem;
+}
+
+.hero-side {
+    gap: .5rem;
+}
+
+#logo {
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    gap: 0rem;
+    align-items: center;
+    justify-content: space-between;
+}   
+
+#award-margins {
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+
+#shopContainer {
+    align-items: center;
+}
+.shopGrid li {
+    width: 96%;
+}
+
+.shopGrid {
+    width: 100%;
+}
+
+#shopTxt img {
+    width: 100%;
+}
+
+#footer-header h2 img {
+width: 100%;
+}
+
+}
