@@ -1,48 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AR.js with GLB Model</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DESN3005 Augmented Reality</title>
 
-  <!-- A-Frame -->
-  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <link rel="icon" href="../media/RL.png" type="image/png">
+    <link rel="stylesheet" href="../portfolioStyles/siteToolkit.css">
+    <link rel="stylesheet" href="../projects.css">
+    <link rel="stylesheet" href="style.css">
 
-  <!-- AR.js for A-Frame -->
-  <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.js"></script>
+  <!-- Open Graph tags -->
+  <meta property="og:title" content="SIAFF AR EXPERIENCE">
+  <meta property="og:description" content="Augmented Reality Experience, coded by Richard Lau.">
+  <meta property="og:url" content="https://richardlau.ca/yorku/desn3005/arexperience">
+  <meta property="og:type" content="website">    
 
-  <style>
-    body { margin: 0; overflow: hidden; }
-  </style>
-</head>
-<body>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+      body { margin: 0; display: flex; justify-content: center; align-items: center; height: 100vh; background: #232323; }
+      model-viewer { width: 100%; max-width: 100%; height: 75vh; }
+    </style>    
+  </head>
 
-  <a-scene
-    embedded
-    vr-mode-ui="enabled: false"
-    renderer="logarithmicDepthBuffer: true; antialias: true;"
-    arjs="sourceType: webcam; debugUIEnabled: false;"
-  >
+  <body>
+        <model-viewer
+        id="award1" 
+        src="towerofescher-small.glb"
+        ios-src="towerofescher-small.usdz"
+        shadow-intensity="1"
+        shadow-softness="0.8"
+        environment-image="https://richardlau.ca/yorku/desn3005/siaff-en/models/lightbox.png"                            
+        alt="Tower of Escher by Richard Lau"
+        camera-controls 
+        auto-rotate 
+        ar 
+        ar-modes="webxr scene-viewer quick-look">
+        </model-viewer>
 
-    <!-- Preload GLB model -->
-    <a-assets>
-      <a-asset-item id="tower-model" src="https://www.richardlau.ca/yorku/desn3005/towerofescher-small.glb"></a-asset-item>
-    </a-assets>
 
-    <!-- Marker -->
-    <a-marker type="pattern" url="https://www.richardlau.ca/yorku/desn3005/marker.patt">
-      <!-- 3D Model -->
-      <a-entity 
-        gltf-model="#tower-model" 
-        scale=".1 .1 .1" 
-        position="0 0.5 0" 
-        rotation="0 0 0">
-      </a-entity>
-    </a-marker>
+        <script>
+        const modelViewer = document.querySelector('#award1');
 
-    <!-- Camera -->
-    <a-entity camera></a-entity>
-  </a-scene>
+        async function launchAR() {
+          // Detect iOS
+          const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
-</body>
+          if (isiOS) {
+            // Open USDZ file for Quick Look AR
+            const usdzURL = modelViewer.getAttribute('ios-src');
+            if (usdzURL) {
+              window.location.href = usdzURL;
+            }
+          } else {
+            // For WebXR (Android / compatible browsers)
+            if (await modelViewer.canActivateAR) {
+              try {
+                await modelViewer.activateAR();
+                console.log('AR mode activated');
+              } catch (err) {
+                console.warn('AR could not be activated automatically:', err);
+              }
+            }
+          }
+        }
+
+        // Wait for the model to load
+        modelViewer.addEventListener('load', launchAR);
+        </script>        
+
+  </body>
+
+
 </html>
