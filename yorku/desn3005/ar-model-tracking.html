@@ -40,35 +40,39 @@
         </model-viewer>
 
 
-        <script>
-        const modelViewer = document.querySelector('#award1');
+      <script>
+      const modelViewer = document.querySelector('#award1');
 
-        async function launchAR() {
-          // Detect iOS
-          const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+      async function launchAR() {
+        const isiOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
 
-          if (isiOS) {
-            // Open USDZ file for Quick Look AR
-            const usdzURL = modelViewer.getAttribute('ios-src');
-            if (usdzURL) {
-              window.location.href = usdzURL;
-            }
-          } else {
-            // For WebXR (Android / compatible browsers)
-            if (await modelViewer.canActivateAR) {
-              try {
-                await modelViewer.activateAR();
-                console.log('AR mode activated');
-              } catch (err) {
-                console.warn('AR could not be activated automatically:', err);
-              }
+        if (isiOS) {
+          const usdzURL = modelViewer.getAttribute('ios-src');
+          if (usdzURL) {
+            // Create an invisible link for Quick Look
+            const link = document.createElement('a');
+            link.rel = 'ar';
+            link.href = usdzURL;
+            link.style.display = 'none';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          }
+        } else {
+          if (await modelViewer.canActivateAR) {
+            try {
+              await modelViewer.activateAR();
+              console.log('AR mode activated');
+            } catch (err) {
+              console.warn('AR could not be activated automatically:', err);
             }
           }
         }
+      }
 
-        // Wait for the model to load
-        modelViewer.addEventListener('load', launchAR);
-        </script>        
+      // Wait for the model to load
+      modelViewer.addEventListener('load', launchAR);
+      </script>
 
   </body>
 
