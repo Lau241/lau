@@ -112,7 +112,7 @@
     height: fit-content;
     display: flex;
     justify-content: center;
-    background-image: url(media-map/grid-background.png);
+    background-image: url(media-map/grid-background-long.png);
     background-color: #000000;
     background-repeat: no-repeat;
     background-size: cover;
