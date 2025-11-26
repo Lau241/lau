@@ -175,6 +175,10 @@
     text-align: center;
 }
 
+.img-txt-header {
+    color: white;
+    font-size: 4rem;
+}
 
 .fade {
     width: 100%;
