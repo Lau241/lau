@@ -1,0 +1,146 @@
+@import url('../../helvetica/stylesheet.css');
+
+main {
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+header {
+    margin-top: 3rem;
+}
+
+.bold {
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+.hero header {
+    font-family: 'Helvetica';
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 1rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    line-height: 120%;
+    margin: 0;
+}
+
+.hero p {
+    line-height: 150%;
+    font-size: 1.25rem;
+    font-family: 'Helvetica';
+    font-weight: 500;
+}
+
+#line {
+    height: .5px;
+    background-color: black;
+    opacity: 50%;
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.reflection {
+display: flex;
+flex-direction: column;
+align-items: left;
+font-family: 'Helvetica';
+}
+
+.projectInfo {
+    color: rgb(65, 65, 65);
+    margin-bottom: 1rem;
+}
+
+.projectInfo h3 {
+    font-weight: 400;
+}
+
+.pgTxt {
+    font-size: 1.10rem;
+    line-height: 150%;
+}
+
+.tweet {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+#fuck {
+    opacity: 70%;
+    margin-top: 1rem;
+}
+
+#fuckTwt {
+    opacity: 70%;
+}
+
+.images {
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      border-radius: .5rem; 
+}
+
+.figmaEmbed {
+    aspect-ratio: 16/9;
+}
+
+.bib h2 {
+    font-family: 'Helvetica';
+    font-weight: 500;
+}
+
+.bib2 {
+    font-family: 'Helvetica';
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+/* Base styles */
+body {
+    width: auto;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    color: black;
+    background-color: #ffffff;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, p, ul, ol {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+em {
+  font-style: normal;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+blockquote {
+  margin: 0;
+  padding: 0;
+  font-style: normal; /* removes italic */
+  border: none;       /* removes any default border */
+  background: none;   /* removes any default background */
+}
+
+@media (max-width: 768px) {
+    main {
+        margin: 1rem;
+    }
+}
