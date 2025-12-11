@@ -1,3 +1,0 @@
-Lewand, R. (2000). Cryptological mathematics (p. 36-37). Mathematical Association of America.
-Cornell University. (n.d.). Letter frequencies. Retrieved March 31, 2025, from https://pi.math.cornell.edu/~mec/2003-2004/cryptography/subs/frequencies.html
-Stefan Trost Media. (n.d.). Character frequency in English. Retrieved March 31, 2025, from https://www.sttmedia.com/characterfrequency-english
