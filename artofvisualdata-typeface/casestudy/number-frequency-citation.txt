@@ -1,0 +1,2 @@
+Reference List: Golbeck, J. (2023). Benford’s Law applies to word frequency rank in English, German, French, Spanish, and Italian. PLOS ONE, 18(9), e0291337. https://doi.
+org/10.1371/journal.pone.0291337

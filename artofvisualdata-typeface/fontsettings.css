@@ -1,0 +1,66 @@
+@import url('../portfolioStyles/fontcss.css');
+
+.largeType {
+    font-size: 3rem;
+}
+
+.largerType {
+    font-size: 3.5rem;
+}
+
+.demiType {
+    font-size: 2.5rem;
+}
+
+.mediumType {
+    font-size: 2.25rem;
+}
+
+.regularType {
+    font-size: 1.5rem;
+} 
+
+.smallType {
+    font-size: 1.25rem;
+}
+
+.smallerType {
+    font-size: 1.15rem;
+}
+
+.vcrFont {
+    font-family: 'VCR OSD Mono', monospace;
+    font-weight: normal;
+}
+
+.halyardLight {
+    font-family: 'Halyard Display', sans-serif;
+    font-weight: 200;
+    font-style: light;
+    font-display: swap;    
+}
+
+.halyardBook {
+    font-family: 'Halyard Display Book', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;    
+}
+
+.halyardRegular {
+    font-family: 'Halyard Display', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.section-title {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.full-width {
+    width: 100%;
+}
+
