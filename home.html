@@ -113,7 +113,7 @@
       <article class="project2 fadeinup">
         <a href="https://richardlau.ca/artofvisualdata-typeface"><span class="visually-hidden">View project: Art of Visual Data Typeface</span>  
           <div class="thumbnailParent">
-            <img src="media/type_specimen_mockup_concrete.png" alt="Type Specimen booklet about the typeface called Art of Visual Data." class="Thumbnail2"></img>
+            <img src="media/aovd-booklet-mockup.png" alt="Type Specimen booklet about the typeface called Art of Visual Data." class="Thumbnail2"></img>
           </div>
         </a>
         <header class="projectHeaders">
@@ -408,43 +408,7 @@ function dragMoveListener (event) {
 window.dragMoveListener = dragMoveListener
 </script>  
 
-<!-- This is the navigation bar scroll effect -->
-<script>  
-  const fixedContainer = document.querySelector('.fixedContainer');
-   let lastScrollY = window.scrollY;
-
-    window.addEventListener('scroll', () => {
-    if (lastScrollY < window.scrollY) {
-      fixedContainer.classList.remove("nav--revealed");
-   fixedContainer.classList.add("nav--hidden");
-    } else {
-    fixedContainer.classList.remove("nav--hidden");
-    fixedContainer.classList.add("nav--revealed");
-    }
-lastScrollY = window.scrollY;
-  });
-</script>
-
-<!-- Fade In Animation -->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-//  if (window.innerWidth < 540) return; // skip mobile if you want
-
-  const sections = document.querySelectorAll('.fadeinup');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animateUp');
-        observer.unobserve(entry.target); // run once
-      }
-    });
-  }, {
-    threshold: 0.4 // element triggers when 40% visible
-  });
-
-  sections.forEach(section => observer.observe(section));
-});
-</script>
+<script src="case-study-scripts.js"></script>
 
 </body>
 </html>
