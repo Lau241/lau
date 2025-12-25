@@ -51,6 +51,10 @@
     margin-top: 11rem;
 }
 
+.large-padding {
+    padding-top: 11rem;
+}
+
 .larger-gap {
     margin-top: 16rem;
 }
@@ -85,7 +89,6 @@
 .text-and-image {
     display: flex;
     flex-direction: row;
-
 }
 
 .image-flex-1 {
@@ -94,7 +97,6 @@
     display: flex;
     width: auto;
     align-items: stretch; 
-    background-color: white;
     border-radius: 1rem;   
 }
 

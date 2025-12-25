@@ -8,6 +8,10 @@
     font-size: 3.5rem;
 }
 
+.customLarge {
+    font-size: 5rem;
+}
+
 .demiType {
     font-size: 2.5rem;
 }
@@ -52,6 +56,43 @@
     font-weight: normal;
     font-style: normal;
     font-display: swap;
+}
+
+/* AoVD */
+.aovd-refined {
+  font-family: 'AoVD', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.aovd-bold {
+  font-family: 'AoVD', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.aovd-oblique {
+  font-family: 'AoVD', sans-serif;
+  font-weight: 300;
+  font-style: oblique;
+}
+
+.aovd-thin {
+  font-family: 'AoVD', sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.aovd-english-oblique {
+  font-family: 'AoVD', sans-serif;
+  font-weight: normal;
+  font-style: oblique;
+}
+
+.aovd-english {
+  font-family: 'AoVD', sans-serif;
+  font-weight: 300;
+  font-style: normal;
 }
 
 .section-title {

@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'AoVD';
+    src: url('AoVDRefined.woff2') format('woff2'),
+        url('AoVDRefined.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AoVD';
+    src: url('AoVDRefinedBold.woff2') format('woff2'),
+        url('AoVDRefinedBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AoVD';
+    src: url('AoVDRefinedOblique.woff2') format('woff2'),
+        url('AoVDRefinedOblique.woff') format('woff');
+    font-weight: 300;
+    font-style: oblique;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AoVD';
+    src: url('AoVDRefinedThin.woff2') format('woff2'),
+        url('AoVDRefinedThin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AoVD';
+    src: url('AoVDEnglishOblique.woff2') format('woff2'),
+        url('AoVDEnglishOblique.woff') format('woff');
+    font-weight: normal;
+    font-style: oblique;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'AoVD';
+    src: url('AoVDEnglish.woff2') format('woff2'),
+        url('AoVDEnglish.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
