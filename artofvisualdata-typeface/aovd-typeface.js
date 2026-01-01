@@ -88,3 +88,6 @@ sizeButtons.forEach(button => {
     }
   });
 });
+
+
+// Navigation Bar

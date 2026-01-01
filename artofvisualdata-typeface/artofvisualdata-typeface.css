@@ -102,7 +102,7 @@
 
 .inspiration-review {
   z-index: 1;
-  top: 0rem;
+  top: 5%;
   position: sticky;
 }
 
@@ -469,7 +469,99 @@
   border-radius: .5rem;
 }
 
+.tags {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
 
+.project-tags {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tags li {
+  list-style: none;
+  padding: .5rem 1.5rem;
+  border-radius: 2rem;
+  background-color: #212326;  
+}
+
+.project-hover {
+  overflow: hidden;
+  border-radius: 1rem;  
+}
+
+.project-hover img:hover {
+  transform: scale(1.06); /* Slightly expand on hover */
+  z-index: 2;
+}
+
+.project-hover img {
+  transition: transform 0.5s ease-out;
+}
+
+.label {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.arrowBottomLeft {
+  height: 1.5rem;
+  width: auto;
+  padding-bottom: .15rem;
+  padding-left: 0.875rem;
+}
+
+.media-link {
+  list-style: none;
+
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.link {
+  padding: 1rem;
+  background-color: #212326;
+  border-radius: .5rem;  
+  color: #EFEAE4;
+
+  text-decoration: none;
+  display: block;
+}
+
+.link:hover {
+  background-color: #EFEAE4;
+  color: #131416;
+  transition: background-color 0.3s ease-out;
+}
+
+.connection-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.pre-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 7.5rem;
+}
+
+.poro-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.poro {
+  width: 17.5%;
+  height: auto;
+  transform: translateY(-50%);
+}
 
 /* Image link focus (keyboard accessible) */
 .img-link:focus {

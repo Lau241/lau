@@ -33,6 +33,29 @@
     </div>
     </section>
 
+    <aside class="table-of-contents">
+      <div class="toc-inner">
+        <div class="content-links">
+          <h3 class="vcrFont regularType">Table of Contents</h3>
+          <div class="sectionDivider smallest-gap"></div>
+          <ul class="vcrFont regularType">
+            <li class="smallest-gap"><a class="dark-gray" href="#introduction">Introduction</a></li>
+            <li class="smallest-gap"><a class="dark-gray" href="#inspiration">Inspiration</a></li>
+            <li class="smallest-gap"><a class="dark-gray" href="#early-research">Early Research</a></li>
+            <li class="smallest-gap"><a class="dark-gray" href="#visualization">Visualization</a></li>
+            <li class="smallest-gap"><a class="dark-gray" href="#initial-design">Initial Design</a></li>
+            <li class="smallest-gap"><a class="dark-gray" href="#typeface-summary">Typeface Summary</a></li>
+            <li class="smallest-gap"><a class="dark-gray" href="#type-specimen">Type Specimen</a></li>
+            <li class="smallest-gap"><a class="dark-gray" href="#final-designs">Final Designs</a></li>
+            <li class="smallest-gap"><a class="dark-gray" href="#conclusion">Conclusion</a></li>
+          </ul>
+        </div>
+        <div class="open-button vcrFont regularType">
+          <div id="toc-btn">></div>
+        </div>
+      </div>
+    </aside>
+
 <main>
 
 
@@ -83,7 +106,7 @@
     </div>
   </section>
 
-  <section class="margins fadeinup large-gap">
+  <section class="margins fadeinup large-gap toc-section" id="introduction">
     <div class="introHeading align-bottom">
       <header style="white-space: nowrap;" class="blockA">
         <h2 class="vcrFont largerType">What’s your Type?</h2>
@@ -101,7 +124,7 @@
     </figure>
   </section>
 
-  <section class="inspiration margins large-gap">
+  <section class="inspiration margins large-gap toc-section" id="inspiration">
     <header class="fadeinup section-title">
       <h3 class="vcrFont dark-gray regularType">inspiration</h3>
       <h2 class="vcrFont largeType">Let’s fix what’s broke</h2>
@@ -116,7 +139,7 @@
       data was interesting but poorly presented, as the data is based on the dictionary, not keyboard usage.
     </p>
 
-    <div class="inspiration-review align-bottom large-padding">
+    <div class="inspiration-review align-bottom large-gap">
       <figure class="keyboard fadeinup">
         <img src="casestudy/keyboard-inspo.png" alt="Letter Frequency visualization by Mike Knuepfel." class="mockupImage">
       </figure>
@@ -154,7 +177,7 @@
     </article> 
   </section>
   
-  <section class="early-research margins regular-gap">
+  <section class="early-research margins regular-gap toc-section" id="early-research">
     <header class="fadeinup section-title">
       <h3 class="vcrFont dark-gray regularType">early research</h3>
       <h2 class="vcrFont largeType">Analyzing the Data</h2>
@@ -197,7 +220,7 @@
         such as ‘th.’ This inspired me to create a system that visualizes how often we utilize these glyphs.</p>      
   </section>  
   
-  <section class="visualization-rational larger-gap">
+  <section class="visualization-rational larger-gap toc-section" id="visualization">
     <header class="vine-header fadeinup">
       <img src="casestudy/svgs/leafPixel.svg" alt="Vines in a Pixel Art Style." class="vines flipped">  
       <div class="vine-title-container" style="white-space: nowrap;">
@@ -242,7 +265,7 @@
 
   </section>
 
-  <section class="early-research margins larger-gap">
+  <section class="early-research margins larger-gap toc-section" id="initial-design">
     <header class="fadeinup section-title">
       <h3 class="vcrFont dark-gray regularType">initial design</h3>
       <h2 class="vcrFont largeType">Designing the System</h2>
@@ -290,7 +313,7 @@
       <article class="search-bar larger-gap">
         <header class="search-header fadeinup">
           <img src="casestudy/svgs/search.svg" alt="Magnifying Glass Icon.">
-          <h5 class="halyardBook mediumType">What was my biggest challenge?</h5>
+          <h5 class="halyardBook mediumType cursor-blink">What was my biggest challenge?</h5>
         </header>
 
         <div class="light-gap fadeinup">
@@ -452,7 +475,7 @@
 
   </section> 
 
-  <section class="visualization-rational larger-gap">
+  <section class="visualization-rational larger-gap toc-section" id="typeface-summary">
     <header class="vine-header fadeinup">
       <img src="casestudy/svgs/leafPixel.svg" alt="Vines in a Pixel Art Style." class="vines flipped">  
       <div class="vine-title-container" style="white-space: nowrap;">
@@ -580,7 +603,7 @@
   </section>
 
 
-  <section class="type-specimen margins large-gap">
+  <section class="type-specimen margins large-gap toc-section" id="type-specimen">
     <header class="fadeinup section-title">
       <h3 class="vcrFont dark-gray regularType">type specimen cover</h3>
       <h2 class="vcrFont largeType">Show off the Typeface</h2>
@@ -604,11 +627,11 @@
       </figure>        
     </article>
 
-    <img src="casestudy/specimen-transparent-cover.png" alt="placeholder" class="mockupImage medium-gap fadeinup">
+    <img src="casestudy/specimen-transparent-cover.png" alt="Booklet showing sliced letterforms along the page edges with text explaining the typeface anatomy concept." class="mockupImage medium-gap fadeinup">
 
   </section>
 
-  <section class="final-designs margins large-gap">
+  <section class="final-designs margins large-gap toc-section" id="final-designs">
     <header class="fadeinup section-title">
       <h3 class="vcrFont dark-gray regularType">final designs</h3>
       <h2 class="vcrFont largeType">This is Art of Visual Data</h2>
@@ -618,7 +641,7 @@
       Under the time constraint of one month, I’ve managed to create a systematic data-driven typeface, type specimen, 
       and a few brand applications that communicates the essence of the Art of Visual Data.      
     </p>  
-      <video autoplay muted loop playsinline class="full-width fadeinup border-smooth small-gap">
+      <video autoplay muted loop playsinline class="full-width fadeinup border-smooth small-gap" aria-label="Preview of the type specimen booklet design.">
         <source src="casestudy/video/type-specimen-booklet-images.webm" type="video/webm">
       </video>
 
@@ -630,11 +653,11 @@
       <article class="two-images small-gap">
   
         <figure class="packaging-center fadeinup">
-          <img src="casestudy/final-specimen-zoom.png" alt="PLACEHOLDER" class="mockupImage">
+          <img src="casestudy/final-specimen-zoom.png" alt="Close-up of the AoVD type specimen booklet showing a page about its brand application." class="mockupImage">
         </figure>
 
         <figure class="packaging-center fadeinup">
-          <img src="casestudy/final-digital-mockup.png" alt="PLACEHOLDER" class="mockupImage">
+          <img src="casestudy/final-digital-mockup.png" alt="Laptop displaying a dashboard interface for Art of Visual Data's 'DataSense' tool." class="mockupImage">
         </figure>     
            
       </article>    
@@ -642,12 +665,12 @@
     <h2 class="vcrFont largeType regular-gap">Brand Applications</h2>
     <div class="sectionDivider line-gap fadeinup"></div>
 
-    <img src="casestudy/final-print-mockup.png" alt="PLACEHOLDER" class="mockupImage fadeinup">
+    <img src="casestudy/final-print-mockup.png" alt="Type posters for AoVD with distressed lettering and plastic wrap texture." class="mockupImage fadeinup">
 
     <figure class="customGrid desktopFinals fadeinup smallest-gap">
-        <img class="gridItem fadeinup" src="casestudy/final-tote-mockup.png" alt="[PLACEHOLDER]">
-        <img class="gridItem fadeinup" src="casestudy/final-hoodie-mockup.png" alt="[PLACEHOLDER]">
-        <img class="gridItem fadeinup" src="casestudy/final-sticker-mockup.png" alt="[PLACEHOLDER]">
+        <img class="gridItem fadeinup" src="casestudy/final-tote-mockup.png" alt="Tote bag with a modified lowercase 'a' in the AoVD: English typeface.">
+        <img class="gridItem fadeinup" src="casestudy/final-hoodie-mockup.png" alt="Chest part of a hoodie with '!!?!?!!!!??' and 'aovd' below in the AoVD: English typeface.">
+        <img class="gridItem fadeinup" src="casestudy/final-sticker-mockup.png" alt="Circular sticker with the text 'i fuck with this typeface' in the AoVD: English typeface.">
     </figure>    
 
   </section>
@@ -663,10 +686,10 @@
       Hangul characters. In the type specimen, I’ve created a brief introduction and example of how this may be applied to other glyphs and symbols.    
     </p>  
 
-    <img src="casestudy/final-specimen-mockup.png" alt="PLACEHOLDER" class="mockupImage fadeinup small-gap">
+    <img src="casestudy/final-specimen-mockup.png" alt="Type specimen page of the AoVD typeface anatomy and an example of it's similar style in Korean." class="mockupImage fadeinup small-gap">
   </section>
 
-  <section class="final-designs margins large-gap">
+  <section class="final-designs margins large-gap toc-section" id="conclusion">
     <header class="fadeinup section-title">
       <h3 class="vcrFont dark-gray regularType">reflection and conclusion</h3>
       <h2 class="vcrFont largeType">What did we achieve?</h2>
@@ -676,7 +699,7 @@
       <article class="v2-text-and-image layout-center regular-gap">
 
         <figure class="v2-image-flex-1 fadeinup">
-          <img src="casestudy/conclusion-aovd-award.png" alt="PLACEHOLDER" class="mockupImage">
+          <img src="casestudy/conclusion-aovd-award.png" alt="Type specimen with 'THE ART OF VISUAL DATA' going across both spreads and the 'RGD 2025 Student Award Winner' sticker in the top right." class="mockupImage">
         </figure>  
 
         <div class="v2-text-and-image-gap"></div>
@@ -702,7 +725,7 @@
         <div class="v2-text-and-image-gap"></div>
 
         <figure class="v2-image-flex-1 fadeinup">
-          <img src="casestudy/conclusion-fontlab-award.png" alt="PLACEHOLDER" class="mockupImage">
+          <img src="casestudy/conclusion-fontlab-award.png" alt="Letter 'A' in the AoVD: Refined typeface being viewed in FontLab." class="mockupImage">
         </figure>  
         
       </article>        
@@ -710,7 +733,7 @@
     <section class="learnings fadeinup large-gap">
       <header class="learnHead fadeinup">
         <img src="casestudy/svgs/search.svg" alt="Magnifying Glass Icon."></img>
-        <h4 class="halyardBook white mediumType">So what did I learn?</h4>
+        <h4 class="halyardBook white mediumType cursor-blink">So what did I learn?</h4>
       </header>
 
       <ul class="fadeinup gray halyardLight regularType">
@@ -724,7 +747,56 @@
 
   </section>  
 
-  <div><br></br><br></br><br></br><br></br><br></br><br></br></div>
+
+  <section class="featured-project fadeinup margins larger-gap">
+    <header>
+      <h2 class="vcrFont fadeinup largeType">Related Projects</h2>
+    </header>
+    <figure class="fadeinup smallest-gap project-hover">
+      <a href="#">
+        <img src="../media/type_specimen_mockup_concrete.png" alt="Seoul International Architecture Film Festivals" class="mockupImage">
+      </a>
+    </figure>
+    <div class="project-tags smallest-gap">
+      <ul class="fadeinup tags halyardBook regularType">
+        <li>Typography</li>
+        <li>Branding</li>
+        <li>Website Design</li>
+        <li>HTML/CSS</li>
+      </ul>
+      <h3><a href="#" class="vcrFont regularType white fadeinup">see project</a></h3>
+    </div>
+  </section>  
+
+  <section class="larger-gap margins pre-footer">
+ 
+    <article class="connection-container">
+      <header class="label">
+        <h2 class="vcrFont mediumType">FOLLOW<h2>
+          <img src="../media/arrowBottomLeft.svg" class="arrowBottomLeft" alt="Arrow pointing downwards to the left.">
+      </header>
+      <ul class="media-link">
+        <li><a href="https://www.linkedin.com/in/richard-lau-70003a217/" class="link vcrFont semi-mediumType white" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/richard_bingo/" class="link vcrFont semi-mediumType white" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </article>
+
+    <article class="connection-container">
+      <header class="label">
+        <h2 class="vcrFont mediumType">EMAIL<h2>
+          <img src="../media/arrowBottomLeft.svg" class="arrowBottomLeft" alt="Arrow pointing downwards to the left.">
+      </header>
+
+      <div class="poro-container">
+      <ul class="media-link">
+        <li><a href="mailto:richardlau1167@gmail.com" class="link vcrFont semi-mediumType white">richardlau1167@gmail.com</a></li>
+      </ul>
+        <img src="../media/poro_refined.gif" alt="8-Bit Poro from League of Legends." class="poro">
+      </div>
+    </article>
+
+  </section>
+
 </main>
 
 
