@@ -1255,7 +1255,6 @@ font-family: 'VCR OSD Mono', monospace;
     font-style: light;
     font-display: swap;
     font-size: 1.5rem;
-    color: #A3A19E;
 }
 
 .listSpacing {
@@ -1345,12 +1344,19 @@ font-family: 'VCR OSD Mono', monospace;
 }
 
 .label {
-    font-family: 'VCR OSD Mono', monospace;
-    font-size: 2.25rem;
-    font-weight: normal;
-    color: #EFEAE4;
+    display: flex;
+    flex-direction: row;
+
     align-items: baseline;
     margin-bottom: 4rem;
+}
+
+.label h2 {
+  font-family: 'VCR OSD Mono', monospace;
+  font-size: 2.25rem;
+  font-weight: normal;
+  color: #EFEAE4;
+      
 }
 
 .arrowBottomLeft {
@@ -2707,3 +2713,78 @@ font-size: 1.25rem;
   animation-duration: 1s;
   animation-fill-mode: forwards; /* keeps final state after animation */
 }
+
+
+/* table of contents */
+
+.table-of-contents {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  z-index: 10;
+}
+
+.open-button {
+  background-color: #1E2022;
+  width: fit-content;
+  height: fit-content;
+
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+
+  border-top-right-radius: .5rem;
+  border-bottom-right-radius: .5rem;  
+  
+  cursor: pointer;
+}
+
+.content-links {
+  padding: 1.5rem;
+  background-color: #1E2022;
+
+  transition: transform 0.3s ease;  
+
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;    
+}
+
+.content-links li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.content-links li a {
+  transition: color 0.15s ease-out;
+  text-decoration: none;
+}
+
+.content-links li a:hover {
+  color: #EFEAE4;
+}
+
+.toc-inner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+#toc-btn {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+#toc-btn.flipped {
+  transform: scaleX(-1);
+}
+

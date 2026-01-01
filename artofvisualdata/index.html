@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../portfolioStyles/siteToolkit.css">
     <link rel="stylesheet" href="../projects.css">
     <link rel="stylesheet" href="artofvisualdata.css">
+    <link rel="stylesheet" href="basicstyling.css">
+    <link rel="stylesheet" href="fontsettings.css">
 </head>
 
 <body>
@@ -34,18 +36,29 @@
   </div>
 </section>
 
-<!--
-<aside class="pageNavigation">
-  <nav class="navigationLinks">
-      <ul>
-        <li><a href="#testing1">Project Overview</a></li>
-        <li><a href="#testing2">Affinity Mapping</a></li>
-        <li><a href="#testing3">Findings & Goals</a></li>
-        <li><a href="#testing4">Users & Personas</a></li>
-      </u l>
-    </nav>  
-</aside>
--->
+    <aside class="table-of-contents">
+      <div class="toc-inner">
+        <div class="content-links">
+          <h3 class="vcrFont regularType">Table of Contents</h3>
+          <div class="sectionDivider smallest-gap"></div>
+          <ul class="vcrFont regularType">
+            <li class="smallest-gap"><a class="dark-gray" href="#introduction">Introduction</a></li>
+            <li class="smallest-gap"><a class="dark-gray" href="#gathering-data">Gathering Data</a></li>
+            <li class="smallest-gap"><a class="dark-gray" href="#defining-users">Defining Users</a></li>
+            <li class="smallest-gap"><a class="dark-gray" href="#research-summary">Research Summary</a></li>
+            <li class="smallest-gap"><a class="dark-gray" href="#web-arch">Web Architecture</a></li>
+            <li class="smallest-gap"><a class="dark-gray" href="#design-challenges">Design Challenges</a></li>
+            <li class="smallest-gap"><a class="dark-gray" href="#final-designs">Final Designs</a></li>
+            <li class="smallest-gap"><a class="dark-gray" href="#extra-tools">Extra Tools</a></li>
+            <li class="smallest-gap"><a class="dark-gray" href="#design-achievements">Design Achievements</a></li>
+            <li class="smallest-gap"><a class="dark-gray" href="#conclusion">Conclusion</a></li>
+          </ul>
+        </div>
+        <div class="open-button vcrFont regularType">
+          <div id="toc-btn">></div>
+        </div>
+      </div>
+    </aside>
 
 <main>
 
@@ -98,7 +111,7 @@
     </div>
   </section>
 
-  <section class="introduction fadeinup">
+  <section class="introduction fadeinup toc-section" id="introduction">
     <div class="introHeading">
       <header style="white-space: nowrap;" class="blockA">
         <h2 class="prSubtitle3">Numbers to Stories</h2>
@@ -117,7 +130,7 @@
   </section>
 
 
-  <section class="gatheringData">
+  <section class="gatheringData toc-section" id="gathering-data">
     <header class="gatheringDataHeaders fadeinup">
       <h3>gathering data</h3>
       <h2>Building empathetic narratives</h2>
@@ -178,7 +191,7 @@
 
 
 
-  <section class="process1 fadeinup">
+  <section class="process1 fadeinup toc-section" id="defining-users">
     <header class="gatheringDataHeaders">
       <h3>defining our users</h3>
       <h2>Who are we <span class="line-break"></span>designing for?</h2>
@@ -308,7 +321,7 @@
     </figure>
   </section>
 
-  <section class="researchSummaryContainer">
+  <section class="researchSummaryContainer toc-section" id="research-summary">
     <header class="researchSummary fadeinup">
       <img src="caseStudy1/leafPixel.svg" alt="Vines in a Pixel Art Style." id="flipped" class="vines"></img>  
       <div class="headerContent" style="white-space: nowrap;">
@@ -345,7 +358,7 @@
     </div>  
   </section>
   
-  <section class="informationArchitecture fadeinup">
+  <section class="informationArchitecture fadeinup toc-section" id="web-arch">
     <header class="gatheringDataHeaders fadeinup">
       <h3>information architecture</h3>
       <h2>Let's talk navigation</h2>
@@ -404,7 +417,7 @@
 
   </section>
 
-  <section class="designChallenge fadeinup">
+  <section class="designChallenge fadeinup toc-section" id="design-challenges">
     <header class="gatheringDataHeaders fadeinup">
       <h3>design challenges</h3>
       <h2>AI for accessibility</h2>
@@ -455,7 +468,7 @@
     </article>
   </div>
   
-  <section class="finalDesigns">
+  <section class="finalDesigns toc-section" id="final-designs">
     <header class="gatheringDataHeaders fadeinup">
       <h3>final designs</h3>
       <h2>This is Art of <span class="line-break"></span>Visual Data</h2>
@@ -576,7 +589,7 @@
 
   </section>
 
-  <section class="dataSense fadeinup">
+  <section class="dataSense fadeinup toc-section" id="extra-tools">
     <header class="gatheringDataHeaders fadeinup">
       <h3>extra tools</h3>
       <h2>DataSense</h2>
@@ -590,7 +603,7 @@
     </figure>
   </section>
 
-  <section class="researchSummaryContainer fadeinup">
+  <section class="researchSummaryContainer fadeinup toc-section" id="design-achievements">
     <header class="researchSummary fadeinup">
       <img src="caseStudy1/leafPixel.svg" alt="Vines in a Pixel Art Style." id="flipped" class="vines"></img>  
       <div class="headerContent" style="white-space: nowrap;">
@@ -627,7 +640,7 @@
     </div>  
   </section>
   
-  <section class="reflection fadeinup">
+  <section class="reflection fadeinup toc-section" id="conclusion">
     <header class="gatheringDataHeaders fadeinup">
       <h3>reflection and conclusion</h3>
       <h2>Innovating stories for the future</h2>
@@ -686,7 +699,7 @@
     <section class="connections">
       <article class="follow">
         <header class="label">
-          FOLLOW<img src="../media/arrowBottomLeft.svg" class="arrowBottomLeft" alt="Arrow pointing downwards to the left."></img>
+          <h2>FOLLOW</h2><img src="../media/arrowBottomLeft.svg" class="arrowBottomLeft" alt="Arrow pointing downwards to the left."></img>
         </header>
         <ul class="connectBtn">
           <li><a href="https://www.linkedin.com/in/richard-lau-70003a217/" class="connectionLink" target="_blank" rel="noopener">LinkedIn</a></li>
@@ -695,14 +708,15 @@
       </article>
       <article class="email">
         <header class="label">
-          EMAIL<img src="../media/arrowBottomLeft.svg" class="arrowBottomLeft" alt="Arrow pointing downwards to the left."></img>
+          <h2>EMAIL</h2><img src="../media/arrowBottomLeft.svg" class="arrowBottomLeft" alt="Arrow pointing downwards to the left."></img>
         </header>
         <ul class="connectBtn">
           <li><a href="mailto:richardlau1167@gmail.com" class="connectionLink">richardlau1167@gmail.com</a></li>
           <li class="poroContainer"><img src="../media/poro_refined.gif" alt="8-Bit Poro from League of Legends." class="poro"></img></li>
         </ul>
       </article>
-    </section>  
+    </section>
+  </section>
 </main>
 
 <!-- Footer/Scripts -->
@@ -714,22 +728,10 @@
   </div>
 </footer>
  
-<!-- This is the navigation bar scroll effect -->
-<script>  
-  const fixedContainer = document.querySelector('.fixedContainer');
-   let lastScrollY = window.scrollY;
+<!-- SCRIPTS -->
 
-    window.addEventListener('scroll', () => {
-    if (lastScrollY < window.scrollY) {
-      fixedContainer.classList.remove("nav--revealed");
-   fixedContainer.classList.add("nav--hidden");
-    } else {
-    fixedContainer.classList.remove("nav--hidden");
-    fixedContainer.classList.add("nav--revealed");
-    }
-lastScrollY = window.scrollY;
-  });
-</script>
+<script src="../case-study-scripts.js"></script>
+
 
 <!-- Persona Profile Slider -->
  <script>
@@ -756,44 +758,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const videos = document.querySelectorAll("video");
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.play();
-      } else {
-        entry.target.pause();
-      }
-    });
-  }, { threshold: 0.1 });
-
-  videos.forEach(video => observer.observe(video));
-});
-</script>
-
-<!-- Fade In Animation -->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-//  if (window.innerWidth < 540) return; // skip mobile if you want
-
-  const sections = document.querySelectorAll('.fadeinup');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animateUp');
-        observer.unobserve(entry.target); // run once
-      }
-    });
-  }, {
-    threshold: 0.4 // element triggers when 40% visible
-  });
-
-  sections.forEach(section => observer.observe(section));
-});
-</script>
-
 <!-- Desktop Video Removal (to save the poor user's ram) -->
  <script>
 if (window.matchMedia("(max-width: 540px)").matches) {
@@ -806,19 +770,6 @@ if (window.matchMedia("(max-width: 540px)").matches) {
 if (window.matchMedia("(min-width: 540px)").matches) {
   document.querySelectorAll('.mobileFinals, .mobileIdea').forEach(el => el.remove());
 }
-</script>
-
-
-<!-- Refresh page when breakpoint changes -->
-<script>
-let currentBreakpoint = window.innerWidth > 540 ? "desktop" : "mobile";
-
-window.addEventListener("resize", function() {
-  let newBreakpoint = window.innerWidth > 540 ? "desktop" : "mobile";
-  if (newBreakpoint !== currentBreakpoint) {
-    location.reload();
-  }
-});
 </script>
 
 </body>

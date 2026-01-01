@@ -1,0 +1,111 @@
+@import url('../portfolioStyles/fontcss.css');
+
+.largeType {
+    font-size: 3rem;
+}
+
+.largerType {
+    font-size: 3.5rem;
+}
+
+.customLarge {
+    font-size: 5rem;
+}
+
+.demiType {
+    font-size: 2.5rem;
+}
+
+.mediumType {
+    font-size: 2.25rem;
+}
+
+.semi-mediumType {
+    font-size: 2rem;
+}
+
+.regularType {
+    font-size: 1.5rem;
+} 
+
+.smallType {
+    font-size: 1.25rem;
+}
+
+.smallerType {
+    font-size: 1.15rem;
+}
+
+.vcrFont {
+    font-family: 'VCR OSD Mono', monospace;
+    font-weight: normal;
+}
+
+.halyardLight {
+    font-family: 'Halyard Display', sans-serif;
+    font-weight: 200;
+    font-style: light;
+    font-display: swap;    
+}
+
+.halyardBook {
+    font-family: 'Halyard Display Book', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;    
+}
+
+.halyardRegular {
+    font-family: 'Halyard Display', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* AoVD */
+.aovd-refined {
+  font-family: 'AoVD', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.aovd-bold {
+  font-family: 'AoVD', sans-serif;
+  font-weight: bold;
+  font-style: normal;
+}
+
+.aovd-oblique {
+  font-family: 'AoVD', sans-serif;
+  font-weight: 300;
+  font-style: oblique;
+}
+
+.aovd-thin {
+  font-family: 'AoVD', sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.aovd-english-oblique {
+  font-family: 'AoVD', sans-serif;
+  font-weight: normal;
+  font-style: oblique;
+}
+
+.aovd-english {
+  font-family: 'AoVD', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.section-title {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.full-width {
+    width: 100%;
+}
+
