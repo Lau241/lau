@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const triggerPoint = 0.65; // desktop trigger
 
   function checkFade() {
-    if (window.innerWidth < 540) return; // skip mobile
+
+    //if (window.innerWidth < 540) return; // skip mobile (its kinda broken)
 
     sections.forEach(section => {
       if (!section.classList.contains('animateUp') && section.getBoundingClientRect().top <= viewportHeight * triggerPoint) {
