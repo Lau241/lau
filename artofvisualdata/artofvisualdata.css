@@ -2193,6 +2193,10 @@ font-size: 1rem;
   list-style: none;
 }
 
+.nav-links a {
+    padding: .25rem 1rem;
+}
+
 .prHeader {
     margin-left: .5rem;
     margin-right: .5rem;  
