@@ -100,7 +100,6 @@ list-style: none;
     align-items: center;
     margin-left: 15rem !important;
     margin-right: 13rem !important;
-    margin-inline: auto;
     padding-top: 1.75rem;
     padding-bottom: .5rem;
     max-width: none;
@@ -190,13 +189,15 @@ h1 {
    display: flex;
    align-items: center;
    gap: 6px;
-   margin-top: -14px;
-   padding-left: 4px;
+   min-height: 100px;
 }
+
+  .mobile {
+    display: none;
+  }
 
 /* paragraph settings */
 .subTitle p {
-    padding-bottom: 3.5px;
     font-family: 'Halyard Display Book', sans-serif;
 font-size: 24px;
 font-style: light;
@@ -241,38 +242,43 @@ font-weight: 300;
 
 .nowrap-container {
   display: flex;
-  align-items: center;
+  justify-content: flex-start;
   gap: 6px;
 }
 
-.typewriter {
-  /* example typewriter effect */
-  align-items: center;
-    display: flex;
+.typewriter-container {
+  display: flex;
+  flex-direction: row;
+
   font-family: 'Halyard Display', sans-serif;
   font-weight: normal;
     font-style: italic;
     font-display: swap;
     color: #FC78CE;
-    font-size: 24px;
+    font-size: 1.5rem;  
+
+  align-items: center;
+  width: fit-content;
+}
+
+.blink {
+  display: block;
 
   overflow: hidden;
   white-space: nowrap;
-  border-right: 16px solid #FC78CE;
   height: 100%;
-  line-height: 1; /* Adjust as needed */
-  animation: typing var(--timing) steps(30), blink 1s ease-in-out infinite;
-  animation-delay: 0s, var(--timing); 
-}
-
-@keyframes typing {
-    from { width: 0 }
-  to { width: var(--typing-width) }
+  border-right: #FC78CE 1.25rem solid;   
+  margin-left: .25rem;
+  font-size: 1.25rem;
+  animation: blink 1s steps(30) infinite;
+  
 }
 
 @keyframes blink {
   50% { border-color: transparent }
 }
+
+
 
 /* Dropdown content styles */
 .dropdown {
@@ -686,9 +692,11 @@ body {
 
     .subTitle {
    display: flex;
+   justify-content: flex-start;
    align-items: baseline;
+   flex-wrap: wrap;
    gap: 6px;
-   margin-top: 0px;
+   margin-top: 1rem;
    padding-left: 4px;
 }
 
@@ -725,6 +733,24 @@ body {
 /* edit animation speeds for this screen*/
 @media (max-width: 540px) {
 
+.mainpage {
+  padding-top: 8rem;
+}
+
+  .mobile {
+    display: block;
+    margin-right: 100%;
+  }
+
+  .blink {
+    font-size: 1rem;
+    border-right: #FC78CE 1rem solid; 
+  }
+
+  .nav-links a {
+    padding: .25rem 1rem;
+  }
+
   .loadingVideo {
   width: 50%;
   }  
@@ -735,33 +761,18 @@ body {
     transform: none !important;
   } */
 
-    .subTitle p {
-        font-size: 2.5rem;
-    }
 
-@keyframes typing {
-    from { width: 0 }
-  to { width: var(--typing-double) }
-}    
-
-.dropbtn {
-  font-size: 2.5rem;
-  height: 3rem;
-  margin-left: .5rem;
-}
+  .dropbtn {
+    font-size: 1.5rem;
+    height: 2rem;
+    margin-left: .25rem;
+  }
 
 .dropdown-content {
   margin-top: 4rem;
   z-index: 1;
 }
 
-.subTitle {
-   display: inline;
-   align-items: baseline;
-   gap: 6px;
-   margin-top: 0px;
-   padding-left: 4px;
-}
 
 .connectionLink {
 font-size: 1.75rem;
@@ -786,7 +797,7 @@ font-size: 1.75rem;
     margin-inline: auto;
     margin-left: .5rem;
     margin-right: .5rem;
-    padding-top: 7.5rem;
+    padding-top: 4rem;
   }
 
   .aovdWeb {
