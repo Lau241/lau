@@ -67,7 +67,6 @@
             <a href="#">designer</a>
             <a href="#">print designer</a>
             <a href="#">system builder</a>
-            <a href="#">product designer</a>
             <a href="#">ui/ux designer</a>
             <a href="#">brand builder</a>
             <a href="#">storyteller</a>
@@ -131,6 +130,22 @@
         <div class="space"></div>
       </article>
 
+      <article class="project8 fadeinup">
+        <a href="https://richardlau.ca/queensgambit"><span class="visually-hidden">View project: Seoul International Architecture Film Festival</span>  
+          <div class="thumbnailParent">
+            <video aria-label="Featuring SIAFF website screens from mobile to desktop applications." class="Thumbnail2" autoplay muted loop playsinline>
+              <source src="https://dl.dropboxusercontent.com/scl/fi/rrv7v4usj4hh6q8c1ps7w/promo-web-video-siaff.mp4?rlkey=nrngswf9hphx0yyvcjcwu8t15" type="video/mp4">
+            </video>
+          </div> 
+        </a>
+        <header class="projectHeaders">
+          <a href="https://richardlau.ca/queensgambit" tabindex="-1">SIAFF - Festival Concept</a>
+          <a href="https://richardlau.ca/queensgambit" class="more">see project<span class="visually-hidden">details for SIAFF - Festival Concept</span></a>
+        </header>
+        <p class="description">A conceptual bilingual festival brand featuring sexy custom fonts and a fully HTML/CSS prototyped website.</p>
+        <div class="space"></div>
+      </article>
+      
       <article class="project3 fadeinup">
         <a href="#"><span class="visually-hidden">View project: THIS PAGE IS A COVER</span>  
           <div class="thumbnailParent">
@@ -205,8 +220,8 @@
       
       <div class="seeAll">
         <a href="#" class="more">See All Works</a>
-      </div>
-      
+      </div>      
+
   </section>
 
   <section class="preFooter">
@@ -265,9 +280,10 @@
       const project5 = document.querySelector('.project5');        
       const project6 = document.querySelector('.project6');     
       const project7 = document.querySelector('.project7');
+      const project8 = document.querySelector('.project8');
             
       
-const projects = [project1, project2, project3, project4, project5, project6, project7];      
+const projects = [project1, project2, project3, project4, project5, project6, project7, project8];      
 projects.forEach(p => {
   p.style.display = ""; // make visible
 });
@@ -275,13 +291,15 @@ projects.forEach(p => {
       if (value === "designer") {
         project5.style.display = "none";
         project6.style.display = "none";
-        project7.style.display = "none";        
+        project7.style.display = "none";     
+        project3.style.display = "none";    
       }
 
       if (value === "print designer") {
         project1.style.display = "none";
         project4.style.display = "none";
         project7.style.display = "none";
+        project8.style.display = "none"; 
       }    
       
       if (value === "system builder") {     
@@ -293,10 +311,10 @@ projects.forEach(p => {
       }
       
       if (value === "storyteller") {     
-        project2.style.display = "none";
-        project3.style.display = "none";        
+        project2.style.display = "none";    
         project5.style.display = "none";
-        project6.style.display = "none";        
+        project6.style.display = "none";
+        project8.style.display = "none";                
       }     
 
       if (value === "ui/ux designer") {     
@@ -306,6 +324,14 @@ projects.forEach(p => {
         project6.style.display = "none"; 
         project7.style.display = "none";       
       }         
+
+      if (value === "brand builder") {     
+        project3.style.display = "none";       
+        project4.style.display = "none";         
+        project5.style.display = "none";
+        project6.style.display = "none"; 
+        project7.style.display = "none";       
+      }        
     }
 
     // Run once on page load with default text
