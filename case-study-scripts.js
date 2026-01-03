@@ -75,6 +75,8 @@ const tocBtn = document.getElementById('toc-btn');
 
 const peekPercent = 0;
 
+if (toc && tocInner && panel && openBtn) {
+
 function setPeek() {
   const panelWidth = panel.offsetWidth;
   const peekPx = (peekPercent / 100) * panelWidth;
@@ -99,7 +101,7 @@ openBtn.addEventListener('click', () => {
 
 window.addEventListener('resize', setPeek);
 
-
+}
 
 //highlighting toc
 
