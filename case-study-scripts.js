@@ -1,30 +1,35 @@
 // Fade in animation
-
 document.addEventListener('DOMContentLoaded', () => {
   const sections = document.querySelectorAll('.fadeinup');
-  const viewportHeight = document.documentElement.clientHeight;
-  const triggerPoint = 0.65; // desktop trigger
+  const isMobile = window.innerWidth < 540;
 
-  function checkFade() {
-
-    if (window.innerWidth < 540) {
-      
+  // MOBILE: force final state and stop
+  if (isMobile) {
     sections.forEach(section => {
       section.classList.add('animateUp');
     });
+    return;
+  }
 
-    return; } // skip mobile (its kinda broken)
+  // DESKTOP ONLY FROM HERE DOWN
+  const viewportHeight = window.innerHeight;
+  const triggerPoint = 0.65;
 
+  function checkFade() {
     sections.forEach(section => {
-      if (!section.classList.contains('animateUp') && section.getBoundingClientRect().top <= viewportHeight * triggerPoint) {
+      if (
+        !section.classList.contains('animateUp') &&
+        section.getBoundingClientRect().top <= viewportHeight * triggerPoint
+      ) {
         section.classList.add('animateUp');
       }
     });
   }
 
-  window.addEventListener('scroll', checkFade);
-  checkFade(); // initial check
+  window.addEventListener('scroll', checkFade, { passive: true });
+  checkFade();
 });
+
 
 //navigation bar scroll effect
 
