@@ -772,8 +772,10 @@ body {
   }
 
 .dropdown-content {
-  margin-top: 4rem;
+  margin-top: 0rem;
   z-index: 1;
+  width: 12rem;
+  max-height: 12rem;
 }
 
 
