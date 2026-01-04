@@ -189,7 +189,6 @@ h1 {
    display: flex;
    align-items: center;
    gap: 6px;
-   min-height: 100px;
 }
 
   .mobile {
@@ -740,6 +739,10 @@ body {
   .mobile {
     display: block;
     margin-right: 100%;
+  }
+
+  .subTitle {
+    min-height: 100px;
   }
 
   .blink {
