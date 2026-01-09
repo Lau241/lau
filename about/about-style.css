@@ -4,11 +4,26 @@
 
 /* Start styling here */
 
+.about-richard {
+  background-color: #131416;
+  z-index: 1;
+  position: sticky;
+  top: 0;  
+}
+
 .about-container {
-  padding-top: 12rem;
+  padding: 15vh 0;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1.5rem;
+  margin: 1rem 0;
+}
+
+.page-header {
+  position: sticky;
+}
+
+.page-title {
+  font-size: 6rem;
 }
 
 .about-header {
@@ -48,7 +63,7 @@
 }
 
 .v3-text-flex-1 {
-    flex: .725;
+    flex: 1.0;
 
     display: flex;
     flex-direction: column;
@@ -64,6 +79,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: #131416;
+  z-index: 2;
+  padding: 25vh 0;
 }
 
 .value-container {
@@ -138,6 +158,12 @@
   display: flex;
   flex-direction: column;
   gap: 7.5rem;
+
+  position: sticky;
+  background-color: #131416;
+  padding-top: 25vh;
+  padding-bottom: 10vh;
+  z-index: 3;
 }
 
 .poro-container {
@@ -319,6 +345,12 @@ body {
 
 /* Footer */
 
+.footerContent {
+  background-color: #131416;
+  z-index: 4;
+  position: relative;
+}
+
 .siteInfo {
   font-family: 'Halyard Display', sans-serif;
     font-weight: 100;
@@ -404,7 +436,11 @@ body {
   animation-duration: 1s;
   animation-fill-mode: forwards; /* keeps final state after animation */
 }
-
+@media (max-width: 1024px) {
+  .page-title {
+    font-size: 4.25rem;
+  }
+}
 
 @media (max-width: 780px) {
   .logo {
@@ -433,7 +469,18 @@ body {
     flex-direction: column;
   }
 
-  
+  .page-title {
+    font-size: 4.5rem;
+    padding-bottom: 2rem;
+  }  
+
+  .page-header, .about-richard, .footerContent, .pre-footer, .values-section {
+    position: relative;
+  }
+
+  .values-section, .about-container {
+    padding: 5vh 0;
+  }
 
   .about-container, .value-container {
     position: relative;
@@ -475,4 +522,12 @@ body {
   .poro {
     display: none;
   }
+}
+
+@media (max-width: 375px) {
+  .page-title {
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+  }  
+
 }
