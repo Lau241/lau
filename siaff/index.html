@@ -77,9 +77,13 @@
 
   <section class="project-info margins fadeinup regular-gap">
 
-    <header style="white-space: nowrap;" class="blockA">
+    <header style="white-space: nowrap;" class="blockA desktop-format">
       <h2 class="vcrFont largerType project-subhead">Breathing Modularity<br>Into Architecture.</h2> 
     </header>
+
+    <header style="white-space: nowrap;" class="blockA mobile-format">
+      <h2 class="vcrFont mediumType project-subhead">Breathing Modularity<br>Into Architecture.</h2> 
+    </header>    
 
     <span class="blockB"></span>
 
@@ -275,20 +279,41 @@
       </header>
     </article>
 
-      <article class="text-and-image layout-center medium-gap">
+      <!--Desktop version-->
+      <div class="desktop-format">    
+        <article class="text-and-image layout-center medium-gap">
 
-        <figure class="image-flex-1 fadeinup">
-          <img src="casestudy/siaff-typeface-illustrator.png" alt="Illustrator file of typeface creation." class="mockupImage">
-        </figure>  
+          <figure class="image-flex-1 fadeinup">
+            <img src="casestudy/siaff-typeface-illustrator.png" alt="Illustrator file of typeface creation." class="mockupImage">
+          </figure>  
 
-        <div class="text-and-image-gap"></div>
+          <div class="text-and-image-gap"></div>
 
-        <div class="text-flex-1 fadeinup">
-          <h4 class="halyardRegular demiType">Developing a multilingual typeface</h4>
-          <p class="halyardLight gray regularType">Typeface design is an extensive process, especially for multilingual use. However, the benefit of creating my own typeface means that I have full control of how the visual style translates from English to Korean.</p>
-        </div>
-        
-      </article>    
+          <div class="text-flex-1 fadeinup">
+            <h4 class="halyardRegular demiType">Developing a multilingual typeface</h4>
+            <p class="halyardLight gray regularType">Typeface design is an extensive process, especially for multilingual use. However, the benefit of creating my own typeface means that I have full control of how the visual style translates from English to Korean.</p>
+          </div>
+          
+        </article>    
+      </div>
+
+      <!--Mobile version-->
+      <div class="mobile-format">
+        <article class="text-and-image layout-center regular-gap">
+
+          <div class="text-flex-1 fadeinup">
+            <h4 class="halyardRegular demiType">Developing a multilingual typeface</h4>
+            <p class="halyardLight gray regularType">Typeface design is an extensive process, especially for multilingual use. However, the benefit of creating my own typeface means that I have full control of how the visual style translates from English to Korean.</p>
+          </div>
+
+          <div class="text-and-image-gap"></div>
+
+          <figure class="image-flex-1 fadeinup">
+            <img src="casestudy/siaff-typeface-illustrator.png" alt="Illustrator file of typeface creation." class="mockupImage">
+          </figure>  
+          
+        </article> 
+      </div>     
       
       <article class="text-and-image layout-center medium-gap">
 
@@ -349,22 +374,28 @@
     
     <article class="three-image-row large-gap posters">
 
-      <figure class="fadeinup packaging-center">
-        <img src="casestudy/final_symbolic.png" alt="Final symbolic poster for the Seoul International Architecture Film Festival featuring architectural blueprints, rulers, and grid-based typography.">      
-
-      </figure>  
-
-      <span class="fadeinup poster-txt">
+      <span class="fadeinup poster-txt mobile-format">   
         <h5 class="vcrFont demiType white">Final Symbolic Poster</h5>
         <div class="line-gap sectionDivider"></div>
         <p class="halyardBook regularType gray">This poster is symbolic of architecture by visually representing the process and origins into planning the actual live buildings.</p>
       </span>
-      <span></span>       
+
+      <figure class="fadeinup packaging-center">
+        <img src="casestudy/final_symbolic.png" alt="Final symbolic poster for the Seoul International Architecture Film Festival featuring architectural blueprints, rulers, and grid-based typography.">      
+
+      </figure>  
+      
+      <span class="fadeinup poster-txt desktop-format">   
+        <h5 class="vcrFont demiType white">Final Symbolic Poster</h5>
+        <div class="line-gap sectionDivider"></div>
+        <p class="halyardBook regularType gray">This poster is symbolic of architecture by visually representing the process and origins into planning the actual live buildings.</p>
+      </span>
+      <span class="desktop-format"></span>       
 
     </article>
 
     <article class="three-image-row large-gap posters">
-      <span></span>
+      <span class="desktop-format"></span>
       <span class="fadeinup poster-txt">
         <h5 class="vcrFont demiType white">Final Abstract Poster</h5>
         <div class="line-gap sectionDivider"></div>
@@ -390,7 +421,7 @@
         <img src="casestudy/final_representational.png" alt="Collage-style poster of stacked brutalist concrete buildings in muted tones, intersected by flowing blue lines and orange accents, promoting the Seoul International Architecture Film Festival.">      
 
       </figure>         
-      <span></span>
+      <span class="desktop-format"></span>
     </article>    
 
   </section>
@@ -527,7 +558,7 @@
     <p class="halyardLight regularType fadeinup gray">In my branding applications, I designed 3D architectural models for festival attendees to experience it through augmented reality and interact with it on my website. This however, was not going to work on a Figma mockup as it didn’t allow embeds, so I decided to code an MVP in HTML/CSS and JavaScript.</p>
     
     <article class="box-and-image fadeinup small-gap">
-      <div class="box-container">
+      <div class="box-container desktop-format">
         <h3 class="halyardBook smallType">What's the challenge?</h3>
         <p class="halyardLight smallType gray small-gap">
           • Figma is limited and cannot implement interactive 3D objects in the website mockup.
@@ -540,7 +571,9 @@
       </figure>
     </article>
 
-    <p class="halyardLight regularType medium-gap fadeinup gray">This branding application is highly experimental, but it creates strong memorability for the festival. It can be extended across multiple touchpoints, including take-home QR-code business cards, presentation decks, and even 3D-printed objects.</p>
+    <p class="halyardLight regularType medium-gap fadeinup gray desktop-format">This branding application is highly experimental, but it creates strong memorability for the festival. It can be extended across multiple touchpoints, including take-home QR-code business cards, presentation decks, and even 3D-printed objects.</p>
+    <p class="halyardLight regularType small-gap fadeinup gray mobile-format">This branding application is highly experimental, but it creates strong memorability for the festival. It can be extended across multiple touchpoints, including take-home QR-code business cards, presentation decks, and even 3D-printed objects.</p>
+
 
     <article class="two-images small-gap">
       <figure class="packaging-center fadeinup">
@@ -554,7 +587,7 @@
       </figure>        
     </article>
 
-    <article class="center-content larger-gap">
+    <article class="center-content larger-gap desktop-format">
       <figure class="fadeinup content-video">
         <video alt="Video demonstrating the process of scanning a SIAFF playing card that leads to a mobile Augmented Reality Experience." class="mockupImage" autoplay muted loop controls playsinline poster="casestudy/loading-phone.png">
           <source src="https://richard-lau.b-cdn.net/siaff/lau.project3.ardemo.webm" type="video/webm">
@@ -568,6 +601,25 @@
         <p class="halyardLight regularType"><a href="https://richardlau.ca/yorku/desn3005/arexperience" class="highlight" target="_blank">Experience it from your phone! </a></p>
       </div>        
     </article>
+
+    <article class="center-content larger-gap mobile-format">
+
+      <div class="content-txt fadeinup">
+        <img src="casestudy/svgs/qrcode.svg" alt="Qr Code Icon." class="svg-width">
+        <h4 class="vcrFont largeType">View a live demo of the AR experience!</h4>
+        <p class="halyardLight regularType gray">In this demonstration, we take a look at the SIAFF scannable cards and the process of experiencing live architecture through augmented reality.</p>
+        <p class="halyardLight regularType"><a href="https://richardlau.ca/yorku/desn3005/arexperience" class="highlight" target="_blank">Experience it from your phone! </a></p>
+        <div class="line-gap sectionDivider">
+      </div>  
+
+      <figure class="fadeinup content-video">
+        <video alt="Video demonstrating the process of scanning a SIAFF playing card that leads to a mobile Augmented Reality Experience." class="mockupImage" autoplay muted loop controls playsinline poster="casestudy/loading-phone.png">
+          <source src="https://richard-lau.b-cdn.net/siaff/lau.project3.ardemo.webm" type="video/webm">
+          <source src="https://richard-lau.b-cdn.net/siaff/lau.project3.ardemo.mp4" type="video/mp4">
+        </video>    
+      </figure>
+      
+    </article>    
 
   </section>
 
@@ -635,31 +687,31 @@
     <div>
       <article class="two-images small-gap">
         <figure class="packaging-center fadeinup">
-          <img src="casestudy/website-page-01.png" alt="Seoul International Architecture Film Festival title on dark grid background." class="mockupImage">
+          <img src="casestudy/website-page-01.png" alt="Seoul International Architecture Film Festival title on dark grid background." class="mockup-image-2">
         </figure>
 
         <figure class="packaging-center fadeinup">
-          <img src="casestudy/website-page-02.png" alt="Festival webpage section of description with blue background and promotional poster image." class="mockupImage">
+          <img src="casestudy/website-page-02.png" alt="Festival webpage section of description with blue background and promotional poster image." class="mockup-image-2">
         </figure>        
       </article>
 
       <article class="two-images small-gap">
         <figure class="packaging-center fadeinup">
-          <img src="casestudy/website-page-03.png" alt="SIAFF webpage section of award nominees layout with project image and QR code." class="mockupImage">
+          <img src="casestudy/website-page-03.png" alt="SIAFF webpage section of award nominees layout with project image and QR code." class="mockup-image-2">
         </figure>
 
         <figure class="packaging-center fadeinup">
-          <img src="casestudy/website-page-04.png" alt="SIAFF webpage section of festival merchandise including tote bag, posters, and sweatshirt." class="mockupImage">
+          <img src="casestudy/website-page-04.png" alt="SIAFF webpage section of festival merchandise including tote bag, posters, and sweatshirt." class="mockup-image-2">
         </figure>        
       </article>
       
       <article class="two-images small-gap">
         <figure class="packaging-center fadeinup">
-          <img src="casestudy/website-page-05.png" alt="SIAFF webpage section of ticket promotion with mobile phone mockups on blue background" class="mockupImage">
+          <img src="casestudy/website-page-05.png" alt="SIAFF webpage section of ticket promotion with mobile phone mockups on blue background" class="mockup-image-2">
         </figure>
 
         <figure class="packaging-center fadeinup">
-          <img src="casestudy/website-page-06.png" alt="SIAFF Festival footer with event details and location map." class="mockupImage">
+          <img src="casestudy/website-page-06.png" alt="SIAFF Festival footer with event details and location map." class="mockup-image-2">
         </figure>        
       </article>      
 
@@ -684,21 +736,26 @@
     <figure class="fadeinup medium-gap">
       <img src="casestudy/responsive-website-mockup.png" alt="Responsive festival website shown across laptop, tablet, and mobile screens." class="mockupImage">
     </figure> 
+    <p class="halyardLight gray regularType smallest-gap fadeinup mobile-format">Click
+      <a href="https://richardlau.ca/yorku/desn3005/siaff-en/" target="_blank" class="highlight">here</a> to open the website in your browser!</p>
+        
 
     <div class="sectionDivider medium-gap fadeinup"></div>
 
-    <p class="halyardLight gray regularType medium-gap fadeinup">Try out the website for yourself below, or click 
+    <p class="halyardLight gray regularType medium-gap fadeinup desktop-format">Try out the website for yourself below, or click
       <a href="https://richardlau.ca/yorku/desn3005/siaff-en/" target="_blank" class="highlight">here</a> to open it in your browser!</p>
     
-      <div class="small-gap fadeinup aspect-ratio-web" style="position:relative; width:100%; border-radius: 1rem; overflow:hidden;">
-      <iframe 
-        src="https://richardlau.ca/yorku/desn3005/siaff-en"
-        style="position:absolute; inset:0; width:100%; height:100%; border:0;"
-        loading="lazy"
-        allowfullscreen>
-        <p class="halyardBook regularType">Your browser does not support iframes.</p>
-      </iframe>
-    </div>  
+      <div class="website-container desktop-format">
+        <div class="small-gap fadeinup aspect-ratio-web" style="position:relative; width:100%; border-radius: 1rem; overflow:hidden;">
+          <iframe 
+            src="https://richardlau.ca/yorku/desn3005/siaff-en"
+            style="position:absolute; inset:0; width:100%; height:100%; border:0;"
+            loading="lazy"
+            allowfullscreen>
+            <p class="halyardBook regularType">Your browser does not support iframes.</p>
+          </iframe>
+        </div>  
+      </div>
 
   </section>  
   

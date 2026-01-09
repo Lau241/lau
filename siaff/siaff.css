@@ -54,6 +54,9 @@
   margin-bottom: 4rem;
 }
 
+.mobile-version {
+  display: none;
+}
 
 .prHeader {
     padding-top: 12rem;
@@ -165,6 +168,14 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+
+.mockup-image-2 {
+  width: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: .5rem;
+  box-sizing: border-box;    
 }
 
 .mockup-image-3 {
@@ -813,6 +824,25 @@ body {
   animation-fill-mode: forwards; /* keeps final state after animation */
 }
 
+@media (max-width: 1024px) {
+  .wide-point {
+    margin-left: 8%;
+    margin-right: 8%;
+  }  
+
+  .center-content {
+    margin: 0rem 12%
+  }
+
+  .content-video {
+    flex: 1.1;
+  }
+
+  .aspect-ratio-web {
+    aspect-ratio: 16/8.5;
+  }
+}
+
 
 @media (max-width: 780px) {
   .logo {
@@ -835,9 +865,14 @@ body {
     flex-direction: column;
     gap: 1rem;
   }
+
+  .aspect-ratio-web {
+    aspect-ratio: 16/10;
+  }  
 }
 
 @media (max-width: 540px) {
+
   .nav-links a {
     padding: .25rem 1rem;
   }
@@ -852,14 +887,29 @@ body {
     height: 3rem;
   }
 
-  .point-flexbox, .project-info {
+  .point-flexbox, .project-info, .introHeading, .grid-2x2, .center-content {
     position: relative;
     flex-direction: column;
     gap: 1rem;
     align-items: flex-start !important;
   }
 
+  .learnings {
+    flex-direction: column;
+  }
 
+  .learnHead {
+    position: relative;
+    top: 0;
+  }  
+
+  .center-content {
+    margin: 0rem 0%;
+  }  
+
+  .three-image-row {
+    flex-direction: column;
+  }
 
   .learnHead {
     position: relative;
@@ -872,12 +922,27 @@ body {
   }
 
   .quote-content blockquote {
-    width: 80%;
+    width: 100%;
+    font-size: 2.25rem;
   }
+
+  .author {
+    font-size: 1.75rem !important;
+  }  
+
   .quote-container {
     gap: 3rem;
   }
 
+  .wide-point {
+    margin-left: 0;
+    margin-right: 0;
+  }    
+
+  .box-and-image {
+    flex-direction: column;
+    gap: 1rem;
+  }
 
   .tags {
     display: none;
@@ -891,6 +956,10 @@ body {
 @media (max-width: 425px) {
 
   .vine-title img {
+    display: none;
+  }
+
+  .aspect-ratio-web {
     display: none;
   }
 }

@@ -311,7 +311,7 @@
 }
 
 .small-gap {
-    margin-top: 1rem;
+    margin-top: 1.5rem;
 }
 
 .lighter-gap {
@@ -319,7 +319,7 @@
 }
 
 .light-gap {
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 .regular-gap {
@@ -365,6 +365,11 @@
       flex-direction: column;
       gap: 1rem;
   }
+
+  .two-images {
+    flex-direction: column;
+    gap: 1.5rem;
+    }
 
 
   .large-gap {
