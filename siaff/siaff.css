@@ -281,7 +281,9 @@
   width: 4rem;
 }
 
-
+.aspect-ratio-web {
+  aspect-ratio: 16/7.75;
+}
 
 
 .header-inspo {
