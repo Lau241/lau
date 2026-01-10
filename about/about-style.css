@@ -7,23 +7,38 @@
 .about-richard {
   background-color: #131416;
   z-index: 1;
-  position: sticky;
   top: 0;  
 }
 
 .about-container {
-  padding: 15vh 0;
   display: flex;
   justify-content: space-between;
   margin: 1rem 0;
 }
 
 .page-header {
-  position: sticky;
+  padding-top: 25vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-head-gap {
+  flex: .75;
+}
+
+.project-header {
+  flex: 6.03;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.img-head {
+  flex: 3.25;
 }
 
 .page-title {
-  font-size: 6rem;
+  font-size: 4.5rem;
 }
 
 .about-header {
@@ -37,6 +52,17 @@
 
 .project-info {
   display: flex;
+}
+
+.image-txt-custom-3 {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.row-flex {
+  display: flex;
+  gap: 1rem;
 }
 
 .sectionDivider {
@@ -78,12 +104,7 @@
 .values-section {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  background-color: #131416;
   z-index: 2;
-  padding: 25vh 0;
 }
 
 .value-container {
@@ -438,7 +459,15 @@ body {
 }
 @media (max-width: 1024px) {
   .page-title {
-    font-size: 4.25rem;
+    font-size: 4.25rem;    
+  }
+
+
+  .page-title {
+    font-size: 3.5rem;
+  }
+  .flex-head-gap {
+    flex: .25;
   }
 }
 
@@ -457,6 +486,13 @@ body {
 
   .siteInfo {
     font-size: 1rem;
+  }
+
+  .page-title {
+    font-size: 3rem;
+  }
+  .flex-head-gap {
+    flex: .25;
   }
 }
 
@@ -478,10 +514,6 @@ body {
     position: relative;
   }
 
-  .values-section, .about-container {
-    padding: 5vh 0;
-  }
-
   .about-container, .value-container {
     position: relative;
     flex-direction: column;
@@ -493,8 +525,9 @@ body {
     padding: 1.5rem 1rem;
   }
 
-  .learnings {
+  .learnings, .row-flex, .page-header {
     flex-direction: column;
+    gap: 3rem;
   }
 
   .learnHead {
