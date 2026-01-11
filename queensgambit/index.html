@@ -5,33 +5,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art of Visual Data</title>
+    <title>The Queen's Gambit</title>
     <link rel="icon" href="../media/RL.png" type="image/png">
     <link rel="stylesheet" href="../portfolioStyles/siteToolkit.css">
-    <link rel="stylesheet" href="../projects.css">
     <link rel="stylesheet" href="thequeensgambit.css">
+    <link rel="stylesheet" href="fontsettings.css">
+    <link rel="stylesheet" href="basicstyling.css">
 </head>
 
 <body>
-    <div class="loadingContainer">
-    <video autoplay muted loop playsinline class="loadingVideo">
-        <source src="../media/loadingvid.webm" type="video/webm">
-        Your browser does not support the video tag.
-    </video>
-    </div>
 
     <!-- This is our navigation bar. -->  
     <section class="fixedContainer">
     <div class="navContainer">
-        <header class="navbar" role="banner">
+        <header class="navbar margins" role="banner">
         <a href="https://richardlau.ca" class="logo" role="link" aria-label="Button to Homepage">richard</a>
         <nav class="nav-links">
-            <ul>
+          <ul>
             <li><a href="https://richardlau.ca/home">home</a></li>
-            <li><a href="https://richardlau.ca/about">about</a></li>
-            <li><a href="#">fishbones</a></li>
+            <li><a href="https://richardlau.ca/about/">about</a></li>
+            <li><a href="https://richardlau.ca/fishbones/">fishbones</a></li>
             <li><a href="https://drive.google.com/file/d/1HeYr4Dw9TadbNes3u8uDA5jCR6kDGA6j/view?usp=sharing" target="_blank">resume</a></li>
-            </ul>
+          </ul>
         </nav>
         </header>
         <div class="divider"></div>
@@ -39,91 +34,66 @@
     </section>
 
     <main>
-
-        <div class="tempNotice">
+        <section class="vcrFont fadeinup notice margins">
+          <header class="notice-header">
             <h1>under construction</h1>
-            <p>great things are coming...</p>
-        </div>
-    </main>
+            <p class="small-gap regularType gray">great things are coming...</p>
+          </header>
+
+          <figure class="large-gap">
+            <img src="https://cdn.myportfolio.com/e8838e2a-7022-4b7d-98a4-10501397dae6/f52c0244-f6e7-4aec-9600-0a7a0395351a_rw_1920.png?h=635fe63767ba3b45c41f00f9705caaa3"
+            style="width: 100%; border-radius: 1rem;">
+          </figure>      
+          
+          <figure class="large-gap">
+            <img src="https://cdn.myportfolio.com/e8838e2a-7022-4b7d-98a4-10501397dae6/62f96a54-86dc-42cd-baf4-ae46ee02b7d1_rw_1920.png?h=f0ac3defc30253ca1439ab6c9a58a888"
+            style="width: 100%; border-radius: 1rem;">
+          </figure>            
+        </section>
+
+
+  <section class="margins pre-footer">
+ 
+    <article class="connection-container">
+      <header class="label">
+        <h2 class="vcrFont mediumType">FOLLOW<h2>
+          <img src="../media/arrowBottomLeft.svg" class="arrowBottomLeft" alt="Arrow pointing downwards to the left.">
+      </header>
+      <ul class="media-link">
+        <li><a href="https://www.linkedin.com/in/richard-lau-70003a217/" class="link vcrFont semi-mediumType white" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://www.instagram.com/richard_bingo/" class="link vcrFont semi-mediumType white" target="_blank" rel="noopener">Instagram</a></li>
+      </ul>
+    </article>
+
+    <article class="connection-container">
+      <header class="label">
+        <h2 class="vcrFont mediumType">EMAIL<h2>
+          <img src="../media/arrowBottomLeft.svg" class="arrowBottomLeft" alt="Arrow pointing downwards to the left.">
+      </header>
+
+      <div class="poro-container">
+      <ul class="media-link">
+        <li><a href="mailto:richardlau1167@gmail.com" class="link vcrFont semi-mediumType white">richardlau1167@gmail.com</a></li>
+      </ul>
+        <img src="../media/poro_refined.gif" alt="8-Bit Poro from League of Legends." class="poro">
+      </div>
+    </article>
+
+  </section>
+
+</main>
 
 
 <!-- Footer/Scripts -->
  <footer class="footerContent">
   <div class="divider"></div>
-  <div class="siteInfo">
+  <div class="siteInfo margins">
     <p>© 2026 Richard Lau. All rights reserved.</p>
     <p>imagined and crafted by richard | ft. healthy sleep schedule</p>
   </div>
 </footer>
  
-<!-- This is the navigation bar scroll effect -->
-<script>  
-  const fixedContainer = document.querySelector('.fixedContainer');
-   let lastScrollY = window.scrollY;
+<script src="aovd-typeface.js"></script>
+<script src="../case-study-scripts.js"></script>
 
-    window.addEventListener('scroll', () => {
-    if (lastScrollY < window.scrollY) {
-      fixedContainer.classList.remove("nav--revealed");
-   fixedContainer.classList.add("nav--hidden");
-    } else {
-    fixedContainer.classList.remove("nav--hidden");
-    fixedContainer.classList.add("nav--revealed");
-    }
-lastScrollY = window.scrollY;
-  });
-</script>
-
-<!-- Fade In Animation -->
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-  const sections = document.querySelectorAll('.fadeinup');
-  const viewportHeight = document.documentElement.clientHeight;
-  const triggerPoint = 0.65; // desktop trigger
-
-  function checkFade() {
-    if (window.innerWidth < 540) return; // skip mobile
-
-    sections.forEach(section => {
-      if (!section.classList.contains('animateUp') && section.getBoundingClientRect().top <= viewportHeight * triggerPoint) {
-        section.classList.add('animateUp');
-      }
-    });
-  }
-
-  window.addEventListener('scroll', checkFade);
-  checkFade(); // initial check
-});
-</script>
-
-<!-- Refresh page when breakpoint changes -->
-<script>
-let currentBreakpoint = window.innerWidth > 540 ? "desktop" : "mobile";
-
-window.addEventListener("resize", function() {
-  let newBreakpoint = window.innerWidth > 540 ? "desktop" : "mobile";
-  if (newBreakpoint !== currentBreakpoint) {
-    location.reload();
-  }
-});
-</script>
-
-
-<!-- Loading Screen -->
-<script>
-window.addEventListener("load", function() {
-  setTimeout(() => {
-    const loader = document.querySelector(".loadingContainer"); // select by class
-    const page = document.getElementById("pageContent");
-
-    if(loader) {
-      loader.classList.add('playAnimation')
-    }
-
-    setTimeout(() => {
-      loader.style.display = "none";
-    }, 500);
-
-  }, 1000);
-});
-</script>    
 </body>
