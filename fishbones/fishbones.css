@@ -83,6 +83,65 @@
   display: none;
 }
 
+.inspo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.inspo-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.inspo-site-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.inspo-site {
+  padding: 2rem;
+  background-color: #212224;
+  border-radius: .5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inspo-site img {
+  overflow: none;
+  aspect-ratio: 2.5/1;
+}
+
+.inspo-site-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inspo-site-text h3 a:hover {
+  text-decoration: none;
+}
+
+.inspo-site-text p {
+  font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* Pre-Footer */
+
 .label {
   display: flex;
   flex-direction: row;
@@ -528,6 +587,9 @@ body {
     flex-direction: column;
   }
 
+  .inspo-site-container {
+    flex-direction: column;
+  }
 
   .nav-links a {
     padding: .25rem 1rem;
