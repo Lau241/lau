@@ -8,6 +8,10 @@ body {
     min-height: 100vh;
 }
 
+.loading-width {
+  width: 12%;
+}
+
 .loading-video {
   inset: 0;
   opacity: 1;
@@ -683,6 +687,11 @@ body {
 
 /* Mobile Device Adaptation for Hero Section */
 @media (max-width: 780px) {
+
+.loading-width {
+  width: 20%;
+}  
+
     .mainpage {
         margin-left: .5rem;
         margin-right: .5rem;
@@ -745,6 +754,10 @@ body {
 
 /* edit animation speeds for this screen*/
 @media (max-width: 540px) {
+
+.loading-width {
+  width: 40%;
+}  
 
 .mainpage {
   padding-top: 8rem;
