@@ -8,6 +8,17 @@ body {
     min-height: 100vh;
 }
 
+.loading-video {
+  inset: 0;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.loading-video.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
 .dragSection {
   right: 30%;
   margin-top: 15rem;
@@ -193,14 +204,16 @@ h1 {
 
   .mobile {
     display: none;
-  }
+  } 
+
 
 /* paragraph settings */
 .subTitle p {
-    font-family: 'Halyard Display Book', sans-serif;
-font-size: 24px;
-font-style: light;
-font-weight: 300;
+  font-family: 'Halyard Display Book', sans-serif;
+  font-size: 24px;
+  font-style: light;
+  font-weight: 300;
+
 }
 
 /* dropdown button */
@@ -212,6 +225,7 @@ font-weight: 300;
   border-radius: 32px;
   line-height: 28px;
   cursor: pointer;
+  
 font-family: 'Halyard Display Book', sans-serif;
 font-size: 24px;
 font-weight: 300;
@@ -225,7 +239,7 @@ font-weight: 300;
 
     align-items: center;
     display: flex;
-    height: 30px;
+    height: 100%;
 }
 
 /* chevron icon */

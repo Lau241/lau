@@ -1,9 +1,16 @@
-  // Dropdown Button Click Detection
-  document.querySelectorAll('.dropbtn').forEach(btn => {
-    btn.addEventListener('click', function() {
-      this.parentElement.classList.toggle('open');
-    });
-  });
+//load animation  
+  setTimeout(() => {
+    const loader = document.querySelector('.loading-video');
+    if (!loader) return;
+
+    loader.classList.add('fade-out');
+
+    loader.addEventListener(
+      'transitionend',
+      () => loader.remove(),
+      { once: true }
+    );
+  }, 1250);
 
   // Dropdown Selection
   document.querySelectorAll('.dropdown').forEach(dropdown => {
