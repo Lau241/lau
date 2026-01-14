@@ -1,3 +1,10 @@
+// Dropdown Button Click Detection
+document.querySelectorAll('.dropbtn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    this.parentElement.classList.toggle('open');
+  });
+});
+
 //load animation  
   setTimeout(() => {
     const loader = document.querySelector('.loading-video');
@@ -172,4 +179,5 @@ function dragMoveListener (event) {
 }
 
 // this function is used later in the resizing and gesture demos
+
 window.dragMoveListener = dragMoveListener
