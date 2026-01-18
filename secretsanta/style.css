@@ -16,8 +16,10 @@ main {
 }
 
 header {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    align-items: center;
+    text-align: center;
 }
 
 .hero header {
@@ -45,7 +47,6 @@ header {
 .item {
     display: flex;
     flex-direction: column;
-    width: 15rem;
     margin-bottom: 2rem;
     text-decoration: none;
 }
@@ -56,10 +57,9 @@ header {
 }
 
 .wishlist {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction:row;
-    gap: 2rem;
+ display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  gap: 2rem;
 }
 
 .desc {
@@ -70,7 +70,7 @@ header {
 }
 
 .thumbnail {
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.25);
    transition: transform 0.5s ease-out;
    border-radius: 5%;    
    margin-bottom: .75rem;
