@@ -17,7 +17,7 @@
     --pine: #10388f;
     --cranberry: #c22340;
     --twine: #796bc9;
-    --line: #8f34a1;
+    --line: #332136;
     --serif: "Fraunces", Georgia, "Times New Roman", serif;
     --sans: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
   }
@@ -34,7 +34,7 @@
 
   header { margin-bottom: 32px; }
   h1 {
-    font-family: var(--serif);
+    font-family: var(--sans);
     font-weight: 800;
     font-size: clamp(2rem, 6vw, 3rem);
     line-height: 1.05;
@@ -108,6 +108,7 @@
     padding-top: 0rem;
     animation: unwrap .28s ease;
   }
+
   @keyframes unwrap {
     from { opacity: 0; transform: translateY(-6px); }
     to   { opacity: 1; transform: none; }
@@ -120,7 +121,7 @@
     background: var(--line);
     display: block;
   }
-  .detail p { margin: 0 0 14px; max-width: 60ch; }
+  .detail p { margin: 0 0 14px;}
   .meta { color: var(--muted); font-size: .92rem; }
   .link {
     display: inline-block;
@@ -143,21 +144,66 @@
   @media (prefers-reduced-motion: reduce) {
     * { animation: none !important; transition: none !important; }
   }
+
+.gift[hidden] { display: none; }
+
+.filters { margin-bottom: 24px; display: grid; gap: 12px; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chips button {
+  font: inherit; font-weight: 600; font-size: .92rem;
+  color: var(--pine);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+.chips button:hover { border-color: var(--pine); }
+.chips button:focus-visible { outline: 3px solid var(--cranberry); outline-offset: 2px; }
+
+.range { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; font-size: .95rem; }
+.range label { display: flex; align-items: center; gap: 6px; }
+.range input[type="number"] {
+  width: 96px; font: inherit;
+  padding: 6px 10px;
+  color: var(--ink); background: var(--card);
+  border: 1px solid var(--line); border-radius: 8px;
+}
+.range input:focus-visible { outline: 3px solid var(--cranberry); outline-offset: 1px; }
+.count, .empty { margin: 0; color: var(--muted); font-size: .92rem; }
+
 </style>
 </head>
+
 <body>
 <div class="wrap">
   <header>
-    <h1>Ricky's Secret Santa wishlist :]</h1>
+    <h1>Welcome to Ricky's wishlist :]</h1>
     <p>Tap da gift to see details.</p>
   </header>
+
+<div class="filters">
+  <div class="chips">
+    <button type="button" data-min="" data-max="">Any</button>
+    <button type="button" data-min="" data-max="25">Under $25</button>
+    <button type="button" data-min="25" data-max="100">$25 – $100</button>
+    <button type="button" data-min="100" data-max="">$100+</button>
+  </div>
+  <div class="range">
+    <label>Min $ <input type="number" id="minPrice" min="0" inputmode="numeric" placeholder="0"></label>
+    <label>Max $ <input type="number" id="maxPrice" min="0" inputmode="numeric" placeholder="any"></label>
+    <label class="check"><input type="checkbox" id="showUnknown" checked> Show unknown priced gifts</label>
+  </div>
+  <p class="count" id="count" aria-live="polite"></p>
+</div>
+<p class="empty" id="empty" hidden>No gifts in that price range. Try widening it.</p>
 
 <!--Jason get out of here. You too, Duaa.-->
 
   <div class="list">
 
     <!-- GIFT -->
-    <details class="gift">
+    <details class="gift" data-price="0">
       <summary>
         <img class="thumb" src="https://media.tenor.com/O2YO0R9gACEAAAAe/jinx-ekko.png" style="object-fit: cover;">
         <span class="title">Drop me into another dimension</span>
@@ -174,7 +220,7 @@
     </details>
 
     <!-- GIFT -->
-    <details class="gift">
+    <details class="gift" data-price="0">
       <summary>
         <img class="thumb" src="https://www.bathandbodyworks.ca/dw/image/v2/BGFZ_PRD/on/demandware.static/-/Sites-bbw_ca-storefront-catalog/default/dw729e610e/hires/028032456.jpg?sw=768&q=75&format=auto" style="object-fit: cover;">
         <span class="title">Bath and Body Works Candles / Candles</span>
@@ -186,6 +232,74 @@
           <p>I like candles.</p>
           <p class="meta">Up to you to decide what candle!</p>
           <a class="link" href="https://www.bathandbodyworks.ca/en/p/crispy-cookie-edges-3-wick-candle-028032456" target="_blank">View product</a>
+        </div>
+      </div>
+    </details>
+
+    <!-- GIFT -->
+    <details class="gift" data-price="190">
+      <summary>
+        <img class="thumb" src="https://merch.riotgames.com/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fdsfx7636%2Fconsumer_products_live%2Fade27baf606563616656083c0cccc9b565dad7f0-2560x2560.png%3FaccountingTag%3Dconsumer_products&w=3840&q=75" style="object-fit: cover;">
+        <span class="title">Arcane Necklace / JinxEkko</span>
+        <span class="price">$190+</span>
+        <span class="chev" aria-hidden="true"></span>
+      </summary>
+      <div class="detail">
+        <div>
+          <p>Yeah it's expensive. Anything cool/similar/cheaper to this is cool too!</p>
+          <p class="meta">Bought from: Riot Store, Aliexpress, Amazon?, Etc.</p>
+          <a class="link" href="https://merch.riotgames.com/en-us/product/arcane-jinx-monkey-necklace/" target="_blank">View product</a>
+        </div>
+      </div>
+    </details>
+
+    <!-- GIFT -->
+    <details class="gift" data-price="150">
+      <summary>
+        <img class="thumb" src="https://merch.riotgames.com/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fdsfx7636%2Fconsumer_products_live%2Fe31dd06b0d40422fc503e9f97dcdef57cb8209af-2560x2560.png%3FaccountingTag%3Dconsumer_products&w=3840&q=75" style="object-fit: cover;">
+        <span class="title">RockLove ARCANE Fishbones Necklace</span>
+        <span class="price">$150+</span>
+        <span class="chev" aria-hidden="true"></span>
+      </summary>
+      <div class="detail">
+        <div>
+          <p>Yeah it's expensive. Anything cool/similar/cheaper to this is cool too!</p>
+          <p class="meta">Bought from: Riot Store, Aliexpress, Amazon?, Etc.</p>
+          <a class="link" href="https://merch.riotgames.com/en-us/product/arcane-fishbones-necklace/" target="_blank">View product</a>
+        </div>
+      </div>
+    </details>
+
+    <!-- GIFT -->
+    <details class="gift" data-price="500000">
+      <summary>
+        <img class="thumb" src="https://raritywatches.com/wp-content/uploads/2025/05/1737577426-casino-plain-aventurine-dial2-1.webp" style="object-fit: cover;">
+        <span class="title">Watch - Casino Tourbillon</span>
+        <span class="price">$500K+</span>
+        <span class="chev" aria-hidden="true"></span>
+      </summary>
+      <div class="detail">
+        <div>
+          <p>I'm kidding. Anything cool/similar/cheaper to this is cool! Or up to you to decide what watch is nice!</p>
+          <p class="meta">Bought from: Aliexpress, Amazon?, Watch sites, In-person, Etc.</p>
+          <a class="link" href="https://raritywatches.com/product/jacob-co-casino-tourbillion-rose-gold-black-aventurine-dial/" target="_blank">View product</a>
+        </div>
+      </div>
+    </details>
+
+    <!-- GIFT -->
+    <details class="gift" data-price="140">
+      <summary>
+        <img class="thumb" src="https://merch.riotgames.com/_next/image/?url=https%3A%2F%2Fcdn.sanity.io%2Fimages%2Fdsfx7636%2Fconsumer_products%2Fa17caa61cbf27c346bb70d537852ce39095d6420-2560x2560.png%3FaccountingTag%3Dconsumer_products&w=3840&q=75" style="object-fit: cover;">
+        <span class="title">RockLove Arcane Ekko Stopwatch Necklace</span>
+        <span class="price">$140+</span>
+        <span class="chev" aria-hidden="true"></span>
+      </summary>
+      <div class="detail">
+        <div>
+          <p>Yeah it's expensive. Anything cool/similar/cheaper to this is cool too!</p>
+          <p class="meta">Bought from: Riot Store, Aliexpress, Amazon?, Etc.</p>
+          <a class="link" href="https://merch.riotgames.com/en-us/product/arcane-ekko-stopwatch-necklace/" target="_blank">View product</a>
         </div>
       </div>
     </details>
@@ -214,5 +328,51 @@
 </footer>
 
 </div>
+
+
+<script>
+  const gifts = document.querySelectorAll('.gift');
+  const minEl = document.getElementById('minPrice');
+  const maxEl = document.getElementById('maxPrice');
+  const unknownEl = document.getElementById('showUnknown');
+  const countEl = document.getElementById('count');
+  const emptyEl = document.getElementById('empty');
+
+  function applyFilter() {
+    const min = minEl.value === '' ? 0 : Number(minEl.value);
+    const max = maxEl.value === '' ? Infinity : Number(maxEl.value);
+    let shown = 0;
+
+    gifts.forEach(gift => {
+      const raw = gift.dataset.price;
+      let visible;
+      if (raw === undefined || raw === '') {
+        visible = unknownEl.checked;          // "$?" gifts
+      } else {
+        const price = Number(raw);
+        visible = price >= min && price <= max;
+      }
+      gift.hidden = !visible;
+      if (visible) shown++;
+    });
+
+    countEl.textContent = `Showing ${shown} of ${gifts.length} options`;
+    emptyEl.hidden = shown !== 0;
+  }
+
+  [minEl, maxEl, unknownEl].forEach(el => el.addEventListener('input', applyFilter));
+
+  document.querySelectorAll('.chips button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      minEl.value = btn.dataset.min;
+      maxEl.value = btn.dataset.max;
+      unknownEl.checked = true;
+      applyFilter();
+    });
+  });
+
+  applyFilter();
+</script>
+
 </body>
 </html>
